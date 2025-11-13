@@ -17,33 +17,29 @@ const ClientLogos = () => {
     { src: client6, alt: "Aerospace Dynamics" }
   ], []);
 
-  // Triple the array for truly seamless infinite scrolling
   const extendedClients = useMemo(() => [...clients, ...clients, ...clients], [clients]);
-
   const [api, setApi] = useState<CarouselApi>();
 
   useEffect(() => {
     if (!api) return;
-
-    // Auto-scroll continuously
     const interval = setInterval(() => {
       api.scrollNext();
-    }, 2000); // Move to next slide every 2 seconds
-
+    }, 2000);
     return () => clearInterval(interval);
   }, [api]);
 
   return (
     <section className="py-16 md:py-20 overflow-hidden bg-card/50 backdrop-blur-sm border-t border-border relative">
-      {/* Section Header */}
+      {/* Redesigned Header */}
       <div className="text-center mb-10 md:mb-12">
-        <div className="inline-flex items-center gap-2 px-4 md:px-6 py-2 md:py-3 bg-accent/10 rounded-full border border-accent/20 mb-4 md:mb-6">
-          <span className="text-xs md:text-sm font-semibold text-foreground tracking-wider uppercase">
+        <div className="inline-flex items-center gap-3 px-6 py-3 bg-white/5 rounded-2xl border border-white/10 mb-6 backdrop-blur-md shadow-lg shadow-accent/5">
+          <div className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse"></div>
+          <span className="text-sm font-semibold text-foreground tracking-wider uppercase">
             Our Client's Partners
           </span>
         </div>
-        <h2 className="text-1xl md:text-2xl lg:text-3xl font-bold text-foreground">
-          <span className="bg-gradient-to-r from-accent to-secondary bg-clip-text text-transparent">
+        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-foreground">
+          <span className="bg-gradient-to-r from-accent via-secondary to-accent bg-clip-text text-transparent">
             Collaborating with Government Leaders
           </span>
         </h2>
