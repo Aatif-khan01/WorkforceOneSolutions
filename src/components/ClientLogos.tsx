@@ -81,11 +81,11 @@ const ClientLogos = () => {
                 key={`${client.alt}-${index}`}
                 className="pl-2 md:pl-4 basis-auto"
               >
-                <div className="flex items-center justify-center w-[120px] h-[120px] sm:w-[140px] sm:h-[140px] md:w-[160px] md:h-[160px] rounded-full overflow-hidden bg-card shadow-lg border-2 border-border hover:border-accent/50 transition-all duration-300 hover:shadow-xl hover:scale-105 group">
+                <div className="flex items-center justify-center w-[120px] h-[120px] sm:w-[140px] sm:h-[140px] md:w-[160px] md:h-[160px] hover:scale-105 transition-all duration-300 group">
                   <img
                     src={client.src}
                     alt={client.alt}
-                    className="w-full h-full object-contain p-3 md:p-4 transition-transform duration-300 group-hover:scale-110"
+                    className="w-full h-full object-contain grayscale hover:grayscale-0 transition-all duration-300"
                     draggable="false"
                     onContextMenu={(e) => e.preventDefault()}
                     loading="lazy"
