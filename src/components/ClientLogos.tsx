@@ -1,6 +1,5 @@
-import { useMemo } from "react";
-import Autoplay from "embla-carousel-autoplay";
-import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
+import { useState, useMemo, useEffect } from "react";
+import { Carousel, CarouselContent, CarouselItem, CarouselApi } from "@/components/ui/carousel";
 import client1 from "@/assets/clients/client-1.png";
 import client2 from "@/assets/clients/client-2.png";
 import client3 from "@/assets/clients/client-3.png";
@@ -10,40 +9,29 @@ import client6 from "@/assets/clients/client-6.png";
 
 const ClientLogos = () => {
   const clients = useMemo(() => [
-    {
-      src: client1,
-      alt: "TechCorp Solutions"
-    },
-    {
-      src: client2,
-      alt: "Global Dynamics"
-    },
-    {
-      src: client3,
-      alt: "SecureDefense Systems"
-    },
-    {
-      src: client4,
-      alt: "MediTech Innovations"
-    },
-    {
-      src: client5,
-      alt: "Capital Partners Group"
-    },
-    {
-      src: client6,
-      alt: "Aerospace Dynamics"
-    }
+    { src: client1, alt: "TechCorp Solutions" },
+    { src: client2, alt: "Global Dynamics" },
+    { src: client3, alt: "SecureDefense Systems" },
+    { src: client4, alt: "MediTech Innovations" },
+    { src: client5, alt: "Capital Partners Group" },
+    { src: client6, alt: "Aerospace Dynamics" }
   ], []);
 
-  // Create extended array for seamless loop (only duplicate once for better performance)
-  const extendedClients = useMemo(() => [...clients, ...clients], [clients]);
+  // Triple the array for truly seamless infinite scrolling
+  const extendedClients = useMemo(() => [...clients, ...clients, ...clients], [clients]);
 
-  const autoplayPlugin = useMemo(() => Autoplay({
-    delay: 2500, // Faster autoplay: 2.5 seconds
-    stopOnInteraction: false,
-    stopOnMouseEnter: false,
-  }), []);
+  const [api, setApi] = useState<CarouselApi>();
+
+  useEffect(() => {
+    if (!api) return;
+
+    // Auto-scroll continuously
+    const interval = setInterval(() => {
+      api.scrollNext();
+    }, 2000); // Move to next slide every 2 seconds
+
+    return () => clearInterval(interval);
+  }, [api]);
 
   return (
     <section className="py-16 md:py-20 overflow-hidden bg-card/50 backdrop-blur-sm border-t border-border relative">
@@ -64,28 +52,26 @@ const ClientLogos = () => {
       {/* Carousel Container */}
       <div className="container mx-auto px-4">
         <Carousel
+          setApi={setApi}
           opts={{
             align: "start",
             loop: true,
-            dragFree: true, // Enable smooth dragging
+            dragFree: false,
             skipSnaps: false,
-            duration: 15, // Faster scroll duration (reduced from default 25)
-            slidesToScroll: 1,
           }}
-          plugins={[autoplayPlugin]}
           className="w-full"
         >
           <CarouselContent className="-ml-2 md:-ml-4">
             {extendedClients.map((client, index) => (
               <CarouselItem
                 key={`${client.alt}-${index}`}
-                className="pl-2 md:pl-4 basis-auto"
+                className="pl-2 md:pl-4 basis-1/3 sm:basis-1/4 md:basis-1/5 lg:basis-1/6"
               >
-                <div className="flex items-center justify-center w-[120px] h-[120px] sm:w-[140px] sm:h-[140px] md:w-[160px] md:h-[160px] hover:scale-105 transition-all duration-300 group">
+                <div className="flex items-center justify-center w-full h-[120px] sm:h-[140px] md:h-[160px] hover:scale-105 transition-all duration-300">
                   <img
                     src={client.src}
                     alt={client.alt}
-                    className="w-full h-full object-contain grayscale hover:grayscale-0 transition-all duration-300"
+                    className="w-full h-full object-contain transition-all duration-300"
                     draggable="false"
                     onContextMenu={(e) => e.preventDefault()}
                     loading="lazy"
