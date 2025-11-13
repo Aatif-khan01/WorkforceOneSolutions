@@ -39,10 +39,10 @@ const ClientLogos = () => {
       <div className="text-center mb-10 md:mb-12">
         <div className="inline-flex items-center gap-2 px-4 md:px-6 py-2 md:py-3 bg-accent/10 rounded-full border border-accent/20 mb-4 md:mb-6">
           <span className="text-xs md:text-sm font-semibold text-foreground tracking-wider uppercase">
-            CLIENTS
+            Our Client's Partners
           </span>
         </div>
-        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-foreground">
+        <h2 className="text-1xl md:text-2xl lg:text-3xl font-bold text-foreground">
           <span className="bg-gradient-to-r from-accent to-secondary bg-clip-text text-transparent">
             Collaborating with Government Leaders
           </span>
