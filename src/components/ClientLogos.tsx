@@ -30,17 +30,11 @@ const ClientLogos = () => {
 
   return (
     <section className="py-16 md:py-20 overflow-hidden bg-card/50 backdrop-blur-sm border-t border-border relative">
-      {/* Redesigned Header */}
+      {/* Header */}
       <div className="text-center mb-10 md:mb-12">
-        <div className="inline-flex items-center gap-3 px-6 py-3 bg-white/5 rounded-2xl border border-white/10 mb-6 backdrop-blur-md shadow-lg shadow-accent/5">
-          <div className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse"></div>
-          <span className="text-sm font-semibold text-foreground tracking-wider uppercase">
-            Our Client's Partners
-          </span>
-        </div>
         <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-foreground">
           <span className="bg-gradient-to-r from-accent via-secondary to-accent bg-clip-text text-transparent">
-            Collaborating with Government Leaders
+            Serving Government Contractors collaborating with:
           </span>
         </h2>
       </div>
