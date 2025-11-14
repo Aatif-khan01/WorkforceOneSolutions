@@ -229,11 +229,10 @@ const Home = () => {
           <div className="text-center mb-8">
             <h2 className="text-4xl md:text-5xl font-bold mb-3">
               <span className="bg-gradient-to-r from-accent to-secondary bg-clip-text text-transparent">
-                Workforce One Solution
+                Quick Summary about Workforce One Solutions
               </span>
             </h2>
             <p className="text-xl text-muted-foreground">
-              Delivering Excellence in Every Engagement
             </p>
           </div>
 
