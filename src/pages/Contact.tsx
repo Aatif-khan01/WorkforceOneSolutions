@@ -16,6 +16,7 @@ import strategicPlanningImage from "@/assets/strategic-planning.jpg";
 import galleryConsultation from "@/assets/gallery-consultation.jpg";
 import galleryPartnership from "@/assets/gallery-partnership.jpg";
 import galleryOfficeView from "@/assets/gallery-office-view.jpg";
+
 const Contact = () => {
   const [formData, setFormData] = useState({
     name: "",
@@ -24,6 +25,7 @@ const Contact = () => {
     source: "",
     message: ""
   });
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     toast.success("Thank you! We'll be in touch soon.", {
@@ -37,6 +39,7 @@ const Contact = () => {
       message: ""
     });
   };
+
   return <div className="min-h-screen">
       <Navigation />
       
@@ -158,7 +161,7 @@ const Contact = () => {
                 })} placeholder="Tell us about your project..." rows={6} required className="bg-glass/40 border-glass-border focus:border-accent resize-none" />
                 </div>
 
-                <Button type="submit" size="lg" className="w-full bg-gradient-to-r from-coral to-secondary hover:shadow-glow group animate-glow">
+                <Button type="submit" size="lg" className="w-full bg-[#66CB00] hover:bg-[#66CB00]/90 hover:shadow-lg text-white group transition-all duration-300">
                   Send Message
                   <Send className="ml-2 group-hover:translate-x-1 transition-transform" size={20} />
                 </Button>
@@ -257,4 +260,5 @@ const Contact = () => {
       <Footer />
     </div>;
 };
+
 export default Contact;
