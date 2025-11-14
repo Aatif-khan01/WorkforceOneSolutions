@@ -222,12 +222,12 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Image Grid Info Section - WITH CENTERED TITLE */}
+      {/* Image Grid Info Section - WITH REDUCED SPACING */}
       <section className="py-24 relative">
         <div className="container mx-auto px-6">
-          {/* Centered Title and Subtitle */}
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">
+          {/* Centered Title and Subtitle with reduced spacing */}
+          <div className="text-center mb-8">
+            <h2 className="text-4xl md:text-5xl font-bold mb-3">
               <span className="bg-gradient-to-r from-accent to-secondary bg-clip-text text-transparent">
                 Workforce One Solution
               </span>
