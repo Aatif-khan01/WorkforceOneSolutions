@@ -8,7 +8,6 @@ import GlassCard from "@/components/GlassCard";
 import ImageGridInfo from "@/components/ImageGridInfo";
 import { Button } from "@/components/ui/button";
 import heroImage from "@/assets/hero-recruitment.jpg";
-import securityClearanceImage from "@/assets/security-clearance.jpg";
 import gallerySecurity from "@/assets/gallery-security.jpg";
 import galleryInterview from "@/assets/gallery-interview.jpg";
 import galleryPartnership from "@/assets/gallery-partnership.jpg";
@@ -181,27 +180,6 @@ const ClearedRecruitment = () => {
 
       {/* Client Logos Section - Positioned after Introduction */}
       <ClientLogos />
-
-      {/* Security Clearance Image Section */}
-      <section className="py-16 relative overflow-hidden">
-        <div className="container mx-auto px-6">
-          <div className="relative rounded-3xl overflow-hidden max-w-6xl mx-auto">
-            <img 
-              src={securityClearanceImage}
-              alt="Security Clearance" 
-              className="w-full h-[400px] object-cover"
-            />
-            <div className="absolute inset-0 flex items-center justify-center">
-              <GlassCard className="p-8 max-w-2xl text-center">
-                <h3 className="text-3xl font-bold mb-4 text-foreground">Security First</h3>
-                <p className="text-lg text-muted-foreground">
-                  We maintain the highest standards of security compliance and confidentiality in all our recruitment processes.
-                </p>
-              </GlassCard>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* Recruitment Process */}
       <section className="py-24 bg-gradient-to-b from-background/50 to-background">
