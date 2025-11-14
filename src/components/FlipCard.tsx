@@ -40,12 +40,12 @@ const FlipCard = ({
           </div>
         </div>
 
-        {/* Back Side */}
+        {/* Back Side - Now uses #66CB00 green */}
         <div className="absolute inset-0 backface-hidden rotate-y-180">
-          <div className={`h-full w-full p-8 rounded-2xl bg-gradient-to-br ${gradient} shadow-lg flex flex-col justify-center items-center text-center`}>
-            <Icon size={48} className="text-background mb-4" />
-            <h3 className="text-2xl font-bold mb-4 text-background">{title}</h3>
-            <p className="text-background/90 text-base leading-relaxed">
+          <div className="h-full w-full p-8 rounded-2xl bg-[#66CB00] shadow-lg flex flex-col justify-center items-center text-center">
+            <Icon size={48} className="text-white mb-4" />
+            <h3 className="text-2xl font-bold mb-4 text-white">{title}</h3>
+            <p className="text-white/90 text-base leading-relaxed">
               {backContent || description}
             </p>
           </div>
