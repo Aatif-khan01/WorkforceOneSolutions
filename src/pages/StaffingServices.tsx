@@ -25,7 +25,13 @@ const BenefitFlipCard = ({
   backContent?: string;
 }) => {
   const [isFlipped, setIsFlipped] = useState(false);
-  return <div className="relative h-[240px] perspective-1000" onMouseEnter={() => setIsFlipped(true)} onMouseLeave={() => setIsFlipped(false)}>
+  
+  return (
+    <div 
+      className="relative h-[240px] perspective-1000" 
+      onMouseEnter={() => setIsFlipped(true)} 
+      onMouseLeave={() => setIsFlipped(false)}
+    >
       <div className={`relative w-full h-full transition-transform duration-700 transform-style-3d ${isFlipped ? 'rotate-y-180' : ''}`}>
         {/* Front Side */}
         <div className="absolute inset-0 backface-hidden">
@@ -40,16 +46,17 @@ const BenefitFlipCard = ({
 
         {/* Back Side */}
         <div className="absolute inset-0 backface-hidden rotate-y-180">
-          <div className="h-full w-full p-6 rounded-2xl bg-gradient-to-br from-accent to-accent-glow shadow-lg flex flex-col justify-center items-center text-center overflow-hidden">
-            <Icon size={40} className="text-background mb-3 flex-shrink-0" />
-            <h3 className="text-lg font-bold mb-3 text-background flex-shrink-0">{title}</h3>
-            <p className="text-background/90 text-xs leading-tight line-clamp-5">
+          <div className="h-full w-full p-6 rounded-2xl bg-[#66CB00] shadow-lg flex flex-col justify-center items-center text-center overflow-hidden">
+            <Icon size={40} className="text-white mb-3 flex-shrink-0" />
+            <h3 className="text-lg font-bold mb-3 text-white flex-shrink-0">{title}</h3>
+            <p className="text-white/90 text-xs leading-tight line-clamp-5">
               {backContent || description}
             </p>
           </div>
         </div>
       </div>
-    </div>;
+    </div>
+  );
 };
 
 // Process Step Flip Card
@@ -68,14 +75,12 @@ const ProcessStepFlipCard = ({
 }) => {
   const [isFlipped, setIsFlipped] = useState(false);
 
-  // Map number color to gradient
-  const getGradient = () => {
-    if (numberColor.includes('accent/')) return 'from-accent to-accent-glow';
-    if (numberColor.includes('secondary')) return 'from-secondary to-coral';
-    if (numberColor.includes('coral')) return 'from-coral to-accent';
-    return 'from-accent-glow to-secondary';
-  };
-  return <div className="relative h-[240px] perspective-1000" onMouseEnter={() => setIsFlipped(true)} onMouseLeave={() => setIsFlipped(false)}>
+  return (
+    <div 
+      className="relative h-[240px] perspective-1000" 
+      onMouseEnter={() => setIsFlipped(true)} 
+      onMouseLeave={() => setIsFlipped(false)}
+    >
       <div className={`relative w-full h-full transition-transform duration-700 transform-style-3d ${isFlipped ? 'rotate-y-180' : ''}`}>
         {/* Front Side */}
         <div className="absolute inset-0 backface-hidden">
@@ -88,16 +93,17 @@ const ProcessStepFlipCard = ({
 
         {/* Back Side */}
         <div className="absolute inset-0 backface-hidden rotate-y-180">
-          <div className={`h-full w-full p-6 rounded-2xl bg-gradient-to-br ${getGradient()} shadow-lg flex flex-col justify-center items-center text-center overflow-hidden`}>
-            <div className="text-4xl font-bold text-background/30 mb-3 flex-shrink-0">{number}</div>
-            <h3 className="text-lg font-bold mb-3 text-background flex-shrink-0">{title}</h3>
-            <p className="text-background/90 text-xs leading-tight line-clamp-5">
+          <div className="h-full w-full p-6 rounded-2xl bg-[#66CB00] shadow-lg flex flex-col justify-center items-center text-center overflow-hidden">
+            <div className="text-4xl font-bold text-white/30 mb-3 flex-shrink-0">{number}</div>
+            <h3 className="text-lg font-bold mb-3 text-white flex-shrink-0">{title}</h3>
+            <p className="text-white/90 text-xs leading-tight line-clamp-5">
               {backContent || description}
             </p>
           </div>
         </div>
       </div>
-    </div>;
+    </div>
+  );
 };
 
 const StaffingServices = () => {
@@ -171,7 +177,8 @@ const StaffingServices = () => {
     numberColor: "text-accent-glow/20"
   }];
 
-  return <div className="min-h-screen">
+  return (
+    <div className="min-h-screen">
       <Navigation />
       
       {/* Hero Section */}
@@ -212,7 +219,15 @@ const StaffingServices = () => {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
-            {benefits.map((benefit, index) => <BenefitFlipCard key={index} icon={benefit.icon} title={benefit.title} description={benefit.description} backContent={benefit.backContent} />)}
+            {benefits.map((benefit, index) => (
+              <BenefitFlipCard 
+                key={index} 
+                icon={benefit.icon} 
+                title={benefit.title} 
+                description={benefit.description} 
+                backContent={benefit.backContent} 
+              />
+            ))}
           </div>
         </div>
       </section>
@@ -238,19 +253,23 @@ const StaffingServices = () => {
           </div>
 
           <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
-            {solutions.map((solution, index) => <GlassCard key={index} className="p-8 animate-scale-in" style={{
-            animationDelay: `${index * 0.15}s`
-          }}>
+            {solutions.map((solution, index) => (
+              <GlassCard key={index} className="p-8 animate-scale-in" style={{
+                animationDelay: `${index * 0.15}s`
+              }}>
                 <div className={`w-full h-2 rounded-full bg-gradient-to-r ${solution.gradient} mb-6`} />
                 <h3 className="text-2xl font-bold mb-4">{solution.title}</h3>
                 <p className="text-muted-foreground mb-6">{solution.description}</p>
                 <div className="space-y-2">
-                  {solution.features.map((feature, idx) => <div key={idx} className="flex items-center space-x-2">
+                  {solution.features.map((feature, idx) => (
+                    <div key={idx} className="flex items-center space-x-2">
                       <div className="w-1.5 h-1.5 rounded-full bg-accent" />
                       <span className="text-sm text-foreground/80">{feature}</span>
-                    </div>)}
+                    </div>
+                  ))}
                 </div>
-              </GlassCard>)}
+              </GlassCard>
+            ))}
           </div>
         </div>
       </section>
@@ -267,7 +286,16 @@ const StaffingServices = () => {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
-            {processes.map((process, index) => <ProcessStepFlipCard key={index} number={process.number} title={process.title} description={process.description} backContent={process.backContent} numberColor={process.numberColor} />)}
+            {processes.map((process, index) => (
+              <ProcessStepFlipCard 
+                key={index} 
+                number={process.number} 
+                title={process.title} 
+                description={process.description} 
+                backContent={process.backContent} 
+                numberColor={process.numberColor} 
+              />
+            ))}
           </div>
         </div>
       </section>
@@ -316,29 +344,35 @@ const StaffingServices = () => {
       </section>
 
       {/* Image Grid Info Section */}
-      <ImageGridInfo images={[{
-      src: galleryCreativeTeam,
-      alt: "Dynamic team collaboration",
-      label: "Flexible Staffing"
-    }, {
-      src: galleryOfficeView,
-      alt: "Professional workspace"
-    }, {
-      src: galleryConsultation,
-      alt: "Staffing consultation"
-    }]} title="Staffing That Scales" subtitle="Flexible Talent Solutions" sections={[{
-      title: "Rapid Deployment",
-      icon: <Zap size={24} className="text-background" />,
-      content: "When you need talent fast, we deliver. Our extensive network and streamlined onboarding processes enable us to place qualified professionals quickly, minimizing disruption to your operations."
-    }, {
-      title: "Quality Assurance",
-      icon: <Shield size={24} className="text-background" />,
-      content: "Every candidate is thoroughly vetted for technical skills, cultural fit, and professional experience. We guarantee the quality of our placements and provide ongoing support to ensure success."
-    }, {
-      title: "Strategic Partnership",
-      icon: <Target size={24} className="text-background" />,
-      content: "We're not just a staffing vendor—we're your strategic talent partner. We take time to understand your business, culture, and goals to deliver staffing solutions that drive long-term success."
-    }]} reverse={true} />
+      <ImageGridInfo 
+        images={[{
+          src: galleryCreativeTeam,
+          alt: "Dynamic team collaboration",
+          label: "Flexible Staffing"
+        }, {
+          src: galleryOfficeView,
+          alt: "Professional workspace"
+        }, {
+          src: galleryConsultation,
+          alt: "Staffing consultation"
+        }]} 
+        title="Staffing That Scales" 
+        subtitle="Flexible Talent Solutions" 
+        sections={[{
+          title: "Rapid Deployment",
+          icon: <Zap size={24} className="text-background" />,
+          content: "When you need talent fast, we deliver. Our extensive network and streamlined onboarding processes enable us to place qualified professionals quickly, minimizing disruption to your operations."
+        }, {
+          title: "Quality Assurance",
+          icon: <Shield size={24} className="text-background" />,
+          content: "Every candidate is thoroughly vetted for technical skills, cultural fit, and professional experience. We guarantee the quality of our placements and provide ongoing support to ensure success."
+        }, {
+          title: "Strategic Partnership",
+          icon: <Target size={24} className="text-background" />,
+          content: "We're not just a staffing vendor—we're your strategic talent partner. We take time to understand your business, culture, and goals to deliver staffing solutions that drive long-term success."
+        }]} 
+        reverse={true} 
+      />
 
       {/* CTA */}
       <section className="py-24">
@@ -359,7 +393,8 @@ const StaffingServices = () => {
       </section>
 
       <Footer />
-    </div>;
+    </div>
+  );
 };
 
 export default StaffingServices;
