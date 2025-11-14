@@ -49,7 +49,7 @@ const About = () => {
             <div className="space-y-6 md:space-y-8">
               <div className="space-y-4 md:space-y-6">
                 <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-foreground">
-                  About us
+                  About Us
                 </h1>
                 <p className="text-base sm:text-lg text-muted-foreground leading-relaxed">
                   Workforce One Solutions was founded with a clear purpose that is to empower
