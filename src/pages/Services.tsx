@@ -210,7 +210,7 @@ const Services = () => {
           <div className="grid md:grid-cols-2 gap-6 md:gap-8 mb-16">
             {services.map((service, index) => (
               <Link key={index} to={service.link} className="group">
-                <GlassCard className="p-0 h-full overflow-hidden">
+                <GlassCard className="p-0 h-full overflow-hidden transition-all duration-500 hover:scale-105 hover:bg-[#66CB00] hover:border-[#66CB00]">
                   <div className="relative h-56 sm:h-64 md:h-72 overflow-hidden">
                     <img 
                       src={service.image} 
@@ -222,25 +222,25 @@ const Services = () => {
                       <service.icon size={28} className="text-white sm:w-8 sm:h-8" />
                     </div>
                   </div>
-                  <div className="p-6 sm:p-8">
-                    <h3 className="text-2xl sm:text-3xl font-bold mb-3 sm:mb-4 group-hover:text-accent transition-colors">
+                  <div className="p-6 sm:p-8 transition-colors duration-500">
+                    <h3 className="text-2xl sm:text-3xl font-bold mb-3 sm:mb-4 text-foreground transition-colors duration-500 group-hover:text-white">
                       {service.title}
                     </h3>
                     
-                    <p className="text-muted-foreground mb-4 sm:mb-6 text-base sm:text-lg">
+                    <p className="text-muted-foreground mb-4 sm:mb-6 text-base sm:text-lg transition-colors duration-500 group-hover:text-white">
                       {service.description}
                     </p>
 
                     <div className="grid grid-cols-2 gap-2 sm:gap-3 mb-4 sm:mb-6">
                       {service.features.map((feature, idx) => (
                         <div key={idx} className="flex items-center space-x-2">
-                          <Check size={14} className="text-accent flex-shrink-0 sm:w-4 sm:h-4" />
-                          <span className="text-xs sm:text-sm text-foreground">{feature}</span>
+                          <Check size={14} className="text-accent flex-shrink-0 sm:w-4 sm:h-4 transition-colors duration-500 group-hover:text-white" />
+                          <span className="text-xs sm:text-sm text-foreground transition-colors duration-500 group-hover:text-white">{feature}</span>
                         </div>
                       ))}
                     </div>
 
-                    <div className="flex items-center text-accent group-hover:translate-x-2 transition-transform">
+                    <div className="flex items-center text-accent group-hover:translate-x-2 transition-all duration-500 group-hover:text-white">
                       <span className="font-semibold text-sm sm:text-base">Learn more</span>
                       <ArrowRight className="ml-2" size={18} />
                     </div>
