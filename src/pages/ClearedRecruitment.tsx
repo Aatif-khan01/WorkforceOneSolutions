@@ -253,6 +253,9 @@ const ClearedRecruitment = () => {
         </div>
       </section>
 
+      {/* Client Logos Section - Positioned like Services page */}
+      <ClientLogos />
+
       {/* Introduction */}
       <section className="py-16 scroll-smooth">
         <div className="container mx-auto px-6">
@@ -462,7 +465,6 @@ const ClearedRecruitment = () => {
         </div>
       </section>
 
-      <ClientLogos />
       <Footer />
     </div>
   );
