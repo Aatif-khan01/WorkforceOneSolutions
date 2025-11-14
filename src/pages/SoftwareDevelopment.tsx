@@ -50,10 +50,10 @@ const ServiceFlipCard = ({
 
         {/* Back Side */}
         <div className="absolute inset-0 backface-hidden rotate-y-180">
-          <div className="h-full w-full p-5 rounded-2xl bg-gradient-to-br from-accent to-accent-glow shadow-lg flex flex-col justify-center items-center text-center overflow-hidden">
-            <Icon size={32} className="text-background mb-2 flex-shrink-0" />
-            <h3 className="text-base font-bold mb-2 text-background flex-shrink-0">{title}</h3>
-            <p className="text-background/90 text-xs leading-tight line-clamp-4">
+          <div className="h-full w-full p-5 rounded-2xl bg-[#66CB00] shadow-lg flex flex-col justify-center items-center text-center overflow-hidden">
+            <Icon size={32} className="text-white mb-2 flex-shrink-0" />
+            <h3 className="text-base font-bold mb-2 text-white flex-shrink-0">{title}</h3>
+            <p className="text-white/90 text-xs leading-tight line-clamp-4">
               {backContent || description}
             </p>
           </div>
@@ -77,16 +77,6 @@ const ProcessStepFlipCard = ({
 }) => {
   const [isFlipped, setIsFlipped] = useState(false);
 
-  // Gradient based on number
-  const getGradient = () => {
-    const num = parseInt(number);
-    if (num === 1) return 'from-accent to-accent-glow';
-    if (num === 2) return 'from-secondary to-coral';
-    if (num === 3) return 'from-coral to-accent';
-    if (num === 4) return 'from-accent-glow to-secondary';
-    return 'from-secondary to-accent';
-  };
-
   return (
     <div 
       className="relative h-[220px] perspective-1000"
@@ -109,10 +99,10 @@ const ProcessStepFlipCard = ({
 
         {/* Back Side */}
         <div className="absolute inset-0 backface-hidden rotate-y-180">
-          <div className={`h-full w-full p-5 rounded-2xl bg-gradient-to-br ${getGradient()} shadow-lg flex flex-col justify-center items-center text-center overflow-hidden`}>
-            <div className="text-4xl font-bold text-background/30 mb-2 flex-shrink-0">{number}</div>
-            <h3 className="text-base font-bold mb-2 text-background flex-shrink-0">{title}</h3>
-            <p className="text-background/90 text-xs leading-tight line-clamp-5">
+          <div className="h-full w-full p-5 rounded-2xl bg-[#66CB00] shadow-lg flex flex-col justify-center items-center text-center overflow-hidden">
+            <div className="text-4xl font-bold text-white/30 mb-2 flex-shrink-0">{number}</div>
+            <h3 className="text-base font-bold mb-2 text-white flex-shrink-0">{title}</h3>
+            <p className="text-white/90 text-xs leading-tight line-clamp-5">
               {backContent || description}
             </p>
           </div>
