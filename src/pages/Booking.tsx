@@ -122,7 +122,7 @@ const Booking = () => {
                 </div>
 
                 {selectedDate && selectedTime && (
-                  <Button className="w-full mt-4">
+                  <Button className="w-full mt-4 bg-[#66CB00] hover:bg-[#66CB00]/90 text-white transition-all duration-300">
                     Confirm Booking
                   </Button>
                 )}
