@@ -4,7 +4,6 @@ import { useState, useEffect, useRef } from "react";
 import { Button } from "./ui/button";
 import { motion, AnimatePresence } from "framer-motion";
 import logo from "@/assets/WfOS-LOGO.png";
-import { ThemeToggle } from "@/components/ThemeToggle";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -183,11 +182,10 @@ const Navigation = () => {
                 )}
               </div>
             ))}
-            <ThemeToggle />
             <Link to="/contact">
               <Button
                 size="lg"
-                className="bg-[#66CB00] hover:bg-[#66CB00]/90 hover:shadow-xl text-white transition-all duration-300 hover:scale-105 px-6"
+                className="bg-[#18cb96] hover:bg-[#18cb96]/90 text-white transition-all duration-300 hover:scale-105 px-6"
               >
                 LET'S TALK
               </Button>
@@ -195,19 +193,16 @@ const Navigation = () => {
           </div>
 
           {/* Mobile Menu Button */}
-          <div className="md:hidden flex items-center gap-2 ml-auto">
-            <ThemeToggle />
-            <button
-              onClick={() => setIsOpen(!isOpen)}
-              className={`p-2 transition-colors ${
-                isHomePage && !isScrolled 
-                  ? "text-white hover:text-white/80" 
-                  : "text-foreground hover:text-accent"
-              }`}
-            >
-              {isOpen ? <X size={24} /> : <Menu size={24} />}
-            </button>
-          </div>
+          <button
+            onClick={() => setIsOpen(!isOpen)}
+            className={`md:hidden p-2 transition-colors ${
+              isHomePage && !isScrolled 
+                ? "text-white hover:text-white/80" 
+                : "text-foreground hover:text-accent"
+            } ${isHomePage ? 'ml-auto' : ''}`}
+          >
+            {isOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
         </div>
 
         {/* Mobile Navigation */}
@@ -242,10 +237,10 @@ const Navigation = () => {
                           to={service.path}
                           onClick={() => setIsOpen(false)}
                           className={`block py-2 px-4 text-sm rounded-lg transition-colors duration-200 ${
-                              location.pathname === service.path
-                                ? "text-accent bg-accent/10"
-                                : "text-foreground hover:text-accent hover:bg-accent/5"
-                            }`}
+                            location.pathname === service.path
+                              ? "text-accent bg-accent/10"
+                              : "text-foreground/80 hover:text-accent hover:bg-accent/5"
+                          }`}
                         >
                           {service.label}
                         </Link>
@@ -257,7 +252,7 @@ const Navigation = () => {
               <Link to="/contact" onClick={() => setIsOpen(false)}>
                 <Button
                   size="lg"
-                  className="w-full bg-[#66CB00] hover:bg-[#66CB00]/90 hover:shadow-xl text-white py-3 mt-4 transition-all duration-300 hover:scale-105"
+                  className="w-full bg-[#18cb96] hover:bg-[#18cb96]/90 text-white py-3 mt-4"
                 >
                   LET'S TALK
                 </Button>
