@@ -18,6 +18,7 @@ import StaffingServices from "./pages/StaffingServices";
 import SoftwareDevelopment from "./pages/SoftwareDevelopment";
 import Contact from "./pages/Contact";
 import Booking from "./pages/Booking";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -39,6 +40,7 @@ const AppRoutes = () => {
           <Route path="/services/software" element={<SoftwareDevelopment />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/booking" element={<Booking />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </PageTransition>
