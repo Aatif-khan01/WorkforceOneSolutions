@@ -247,7 +247,9 @@ const Home = () => {
     }]} title="Workforce One Solution" subtitle="Delivering Excellence in Every Engagement" sections={[{
       title: "About Us",
       icon: <Target size={24} className="text-background" />,
-      content: "Workforce One Solutions is a **strategic partner** dedicated to helping federal contractors and commercial enterprises **thrive in complexity**. We bridge the gap between ambitious goals and measurable execution by aligning your strategy, talent, and technology. Our integrated approach ensures you have the precise resources and winning strategies required for mission-critical success. We deliver proven expertise, agility, and innovative solutions that drive tangible, positive results."
+      content: "Workforce One Solutions is purpose built to empower organizations, from federal contractors to commercial enterprises, to thrive amidst rapid technological and business change. We serve as a strategic partner, delivering proven expertise, agility, and innovative solutions that drive measurable results for our clients.
+
+Our core capabilities encompass Proposal Development, Cleared Recruitment, Flexible Staffing Solutions, and Custom Software Development. We leverage these services to help you build high performing teams, optimize operational efficiency, and successfully achieve mission critical objectives with precision and commitment."
     }, {
       title: "Our Vision",
       icon: <Zap size={24} className="text-background" />,
