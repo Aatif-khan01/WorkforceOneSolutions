@@ -10,7 +10,7 @@ const Footer = () => {
               <img src={logo} alt="Company logo" className="h-14 w-auto" />
             </Link>
             <p className="text-muted-foreground">
-              Bridging the gap between opportunity and execution.
+              Empowering Businesses through Talent and Innovation.
             </p>
           </div>
 
