@@ -2,12 +2,12 @@ import { Link } from "react-router-dom";
 import { ArrowRight, CheckCircle, Users, FileText, Code, Briefcase, Target, Zap, Shield } from "lucide-react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import ScheduleMeetingSection from "@/components/ScheduleMeetingSection";
 import AnimatedCard from "@/components/AnimatedCard";
 import AnimatedBox from "@/components/AnimatedBox";
 import StaggeredAnimation from "@/components/StaggeredAnimation";
 import StatCounter from "@/components/StatCounter";
 import ImageGridInfo from "@/components/ImageGridInfo";
-
 import { Button } from "@/components/ui/button";
 import heroImage from "@/assets/hero-home.jpg";
 import heroMobileImage from "@/assets/hero-mbhome.jpg";
@@ -80,17 +80,17 @@ const Home = () => {
         </div>
 
         {/* Buttons placed horizontally at the bottom */}
-        <div className="absolute bottom-16 sm:bottom-20 md:bottom-24 left-1/2 transform -translate-x-1/2 z-20 w-full px-4 sm:px-6 max-w-2xl">
+        <div className="absolute bottom-20 sm:bottom-24 left-1/2 transform -translate-x-1/2 z-20 w-full px-4 sm:px-6">
           <AnimatedBox animation="fadeInUp" delay={50}>
-            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
-              <Link to="/contact" className="flex-1 min-w-0">
-                <Button size="lg" className="w-full group bg-[#18cb96] hover:bg-[#18cb96]/90 hover:shadow-lg text-white text-sm sm:text-base md:text-lg px-4 sm:px-6 md:px-8 py-4 sm:py-5 md:py-6">
+            <div className="flex flex-row gap-4 justify-center max-w-lg mx-auto">
+              <Link to="/contact" className="flex-1">
+                <Button size="lg" className="w-full group bg-[#18cb96] hover:bg-[#18cb96]/90 hover:shadow-lg text-white text-base sm:text-lg px-6 sm:px-8 py-5 sm:py-6">
                   Get Started
-                  <ArrowRight className="ml-2 w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform" />
+                  <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
                 </Button>
               </Link>
-              <Link to="/services" className="flex-1 min-w-0">
-                <Button size="lg" className="w-full bg-black text-white text-sm sm:text-base md:text-lg px-4 sm:px-6 md:px-8 py-4 sm:py-5 md:py-6 hover:bg-gray-900 transition-colors">
+              <Link to="/services" className="flex-1">
+                <Button size="lg" className="w-full bg-black text-white text-base sm:text-lg px-6 sm:px-8 py-5 sm:py-6 hover:bg-gray-900 transition-colors">
                   Explore Services
                 </Button>
               </Link>
@@ -106,11 +106,7 @@ const Home = () => {
       </section>
 
       {/* Stats Section */}
-      <section className="py-20 relative">
-        <div className="container mx-auto px-6">
-          
-        </div>
-      </section>
+      
 
       {/* Services Section */}
       <section className="py-24 relative">
@@ -131,9 +127,7 @@ const Home = () => {
                 <AnimatedCard className="p-0 h-full overflow-hidden" animation="fadeInUp" delay={index * 50}>
                   <div className="relative h-64 overflow-hidden">
                     <img src={service.image} alt={service.title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
-                    <div className={`absolute top-6 left-6 w-14 h-14 rounded-xl bg-gradient-to-br ${service.gradient} flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
-                      <service.icon size={28} className="text-white" />
-                    </div>
+                    
                   </div>
                   <div className="p-8">
                     <h3 className="text-2xl font-bold mb-4 text-foreground group-hover:text-accent transition-colors">
@@ -302,6 +296,7 @@ const Home = () => {
         </div>
       </section>
 
+      <ScheduleMeetingSection />
       <Footer />
     </div>;
 };
