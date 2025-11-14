@@ -22,7 +22,7 @@ const Home = () => {
     {
       icon: FileText,
       title: "Strategic Proposal Development",
-      description: "From government bids to corporate contracts, we help you craft proposals that win.",
+      description: "Accelerating your success in federal contracting through Strategic Proposal Development.",
       link: "/services/proposal",
       gradient: "from-accent to-accent-glow",
       image: serviceProposal
@@ -30,7 +30,7 @@ const Home = () => {
     {
       icon: Users,
       title: "Cleared Recruitment",
-      description: "We specialize in sourcing and vetting security-cleared professionals for sensitive projects.",
+      description: "Accelerated access to highly qualified and cleared professionals for your mission-critical projects.",
       link: "/services/recruitment",
       gradient: "from-secondary to-coral",
       image: serviceRecruitment
@@ -38,7 +38,7 @@ const Home = () => {
     {
       icon: Briefcase,
       title: "Workforce Staffing",
-      description: "Flexible staffing built for today's evolving business needs.",
+      description: "Connecting your business with thoroughly vetted talent that fits your culture and mission.",
       link: "/services/staffing",
       gradient: "from-coral to-secondary",
       image: serviceStaffing
@@ -46,7 +46,7 @@ const Home = () => {
     {
       icon: Code,
       title: "Software Development",
-      description: "We build scalable, secure, and high-performance software solutions tailored to your organization.",
+      description: "Custom software development that accelerates your market growth and competitive advantage.",
       link: "/services/software",
       gradient: "from-accent-glow to-accent",
       image: serviceSoftware
