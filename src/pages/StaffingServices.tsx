@@ -99,6 +99,7 @@ const ProcessStepFlipCard = ({
       </div>
     </div>;
 };
+
 const StaffingServices = () => {
   const benefits = [{
     icon: Zap,
@@ -121,6 +122,7 @@ const StaffingServices = () => {
     description: "Onboarding, compliance, workforce analytics and performance tracking",
     backContent: "Complete lifecycle management from onboarding through offboarding, including compliance monitoring, performance analytics, timesheet management, and continuous optimization of your workforce."
   }];
+
   const solutions = [{
     title: "Cleared Recruitment & Deployment",
     description: "For government, defence, or high-sensitivity commercial projects with required security clearances.",
@@ -142,6 +144,7 @@ const StaffingServices = () => {
     features: ["Fully managed teams", "Performance KPIs", "Delivery oversight", "Global roll-outs"],
     gradient: "from-accent-glow to-accent"
   }];
+
   const processes = [{
     number: "01",
     title: "Discovery & Planning",
@@ -167,6 +170,7 @@ const StaffingServices = () => {
     backContent: "Ongoing management with real-time performance tracking, automated timesheet processing, compliance monitoring, and detailed workforce analytics to optimize productivity and drive continuous improvement.",
     numberColor: "text-accent-glow/20"
   }];
+
   return <div className="min-h-screen">
       <Navigation />
       
@@ -345,7 +349,7 @@ const StaffingServices = () => {
               Let's discuss your staffing needs and find the perfect talent solution.
             </p>
             <Link to="/contact">
-              <Button size="lg" className="bg-gradient-to-r from-coral to-secondary hover:shadow-glow text-lg px-12 py-6 group">
+              <Button size="lg" className="bg-[#66CB00] hover:bg-[#66CB00]/90 hover:shadow-lg text-white text-lg px-12 py-6 group transition-all duration-300">
                 Get Started
                 <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
               </Button>
@@ -357,4 +361,5 @@ const StaffingServices = () => {
       <Footer />
     </div>;
 };
+
 export default StaffingServices;
