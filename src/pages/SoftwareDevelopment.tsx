@@ -3,7 +3,6 @@ import { useState } from "react";
 import { Code, Smartphone, Globe, Cloud, Palette, TestTube, RefreshCw, Wrench, ArrowRight, Layers, Award, Rocket } from "lucide-react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import ClientLogos from "@/components/ClientLogos";
 import ImageGridInfo from "@/components/ImageGridInfo";
 import GlassCard from "@/components/GlassCard";
 import { Button } from "@/components/ui/button";
@@ -440,7 +439,6 @@ const SoftwareDevelopment = () => {
         </div>
       </section>
 
-      <ClientLogos />
       <Footer />
     </div>
   );
