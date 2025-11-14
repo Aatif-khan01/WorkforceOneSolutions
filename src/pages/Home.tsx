@@ -325,4 +325,19 @@ const Home = () => {
             <Link to="/contact">
               <Button 
                 size="lg" 
-                className="bg-[#66CB00] hover:bg-[#66CB00]/90 hover:shadow-lg text-white text-lg px-12 py-6 group
+                className="bg-[#66CB00] hover:bg-[#66CB00]/90 hover:shadow-lg text-white text-lg px-12 py-6 group transition-all duration-300"
+              >
+                Start Your Journey
+                <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
+              </Button>
+            </Link>
+          </AnimatedCard>
+        </div>
+      </section>
+
+      <Footer />
+    </div>
+  );
+};
+
+export default Home;
