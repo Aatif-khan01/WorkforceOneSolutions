@@ -120,20 +120,27 @@ const Services = () => {
               </div>
             </div>
 
-            {/* Center - Hexagonal Icons */}
+            {/* Center - Hexagonal Icons in Cross/Plus Pattern */}
             <div className="flex justify-center items-center">
-              <div className="relative w-64 h-[550px]">
-                <div className="absolute top-0 left-8 w-32 h-32 bg-[#66CB00] clip-hexagon flex items-center justify-center transform hover:scale-110 transition-transform duration-300 shadow-xl">
-                  <FileText size={40} className="text-white" />
+              <div className="relative w-80 h-80">
+                {/* Top Hexagon - File/Document */}
+                <div className="absolute top-0 left-1/2 -translate-x-1/2 w-28 h-28 bg-[#66CB00] clip-hexagon flex items-center justify-center transform hover:scale-110 transition-transform duration-300 shadow-xl">
+                  <FileText size={36} className="text-white" />
                 </div>
-                <div className="absolute top-24 right-0 w-32 h-32 bg-[#66CB00] clip-hexagon flex items-center justify-center transform hover:scale-110 transition-transform duration-300 shadow-xl">
-                  <Briefcase size={40} className="text-white" />
+                
+                {/* Right Hexagon - Briefcase */}
+                <div className="absolute top-1/2 right-0 -translate-y-1/2 w-28 h-28 bg-[#66CB00] clip-hexagon flex items-center justify-center transform hover:scale-110 transition-transform duration-300 shadow-xl">
+                  <Briefcase size={36} className="text-white" />
                 </div>
-                <div className="absolute top-48 left-8 w-32 h-32 bg-[#66CB00] clip-hexagon flex items-center justify-center transform hover:scale-110 transition-transform duration-300 shadow-xl">
-                  <Users size={40} className="text-white" />
+                
+                {/* Bottom Hexagon - Users */}
+                <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-28 h-28 bg-[#66CB00] clip-hexagon flex items-center justify-center transform hover:scale-110 transition-transform duration-300 shadow-xl">
+                  <Users size={36} className="text-white" />
                 </div>
-                <div className="absolute bottom-0 right-0 w-32 h-32 bg-[#66CB00] clip-hexagon flex items-center justify-center transform hover:scale-110 transition-transform duration-300 shadow-xl">
-                  <Code size={40} className="text-white" />
+                
+                {/* Left Hexagon - Code */}
+                <div className="absolute top-1/2 left-0 -translate-y-1/2 w-28 h-28 bg-[#66CB00] clip-hexagon flex items-center justify-center transform hover:scale-110 transition-transform duration-300 shadow-xl">
+                  <Code size={36} className="text-white" />
                 </div>
               </div>
             </div>
