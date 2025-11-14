@@ -222,43 +222,58 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Image Grid Info Section */}
-      <ImageGridInfo 
-        images={[
-          {
-            src: galleryTechWork,
-            alt: "Professional working on technology",
-            label: "What We Deliver"
-          },
-          {
-            src: galleryBuilding,
-            alt: "Modern office building"
-          },
-          {
-            src: galleryTeam,
-            alt: "Team collaboration"
-          }
-        ]} 
-        title="Workforce One Solution" 
-        subtitle="Delivering Excellence in Every Engagement" 
-        sections={[
-          {
-            title: "About Us",
-            icon: <Target size={24} className="text-background" />,
-            content: "Workforce One Solutions is purpose built to empower organizations, from federal contractors to commercial enterprises, to thrive amidst rapid technological and business change. We serve as a strategic partner, delivering proven expertise, agility, and innovative solutions that drive measurable results for our clients.\n\nOur core capabilities encompass Proposal Development, Cleared Recruitment, Flexible Staffing Solutions, and Custom Software Development.\n\nWe leverage these services to help you build high performing teams, optimize operational efficiency, and successfully achieve mission critical objectives with precision and commitment."
-          },
-          {
-            title: "Our Vision",
-            icon: <Zap size={24} className="text-background" />,
-            content: "To be the premier workforce and strategic solutions provider, recognized globally for our commitment to excellence, innovation, and measurable results that consistently drive business success for our clients."
-          },
-          {
-            title: "Our Mission",
-            icon: <Shield size={24} className="text-background" />,
-            content: "To bridge the gap between opportunity and execution by providing specialized talent, strategic insights (Proposal Development), and cutting-edge technology solutions that empower our clients to achieve their most critical objectives with confidence."
-          }
-        ]} 
-      />
+      {/* Image Grid Info Section - WITH CENTERED TITLE */}
+      <section className="py-24 relative">
+        <div className="container mx-auto px-6">
+          {/* Centered Title and Subtitle */}
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">
+              <span className="bg-gradient-to-r from-accent to-secondary bg-clip-text text-transparent">
+                Workforce One Solution
+              </span>
+            </h2>
+            <p className="text-xl text-muted-foreground">
+              Delivering Excellence in Every Engagement
+            </p>
+          </div>
+
+          <ImageGridInfo 
+            images={[
+              {
+                src: galleryTechWork,
+                alt: "Professional working on technology",
+                label: "What We Deliver"
+              },
+              {
+                src: galleryBuilding,
+                alt: "Modern office building"
+              },
+              {
+                src: galleryTeam,
+                alt: "Team collaboration"
+              }
+            ]} 
+            hideTitle={true}
+            sections={[
+              {
+                title: "About Us",
+                icon: <Target size={24} className="text-background" />,
+                content: "Workforce One Solutions is purpose built to empower organizations, from federal contractors to commercial enterprises, to thrive amidst rapid technological and business change. We serve as a strategic partner, delivering proven expertise, agility, and innovative solutions that drive measurable results for our clients.\n\nOur core capabilities encompass Proposal Development, Cleared Recruitment, Flexible Staffing Solutions, and Custom Software Development.\n\nWe leverage these services to help you build high performing teams, optimize operational efficiency, and successfully achieve mission critical objectives with precision and commitment."
+              },
+              {
+                title: "Our Vision",
+                icon: <Zap size={24} className="text-background" />,
+                content: "To be the premier workforce and strategic solutions provider, recognized globally for our commitment to excellence, innovation, and measurable results that consistently drive business success for our clients."
+              },
+              {
+                title: "Our Mission",
+                icon: <Shield size={24} className="text-background" />,
+                content: "To bridge the gap between opportunity and execution by providing specialized talent, strategic insights (Proposal Development), and cutting-edge technology solutions that empower our clients to achieve their most critical objectives with confidence."
+              }
+            ]} 
+          />
+        </div>
+      </section>
 
       {/* CTA Section */}
       <section className="py-24 relative">
