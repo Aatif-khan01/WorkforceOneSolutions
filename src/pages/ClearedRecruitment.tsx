@@ -253,9 +253,6 @@ const ClearedRecruitment = () => {
         </div>
       </section>
 
-      {/* Client Logos Section - Positioned like Services page */}
-      <ClientLogos />
-
       {/* Introduction */}
       <section className="py-16 scroll-smooth">
         <div className="container mx-auto px-6">
@@ -266,6 +263,9 @@ const ClearedRecruitment = () => {
           </GlassCard>
         </div>
       </section>
+
+      {/* Client Logos Section - Positioned after Introduction */}
+      <ClientLogos />
 
       {/* Security Clearance Image Section */}
       <section className="py-16 relative overflow-hidden">
