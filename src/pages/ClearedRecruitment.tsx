@@ -456,7 +456,7 @@ const ClearedRecruitment = () => {
               Let's connect you with top-tier security-cleared professionals.
             </p>
             <Link to="/contact">
-              <Button size="lg" className="bg-gradient-to-r from-coral to-secondary hover:shadow-glow text-lg px-12 py-6 group">
+              <Button size="lg" className="bg-[#66CB00] hover:bg-[#66CB00]/90 hover:shadow-lg text-white text-lg px-12 py-6 group transition-all duration-300">
                 Start Recruiting
                 <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
               </Button>
