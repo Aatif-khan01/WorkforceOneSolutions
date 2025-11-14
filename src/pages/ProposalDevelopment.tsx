@@ -13,6 +13,7 @@ import businessMeetingImage from "@/assets/business-meeting.jpg";
 import galleryPresentation from "@/assets/gallery-presentation.jpg";
 import galleryTeam from "@/assets/gallery-team-1.jpg";
 import galleryBuilding from "@/assets/gallery-building-1.jpg";
+
 const ProposalDevelopment = () => {
   const services = [{
     icon: Target,
@@ -45,6 +46,7 @@ const ProposalDevelopment = () => {
     backContent: "We orchestrate every aspect of proposal development with meticulous timeline management, strategic resource allocation, and seamless submission coordination.",
     gradient: "from-secondary to-accent"
   }];
+
   const phases = [{
     number: "01",
     title: "Discovery & Planning",
@@ -70,6 +72,7 @@ const ProposalDevelopment = () => {
     backContent: "Final quality assurance, professional formatting, meticulous packaging, and timely submission ensure your proposal is delivered flawlessly and makes the strongest possible impression.",
     gradient: "from-accent-glow to-accent"
   }];
+
   return <div className="min-h-screen">
       <Navigation />
       
@@ -209,7 +212,7 @@ const ProposalDevelopment = () => {
               Let's craft a proposal that stands out and delivers results.
             </p>
             <Link to="/contact">
-              <Button size="lg" className="bg-gradient-to-r from-coral to-secondary hover:shadow-glow text-lg px-12 py-6 group">
+              <Button size="lg" className="bg-[#66CB00] hover:bg-[#66CB00]/90 hover:shadow-lg text-white text-lg px-12 py-6 group transition-all duration-300">
                 Start Your Proposal
                 <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
               </Button>
@@ -262,4 +265,5 @@ const PhaseFlipCard = ({
       </div>
     </div>;
 };
+
 export default ProposalDevelopment;
