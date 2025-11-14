@@ -115,7 +115,7 @@ const Navigation = () => {
               <img
                 src={logo}
                 alt="Company logo"
-                className="h-12 w-auto" 
+                className="h-20 w-auto" 
               />
             </Link>
           )}
