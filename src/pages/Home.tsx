@@ -118,11 +118,11 @@ const Home = () => {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {stats.map((stat, index) => (
               <AnimatedBox key={index} animation="fadeInUp" delay={index * 100} className="text-center">
-                <StatCounter 
-                  start={0} 
-                  end={stat.value} 
-                  suffix={stat.suffix} 
-                  className="text-5xl md:text-6xl font-extrabold text-[#66CB00] mb-2" 
+                <StatCounter 
+                  start={0} 
+                  end={stat.value} 
+                  suffix={stat.suffix} 
+                  className="text-5xl md:text-6xl font-extrabold text-[#66CB00] mb-2" 
                 />
                 <p className="text-lg text-foreground font-medium">{stat.label}</p>
               </AnimatedBox>
@@ -160,7 +160,7 @@ const Home = () => {
                     <div className="flex items-center text-accent group-hover:translate-x-2 transition-all duration-500 group-hover:text-white">
                       <span className="font-semibold">Learn more</span>
                       <ArrowRight className="ml-2" size={20} />
-                    </div>
+                  </div>
                   </div>
                 </AnimatedCard>
               </Link>)}
@@ -247,9 +247,11 @@ const Home = () => {
     }]} title="Workforce One Solution" subtitle="Delivering Excellence in Every Engagement" sections={[{
       title: "About Us",
       icon: <Target size={24} className="text-background" />,
-      content: "Workforce One Solutions is purpose built to empower organizations, from federal contractors to commercial enterprises, to thrive amidst rapid technological and business change. We serve as a strategic partner, delivering proven expertise, agility, and innovative solutions that drive measurable results for our clients.
-
-Our core capabilities encompass Proposal Development, Cleared Recruitment, Flexible Staffing Solutions, and Custom Software Development. We leverage these services to help you build high performing teams, optimize operational efficiency, and successfully achieve mission critical objectives with precision and commitment."
+      **// FIX: Content split into two separate strings (paragraphs) in an array**
+      content: [
+        "Workforce One Solutions is purpose built to empower organizations, from federal contractors to commercial enterprises, to thrive amidst rapid technological and business change. We serve as a strategic partner, delivering proven expertise, agility, and innovative solutions that drive measurable results for our clients.",
+        "Our core capabilities encompass Proposal Development, Cleared Recruitment, Flexible Staffing Solutions, and Custom Software Development. We leverage these services to help you build high performing teams, optimize operational efficiency, and successfully achieve mission critical objectives with precision and commitment."
+      ]
     }, {
       title: "Our Vision",
       icon: <Zap size={24} className="text-background" />,
