@@ -10,6 +10,7 @@ import teamCollaborationImage from "@/assets/team-collaboration.jpg";
 import galleryPartnership from "@/assets/gallery-partnership.jpg";
 import galleryOfficeView from "@/assets/gallery-office-view.jpg";
 import galleryCreativeTeam from "@/assets/gallery-creative-team.jpg";
+
 const About = () => {
   const principles = [{
     title: "Your Success Is Our Priority",
@@ -28,6 +29,7 @@ const About = () => {
     description: "We apply disciplined processes and continuous improvement to ensure our work meets and exceeds expectations.",
     icon: Award
   }];
+
   return <div className="min-h-screen">
       <Navigation />
 
@@ -208,7 +210,7 @@ const About = () => {
             </p>
 
             <Link to="/contact">
-              <Button size="lg" className="bg-gradient-to-r from-coral to-secondary hover:shadow-glow text-base md:text-lg px-8 sm:px-12 py-5 md:py-6 group w-full sm:w-auto">
+              <Button size="lg" className="bg-[#66CB00] hover:bg-[#66CB00]/90 hover:shadow-lg text-white text-base md:text-lg px-8 sm:px-12 py-5 md:py-6 group w-full sm:w-auto transition-all duration-300">
                 Get in Touch
                 <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
               </Button>
@@ -220,4 +222,5 @@ const About = () => {
       <Footer />
     </div>;
 };
+
 export default About;
