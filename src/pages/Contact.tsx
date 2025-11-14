@@ -211,8 +211,6 @@ const Contact = () => {
                   <a href="#" className="w-12 h-12 rounded-lg bg-glass/40 border border-glass-border hover:border-accent flex items-center justify-center transition-all hover:scale-110 animate-float">
                     <span className="text-accent font-bold">in</span>
                   </a>
-                  
-                  
                 </div>
               </AnimatedCard>
 
