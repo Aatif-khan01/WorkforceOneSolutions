@@ -274,7 +274,7 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Image Grid Info Section - WITH PARAGRAPH BREAKS */}
+      {/* Image Grid Info Section */}
       <ImageGridInfo 
         images={[
           {
@@ -297,11 +297,7 @@ const Home = () => {
           {
             title: "About Us",
             icon: <Target size={24} className="text-background" />,
-            content: [
-              "Workforce One Solutions is purpose built to empower organizations, from federal contractors to commercial enterprises, to thrive amidst rapid technological and business change. We serve as a strategic partner, delivering proven expertise, agility, and innovative solutions that drive measurable results for our clients.",
-              "Our core capabilities encompass Proposal Development, Cleared Recruitment, Flexible Staffing Solutions, and Custom Software Development.",
-              "We leverage these services to help you build high performing teams, optimize operational efficiency, and successfully achieve mission critical objectives with precision and commitment."
-            ]
+            content: "Workforce One Solutions is purpose built to empower organizations, from federal contractors to commercial enterprises, to thrive amidst rapid technological and business change. We serve as a strategic partner, delivering proven expertise, agility, and innovative solutions that drive measurable results for our clients.\n\nOur core capabilities encompass Proposal Development, Cleared Recruitment, Flexible Staffing Solutions, and Custom Software Development.\n\nWe leverage these services to help you build high performing teams, optimize operational efficiency, and successfully achieve mission critical objectives with precision and commitment."
           },
           {
             title: "Our Vision",
@@ -329,19 +325,4 @@ const Home = () => {
             <Link to="/contact">
               <Button 
                 size="lg" 
-                className="bg-[#66CB00] hover:bg-[#66CB00]/90 hover:shadow-lg text-white text-lg px-12 py-6 group transition-all duration-300"
-              >
-                Start Your Journey
-                <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
-              </Button>
-            </Link>
-          </AnimatedCard>
-        </div>
-      </section>
-
-      <Footer />
-    </div>
-  );
-};
-
-export default Home;
+                className="bg-[#66CB00] hover:bg-[#66CB00]/90 hover:shadow-lg text-white text-lg px-12 py-6 group
