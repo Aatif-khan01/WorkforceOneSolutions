@@ -19,8 +19,8 @@ const Services = () => {
   const services = [
     {
       icon: FileText,
-      title: "Proposal Development",
-      description: "From concept to submission, our Proposal Development service turns your opportunities into winning bids.",
+      title: "Strategic Proposal Development",
+      description: "Accelerating your success in federal contracting through Strategic Proposal Development.",
       link: "/services/proposal",
       gradient: "from-accent to-accent-glow",
       features: ["Market Research", "Capture Strategy", "Compliance Review", "Graphic Design"],
@@ -29,7 +29,7 @@ const Services = () => {
     {
       icon: Users,
       title: "Cleared Recruitment",
-      description: "When project success hinges on security-cleared talent, our Cleared Recruitment service delivers.",
+      description: "Accelerated access to highly qualified and cleared professionals for your mission-critical projects.",
       link: "/services/recruitment",
       gradient: "from-secondary to-coral",
       features: ["Security Clearances", "Vetting Process", "Mission Ready", "Cultural Fit"],
@@ -38,7 +38,7 @@ const Services = () => {
     {
       icon: Briefcase,
       title: "Workforce Staffing",
-      description: "Flexible, scalable talent solutions to meet your evolving business demands.",
+      description: "Connecting your business with thoroughly vetted talent that fits your culture and mission.",
       link: "/services/staffing",
       gradient: "from-coral to-secondary",
       features: ["Contract Support", "Direct Hire", "Team Buildouts", "Rapid Deployment"],
@@ -47,7 +47,7 @@ const Services = () => {
     {
       icon: Code,
       title: "Software Development",
-      description: "Custom applications, enterprise systems and integrations tailored to your environment.",
+      description: "Custom software development that accelerates your market growth and competitive advantage.",
       link: "/services/software",
       gradient: "from-accent-glow to-accent",
       features: ["Custom Development", "Enterprise Systems", "Cloud Solutions", "Ongoing Support"],
