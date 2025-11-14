@@ -13,56 +13,6 @@ import gallerySecurity from "@/assets/gallery-security.jpg";
 import galleryInterview from "@/assets/gallery-interview.jpg";
 import galleryPartnership from "@/assets/gallery-partnership.jpg";
 
-// Simple Icon Flip Card Component - NO SCROLL
-const IconFlipCard = ({ 
-  icon: Icon, 
-  title, 
-  description,
-  backContent,
-  gradient = "from-accent to-secondary"
-}: { 
-  icon: any;
-  title: string;
-  description?: string;
-  backContent?: string;
-  gradient?: string;
-}) => {
-  const [isFlipped, setIsFlipped] = useState(false);
-
-  return (
-    <div 
-      className="relative h-[200px] perspective-1000"
-      onMouseEnter={() => setIsFlipped(true)}
-      onMouseLeave={() => setIsFlipped(false)}
-    >
-      <div 
-        className={`relative w-full h-full transition-transform duration-700 transform-style-3d ${
-          isFlipped ? 'rotate-y-180' : ''
-        }`}
-      >
-        {/* Front Side */}
-        <div className="absolute inset-0 backface-hidden">
-          <div className="h-full w-full p-6 rounded-2xl border border-glass-border bg-glass/50 backdrop-blur-sm shadow-lg text-center flex flex-col items-center justify-center">
-            <Icon className="w-12 h-12 mb-4 text-accent flex-shrink-0" />
-            <h3 className="text-lg font-bold">{title}</h3>
-          </div>
-        </div>
-
-        {/* Back Side */}
-        <div className="absolute inset-0 backface-hidden rotate-y-180">
-          <div className={`h-full w-full p-5 rounded-2xl bg-gradient-to-br ${gradient} shadow-lg flex flex-col justify-center items-center text-center overflow-hidden`}>
-            <Icon className="w-10 h-10 mb-2 text-background flex-shrink-0" />
-            <h3 className="text-sm font-bold mb-2 text-background flex-shrink-0">{title}</h3>
-            <p className="text-background/90 text-xs leading-tight line-clamp-4">
-              {backContent || description || "Learn more about our services"}
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-};
-
 // Process Step Flip Card - NO SCROLL
 const ProcessFlipCard = ({ 
   icon: Icon, 
@@ -78,14 +28,6 @@ const ProcessFlipCard = ({
   iconColor?: string;
 }) => {
   const [isFlipped, setIsFlipped] = useState(false);
-
-  // Map icon color to gradient
-  const getGradient = () => {
-    if (iconColor.includes('accent')) return 'from-accent to-accent-glow';
-    if (iconColor.includes('secondary')) return 'from-secondary to-coral';
-    if (iconColor.includes('coral')) return 'from-coral to-accent';
-    return 'from-accent-glow to-secondary';
-  };
 
   return (
     <div 
@@ -109,10 +51,10 @@ const ProcessFlipCard = ({
 
         {/* Back Side */}
         <div className="absolute inset-0 backface-hidden rotate-y-180">
-          <div className={`h-full w-full p-6 rounded-2xl bg-gradient-to-br ${getGradient()} shadow-lg flex flex-col justify-center items-center text-center overflow-hidden`}>
-            <Icon className="w-12 h-12 mb-3 text-background flex-shrink-0" />
-            <h3 className="text-base font-bold mb-3 text-background flex-shrink-0">{title}</h3>
-            <p className="text-background/90 text-xs leading-tight line-clamp-6">
+          <div className="h-full w-full p-6 rounded-2xl bg-[#66CB00] shadow-lg flex flex-col justify-center items-center text-center overflow-hidden">
+            <Icon className="w-12 h-12 mb-3 text-white flex-shrink-0" />
+            <h3 className="text-base font-bold mb-3 text-white flex-shrink-0">{title}</h3>
+            <p className="text-white/90 text-xs leading-tight line-clamp-6">
               {backContent || description}
             </p>
           </div>
@@ -155,8 +97,8 @@ const RoleFlipCard = ({
 
         {/* Back Side */}
         <div className="absolute inset-0 backface-hidden rotate-y-180">
-          <div className="h-full w-full p-5 rounded-2xl bg-gradient-to-br from-secondary to-coral shadow-lg flex items-center justify-center text-center overflow-hidden">
-            <p className="text-background font-medium text-sm line-clamp-3 px-2">
+          <div className="h-full w-full p-5 rounded-2xl bg-[#66CB00] shadow-lg flex items-center justify-center text-center overflow-hidden">
+            <p className="text-white font-medium text-sm line-clamp-3 px-2">
               {backContent || `Specialized ${role.toLowerCase()} recruitment`}
             </p>
           </div>
@@ -167,33 +109,6 @@ const RoleFlipCard = ({
 };
 
 const ClearedRecruitment = () => {
-  const clearanceLevels = [
-    { 
-      name: "Secret", 
-      backContent: "Basic level clearance for access to classified information that could cause damage to national security if disclosed."
-    },
-    { 
-      name: "Top Secret", 
-      backContent: "Higher level clearance for exceptionally grave damage protection. Requires extensive background investigation."
-    },
-    { 
-      name: "Top Secret/SCI", 
-      backContent: "Sensitive Compartmented Information access. Specialized intelligence sources and methods protection."
-    },
-    { 
-      name: "Full-Scope Polygraph", 
-      backContent: "Comprehensive polygraph examination covering all aspects of security and background for the highest sensitivity positions."
-    },
-    { 
-      name: "Counterintelligence Polygraph", 
-      backContent: "Focused polygraph for positions involving counterintelligence operations and national security matters."
-    },
-    { 
-      name: "Public Trust", 
-      backContent: "Position of public trust requiring reliability, trustworthiness, and good conduct for sensitive but unclassified work."
-    },
-  ];
-
   const roles = [
     { name: "Cybersecurity Experts", backContent: "Elite security professionals protecting critical infrastructure and classified systems" },
     { name: "Intelligence Analysts", backContent: "Expert analysts processing and evaluating classified intelligence data" },
@@ -284,32 +199,6 @@ const ClearedRecruitment = () => {
                 </p>
               </GlassCard>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Clearance Levels */}
-      <section className="py-24">
-        <div className="container mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-5xl font-bold mb-6">
-              <span className="bg-gradient-to-r from-accent to-secondary bg-clip-text text-transparent">
-                Security Clearance Levels
-              </span>
-            </h2>
-            <p className="text-xl text-muted-foreground">We specialize in sourcing professionals with active clearances</p>
-          </div>
-
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
-            {clearanceLevels.map((level, index) => (
-              <IconFlipCard
-                key={index}
-                icon={Shield}
-                title={level.name}
-                backContent={level.backContent}
-                gradient="from-accent to-secondary"
-              />
-            ))}
           </div>
         </div>
       </section>
