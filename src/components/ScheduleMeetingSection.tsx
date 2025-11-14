@@ -19,13 +19,13 @@ const ScheduleMeetingSection = () => {
               </p>
               <div className="flex flex-wrap gap-4">
                 <Link to="/booking">
-                  <Button size="lg" className="gap-2">
+                  <Button size="lg" className="bg-[#66CB00] hover:bg-[#66CB00]/90 text-white gap-2 transition-all duration-300">
                     Schedule a Meeting
                     <ArrowRight className="w-4 h-4" />
                   </Button>
                 </Link>
                 <Link to="/contact">
-                  <Button size="lg" variant="outline" className="gap-2">
+                  <Button size="lg" variant="outline" className="gap-2 border-[#66CB00] text-[#66CB00] hover:bg-[#66CB00] hover:text-white transition-all duration-300">
                     Request a Callback
                     <ArrowRight className="w-4 h-4" />
                   </Button>
