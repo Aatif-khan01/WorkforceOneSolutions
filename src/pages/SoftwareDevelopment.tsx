@@ -430,7 +430,7 @@ const SoftwareDevelopment = () => {
               Let's discuss your software development needs and create something exceptional.
             </p>
             <Link to="/contact">
-              <Button size="lg" className="bg-gradient-to-r from-coral to-secondary hover:shadow-glow text-lg px-12 py-6 group">
+              <Button size="lg" className="bg-[#66CB00] hover:bg-[#66CB00]/90 hover:shadow-lg text-white text-lg px-12 py-6 group transition-all duration-300">
                 Start Your Project
                 <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
               </Button>
