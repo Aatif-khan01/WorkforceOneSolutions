@@ -6,7 +6,6 @@ import ClientLogos from "@/components/ClientLogos";
 import GlassCard from "@/components/GlassCard";
 import ImageGridInfo from "@/components/ImageGridInfo";
 import { Button } from "@/components/ui/button";
-import technologyNetworkImage from "@/assets/technology-network.jpg";
 import galleryPresentation from "@/assets/gallery-presentation.jpg";
 import galleryDevWork from "@/assets/gallery-dev-work.jpg";
 import galleryConsultation from "@/assets/gallery-consultation.jpg";
@@ -282,27 +281,6 @@ const Services = () => {
                 <p className="text-xs sm:text-sm text-muted-foreground">{step.description}</p>
               </GlassCard>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Technology Image Section */}
-      <section className="py-12 md:py-16 relative overflow-hidden">
-        <div className="container mx-auto px-4 sm:px-6">
-          <div className="relative rounded-3xl overflow-hidden max-w-6xl mx-auto">
-            <img 
-              src={technologyNetworkImage}
-              alt="Technology Network" 
-              className="w-full h-[250px] sm:h-[350px] md:h-[400px] object-cover"
-            />
-            <div className="absolute inset-0 flex items-center justify-center p-4">
-              <GlassCard className="p-6 sm:p-8 max-w-2xl text-center">
-                <h3 className="text-2xl sm:text-3xl font-bold mb-3 sm:mb-4 text-foreground">Powered by Innovation</h3>
-                <p className="text-base sm:text-lg text-muted-foreground">
-                  We leverage cutting-edge technology and proven methodologies to deliver exceptional results for our clients.
-                </p>
-              </GlassCard>
-            </div>
           </div>
         </div>
       </section>
