@@ -19,6 +19,7 @@ import serviceProposal from "@/assets/service-proposal.jpg";
 import serviceRecruitment from "@/assets/service-recruitment.jpg";
 import serviceStaffing from "@/assets/service-staffing.jpg";
 import serviceSoftware from "@/assets/service-software.jpg";
+
 const Home = () => {
   const services = [{
     icon: FileText,
@@ -49,6 +50,7 @@ const Home = () => {
     gradient: "from-accent-glow to-accent",
     image: serviceSoftware
   }];
+
   const stats = [{
     value: 500,
     suffix: "+",
@@ -66,7 +68,14 @@ const Home = () => {
     suffix: "%",
     label: "Client Retention"
   }];
-  const values = ["Businesses grow faster when talent and strategy align.", "Recruitment isn't about filling positions; it's about building capability.", "Great proposals start with deep understanding and sharp storytelling.", "You don't need more resources; you need the right ones."];
+
+  const values = [
+    "Businesses grow faster when talent and strategy align.", 
+    "Recruitment isn't about filling positions; it's about building capability.", 
+    "Great proposals start with deep understanding and sharp storytelling.", 
+    "You don't need more resources; you need the right ones."
+  ];
+
   return <div className="min-h-screen">
       <Navigation />
 
@@ -244,7 +253,7 @@ const Home = () => {
               The future belongs to companies that combine people, process, and technology seamlessly.
             </p>
             <Link to="/contact">
-              <Button size="lg" className="bg-gradient-to-r from-coral to-secondary hover:shadow-glow text-lg px-12 py-6 group animate-glow">
+              <Button size="lg" className="bg-[#66CB00] hover:bg-[#66CB00]/90 hover:shadow-lg text-white text-lg px-12 py-6 group transition-all duration-300">
                 Start Your Journey
                 <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
               </Button>
@@ -257,4 +266,5 @@ const Home = () => {
       <Footer />
     </div>;
 };
+
 export default Home;
