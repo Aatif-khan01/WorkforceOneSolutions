@@ -162,8 +162,8 @@ const Navigation = () => {
                             to={service.path}
                             className={`block px-4 py-2 text-sm transition-colors duration-200 ${
                               location.pathname === service.path
-                                ? "text-[#66CB00] bg-[#66CB00]/10"
-                                : "text-foreground hover:text-[#66CB00] hover:bg-[#66CB00]/5"
+                                ? "text-[#66CB00] bg-[#66CB00]/10 font-semibold"
+                                : "text-foreground hover:text-[#66CB00] hover:bg-[#66CB00]/10"
                             }`}
                           >
                             {service.label}
@@ -221,7 +221,7 @@ const Navigation = () => {
                       location.pathname === link.path ||
                       (link.path === "/services" && location.pathname.startsWith("/services"))
                         ? "text-[#66CB00] bg-[#66CB00]/10"
-                        : "text-foreground hover:text-[#66CB00] hover:bg-[#66CB00]/5"
+                        : "text-foreground hover:text-[#66CB00] hover:bg-[#66CB00]/10"
                     }`}
                   >
                     {link.label}
@@ -235,8 +235,8 @@ const Navigation = () => {
                           onClick={() => setIsOpen(false)}
                           className={`block py-2 px-4 text-sm rounded-lg transition-colors duration-200 ${
                             location.pathname === service.path
-                              ? "text-[#66CB00] bg-[#66CB00]/10"
-                              : "text-foreground hover:text-[#66CB00] hover:bg-[#66CB00]/5"
+                              ? "text-[#66CB00] bg-[#66CB00]/10 font-semibold"
+                              : "text-foreground hover:text-[#66CB00] hover:bg-[#66CB00]/10"
                           }`}
                         >
                           {service.label}
