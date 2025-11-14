@@ -146,7 +146,7 @@ const Services = () => {
 
             {/* Right Side - Title and Services */}
             <div className="space-y-12">
-              <h1 className="text-5xl md:text-6xl font-bold">
+              <h1 className="text-5xl md:text-6xl font-bold text-center">
                 Our<br />Services
               </h1>
 
@@ -285,33 +285,48 @@ const Services = () => {
         </div>
       </section>
 
-      {/* Image Grid Info Section */}
-      <ImageGridInfo
-        images={[
-          { src: galleryPresentation, alt: "Business presentation", label: "Excellence in Delivery" },
-          { src: galleryDevWork, alt: "Software development" },
-          { src: galleryConsultation, alt: "Business consultation" },
-        ]}
-        title="Service Excellence"
-        subtitle="What Sets Us Apart"
-        sections={[
-          {
-            title: "Integrated Solutions",
-            icon: <Layers size={24} className="text-background" />,
-            content: "Our services work together seamlessly. Whether you need proposal support, staffing solutions, or custom software, we provide coordinated expertise that delivers comprehensive results.",
-          },
-          {
-            title: "Proven Track Record",
-            icon: <Award size={24} className="text-background" />,
-            content: "With hundreds of successful projects and satisfied clients, we've demonstrated our ability to deliver quality results consistently across all service lines.",
-          },
-          {
-            title: "Rapid Response",
-            icon: <Clock size={24} className="text-background" />,
-            content: "We understand the urgency of your needs. Our streamlined processes and experienced teams enable us to mobilize quickly without compromising quality.",
-          },
-        ]}
-      />
+      {/* Image Grid Info Section - WITH CENTERED TITLE */}
+      <section className="py-24 relative">
+        <div className="container mx-auto px-6">
+          {/* Centered Title and Subtitle */}
+          <div className="text-center mb-12">
+            <h2 className="text-4xl md:text-5xl font-bold mb-3">
+              <span className="bg-gradient-to-r from-accent to-secondary bg-clip-text text-transparent">
+                Service Excellence
+              </span>
+            </h2>
+            <p className="text-xl text-muted-foreground">
+              What Sets Us Apart
+            </p>
+          </div>
+
+          <ImageGridInfo
+            images={[
+              { src: galleryPresentation, alt: "Business presentation", label: "Excellence in Delivery" },
+              { src: galleryDevWork, alt: "Software development" },
+              { src: galleryConsultation, alt: "Business consultation" },
+            ]}
+            hideTitle={true}
+            sections={[
+              {
+                title: "Integrated Solutions",
+                icon: <Layers size={24} className="text-background" />,
+                content: "Our services work together seamlessly. Whether you need proposal support, staffing solutions, or custom software, we provide coordinated expertise that delivers comprehensive results.",
+              },
+              {
+                title: "Proven Track Record",
+                icon: <Award size={24} className="text-background" />,
+                content: "With hundreds of successful projects and satisfied clients, we've demonstrated our ability to deliver quality results consistently across all service lines.",
+              },
+              {
+                title: "Rapid Response",
+                icon: <Clock size={24} className="text-background" />,
+                content: "We understand the urgency of your needs. Our streamlined processes and experienced teams enable us to mobilize quickly without compromising quality.",
+              },
+            ]}
+          />
+        </div>
+      </section>
 
       {/* CTA Section */}
       <section className="py-16 md:py-24">
