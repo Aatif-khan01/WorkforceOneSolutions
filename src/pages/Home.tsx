@@ -84,13 +84,13 @@ const Home = () => {
           <AnimatedBox animation="fadeInUp" delay={50}>
             <div className="flex flex-row gap-4 justify-center max-w-lg mx-auto">
               <Link to="/contact" className="flex-1">
-                <Button size="lg" className="w-full group bg-[#18cb96] hover:bg-[#18cb96]/90 hover:shadow-lg text-white text-base sm:text-lg px-6 sm:px-8 py-5 sm:py-6">
+                <Button size="lg" className="w-full group bg-[#66CB00] hover:bg-[#66CB00]/90 hover:shadow-lg hover:scale-105 text-white text-base sm:text-lg px-6 sm:px-8 py-5 sm:py-6 transition-all duration-300">
                   Get Started
                   <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
                 </Button>
               </Link>
               <Link to="/services" className="flex-1">
-                <Button size="lg" className="w-full bg-black text-white text-base sm:text-lg px-6 sm:px-8 py-5 sm:py-6 hover:bg-gray-900 transition-colors">
+                <Button size="lg" className="w-full bg-black text-white text-base sm:text-lg px-6 sm:px-8 py-5 sm:py-6 hover:bg-gray-900 hover:shadow-lg hover:scale-105 transition-all duration-300">
                   Explore Services
                 </Button>
               </Link>
@@ -99,9 +99,7 @@ const Home = () => {
         </div>
 
         <div className="absolute bottom-6 sm:bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce z-20">
-          <div className="w-6 h-10 rounded-full border-2 border-white flex items-start justify-center p-2">
-            <div className="w-1 h-3 bg-white rounded-full animate-pulse" />
-          </div>
+          
         </div>
       </section>
 
@@ -124,17 +122,17 @@ const Home = () => {
 
           <StaggeredAnimation className="grid md:grid-cols-2 gap-8" staggerDelay={75}>
             {services.map((service, index) => <Link key={index} to={service.link} className="group">
-                <AnimatedCard className="p-0 h-full overflow-hidden" animation="fadeInUp" delay={index * 50}>
+                <AnimatedCard className="p-0 h-full overflow-hidden transition-all duration-500 hover:scale-105 hover:bg-[#66CB00] hover:border-[#66CB00]" animation="fadeInUp" delay={index * 50} hover={false}>
                   <div className="relative h-64 overflow-hidden">
                     <img src={service.image} alt={service.title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
                     
                   </div>
-                  <div className="p-8">
-                    <h3 className="text-2xl font-bold mb-4 text-foreground group-hover:text-accent transition-colors">
+                  <div className="p-8 transition-colors duration-500">
+                    <h3 className="text-2xl font-bold mb-4 text-foreground transition-colors duration-500 group-hover:text-white">
                       {service.title}
                     </h3>
-                    <p className="text-muted-foreground mb-6">{service.description}</p>
-                    <div className="flex items-center text-accent group-hover:translate-x-2 transition-transform">
+                    <p className="text-muted-foreground mb-6 transition-colors duration-500 group-hover:text-white">{service.description}</p>
+                    <div className="flex items-center text-accent group-hover:translate-x-2 transition-all duration-500 group-hover:text-white">
                       <span className="font-semibold">Learn more</span>
                       <ArrowRight className="ml-2" size={20} />
                     </div>
@@ -189,48 +187,7 @@ const Home = () => {
       </section>
 
       {/* Success Stories Section */}
-      <section className="py-24 relative overflow-hidden">
-        <div className="absolute inset-0 z-0">
-          <img src={clientSuccessImage} alt="Client Success" className="w-full h-full object-cover" />
-        </div>
-
-        <div className="container mx-auto px-6 relative z-10">
-          <div className="text-center mb-16">
-            <h2 className="text-5xl md:text-6xl font-bold mb-6">
-              <span className="bg-gradient-to-r from-accent to-secondary bg-clip-text text-transparent">
-                Trusted by Industry Leaders
-              </span>
-            </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              From government contractors to innovative startups, we've helped organizations achieve their most ambitious goals.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            <AnimatedCard className="p-8 text-center" animation="scaleIn" delay={50}>
-              <div className="text-6xl mb-4 animate-bounce-in">🏆</div>
-              <h3 className="text-2xl font-bold mb-3">Award-Winning Proposals</h3>
-              <p className="text-muted-foreground">Helped clients secure over $2B in contract value through strategic proposal development</p>
-            </AnimatedCard>
-
-            <AnimatedCard className="p-8 text-center" animation="scaleIn" delay={100}>
-              <div className="text-6xl mb-4 animate-bounce-in" style={{
-              animationDelay: '0.2s'
-            }}>🚀</div>
-              <h3 className="text-2xl font-bold mb-3">Rapid Deployment</h3>
-              <p className="text-muted-foreground">Average placement time of 14 days for cleared professionals across all security levels</p>
-            </AnimatedCard>
-
-            <AnimatedCard className="p-8 text-center" animation="scaleIn" delay={150}>
-              <div className="text-6xl mb-4 animate-bounce-in" style={{
-              animationDelay: '0.4s'
-            }}>💡</div>
-              <h3 className="text-2xl font-bold mb-3">Innovation Excellence</h3>
-              <p className="text-muted-foreground">Developed mission-critical software platforms serving millions of users</p>
-            </AnimatedCard>
-          </div>
-        </div>
-      </section>
+      
 
       {/* Values Section */}
       <section className="py-24 relative">
@@ -296,7 +253,7 @@ const Home = () => {
         </div>
       </section>
 
-      <ScheduleMeetingSection />
+      
       <Footer />
     </div>;
 };
