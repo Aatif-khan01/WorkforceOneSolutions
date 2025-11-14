@@ -7,7 +7,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="space-y-4">
             <Link to="/" className="inline-flex items-center">
-              <img src={logo} alt="Company logo" className="h-10 w-auto" />
+              <img src={logo} alt="Company logo" className="h-14 w-auto" />
             </Link>
             <p className="text-muted-foreground">
               Bridging the gap between opportunity and execution.
