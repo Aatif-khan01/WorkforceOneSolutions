@@ -56,29 +56,6 @@ const Home = () => {
     }
   ];
 
-  const stats = [
-    {
-      value: 500,
-      suffix: "+",
-      label: "Successful Proposals"
-    },
-    {
-      value: 1200,
-      suffix: "+",
-      label: "Professionals Recruited"
-    },
-    {
-      value: 50000,
-      suffix: "+",
-      label: "Hours Delivered"
-    },
-    {
-      value: 98,
-      suffix: "%",
-      label: "Client Retention"
-    }
-  ];
-
   const values = [
     "Businesses grow faster when talent and strategy align.",
     "Recruitment isn't about filling positions; it's about building capability.",
@@ -134,25 +111,6 @@ const Home = () => {
 
         <div className="absolute bottom-6 sm:bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce z-20">
           {/* Empty div for spacing */}
-        </div>
-      </section>
-
-      {/* Stats Section */}
-      <section className="py-16 bg-gray-50 dark:bg-gray-900">
-        <div className="container mx-auto px-6">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {stats.map((stat, index) => (
-              <AnimatedBox key={index} animation="fadeInUp" delay={index * 100} className="text-center">
-                <StatCounter 
-                  start={0} 
-                  end={stat.value} 
-                  suffix={stat.suffix} 
-                  className="text-5xl md:text-6xl font-extrabold text-[#66CB00] mb-2" 
-                />
-                <p className="text-lg text-foreground font-medium">{stat.label}</p>
-              </AnimatedBox>
-            ))}
-          </div>
         </div>
       </section>
 
