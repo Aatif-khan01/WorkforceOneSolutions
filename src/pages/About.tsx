@@ -30,7 +30,8 @@ const About = () => {
     icon: Award
   }];
 
-  return <div className="min-h-screen">
+  return (
+    <div className="min-h-screen">
       <Navigation />
 
       {/* Hero Section */}
@@ -55,11 +56,13 @@ const About = () => {
                   organizations to succeed in today's fast-paced and ever-evolving business and
                   technology landscape through talent and innovation. As a trusted partner to both
                   federal contractors and commercial enterprises, we bring together proven expertise,
-                  agility, and a results-driven solutions.<br /><br />
+                  agility, and a results-driven solutions.
+                  <br /><br />
                   Our diverse range of services include Proposal Development, Cleared Recruitment,
                   Flexible Staffing Solutions, and Custom Software Development that are designed to
                   help our clients build stronger teams, streamline operations, and achieve mission-critical
-                  objectives with efficiency and precision.<br /><br />
+                  objectives with efficiency and precision.
+                  <br /><br />
                   At Workforce One Solutions, we pride ourselves on being more than just a service
                   provider. We're a strategic partner committed to innovation, measurable impact and
                   delivering excellence in every engagement.
@@ -141,7 +144,8 @@ const About = () => {
           </div>
 
           <div className="grid md:grid-cols-2 gap-4 md:gap-6 max-w-6xl mx-auto">
-            {principles.map((principle, index) => <GlassCard key={index} className="p-6 md:p-8 group">
+            {principles.map((principle, index) => (
+              <GlassCard key={index} className="p-6 md:p-8 group">
                 <div className="flex items-start space-x-3 md:space-x-4">
                   <div className="p-2 md:p-3 rounded-xl bg-gradient-to-br from-accent to-accent-glow group-hover:scale-110 transition-transform duration-300 flex-shrink-0">
                     <principle.icon size={24} className="text-background sm:w-7 sm:h-7" />
@@ -155,7 +159,8 @@ const About = () => {
                     </p>
                   </div>
                 </div>
-              </GlassCard>)}
+              </GlassCard>
+            ))}
           </div>
 
           <div className="mt-8 md:mt-12 text-center">
@@ -169,34 +174,40 @@ const About = () => {
         </div>
       </section>
 
-      {/* Image Grid Info Section - Added 4th Core Value */}
-      <ImageGridInfo images={[{
-      src: galleryPartnership,
-      alt: "Business partnership",
-      label: "Our Culture"
-    }, {
-      src: galleryOfficeView,
-      alt: "Modern workspace"
-    }, {
-      src: galleryCreativeTeam,
-      alt: "Creative collaboration"
-    }]} title="Our Core Values" subtitle="The Principles That Guide Us" sections={[{
-      title: "Integrity First",
-      icon: <Shield size={24} className="text-background" />,
-      content: "We operate with transparency, honesty, and ethical standards in all our interactions. Your trust is our most valuable asset, and we earn it through consistent, principled action."
-    }, {
-      title: "Client-Centric Focus",
-      icon: <Heart size={24} className="text-background" />,
-      content: "Your success is our success. We listen deeply, understand your unique challenges, and tailor solutions that align with your goals, culture, and mission."
-    }, {
-      title: "Continuous Innovation",
-      icon: <Rocket size={24} className="text-background" />,
-      content: "We embrace change and continuously evolve our methods, tools, and approaches to stay ahead of industry trends and deliver cutting-edge solutions."
-    }, {
-      title: "Excellence & Quality",
-      icon: <Award size={24} className="text-background" />,
-      content: "We are committed to delivering exceptional results with precision and integrity, ensuring every solution reflects our highest standards of quality."
-    }]} reverse={true} />
+      {/* Image Grid Info Section */}
+      <ImageGridInfo 
+        images={[{
+          src: galleryPartnership,
+          alt: "Business partnership",
+          label: "Our Culture"
+        }, {
+          src: galleryOfficeView,
+          alt: "Modern workspace"
+        }, {
+          src: galleryCreativeTeam,
+          alt: "Creative collaboration"
+        }]} 
+        title="Our Core Values" 
+        subtitle="The Principles That Guide Us" 
+        sections={[{
+          title: "Integrity First",
+          icon: <Shield size={24} className="text-background" />,
+          content: "We operate with transparency, honesty, and ethical standards in all our interactions. Your trust is our most valuable asset, and we earn it through consistent, principled action."
+        }, {
+          title: "Client-Centric Focus",
+          icon: <Heart size={24} className="text-background" />,
+          content: "Your success is our success. We listen deeply, understand your unique challenges, and tailor solutions that align with your goals, culture, and mission."
+        }, {
+          title: "Continuous Innovation",
+          icon: <Rocket size={24} className="text-background" />,
+          content: "We embrace change and continuously evolve our methods, tools, and approaches to stay ahead of industry trends and deliver cutting-edge solutions."
+        }, {
+          title: "Excellence & Quality",
+          icon: <Award size={24} className="text-background" />,
+          content: "We are committed to delivering exceptional results with precision and integrity, ensuring every solution reflects our highest standards of quality."
+        }]} 
+        reverse={true} 
+      />
 
       {/* CTA */}
       <section className="py-16 md:py-24">
@@ -220,7 +231,8 @@ const About = () => {
       </section>
 
       <Footer />
-    </div>;
+    </div>
+  );
 };
 
 export default About;
