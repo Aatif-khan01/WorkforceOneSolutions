@@ -2,16 +2,13 @@ import { Link } from "react-router-dom";
 import { ArrowRight, CheckCircle, Users, FileText, Code, Briefcase, Target, Zap, Shield } from "lucide-react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import ScheduleMeetingSection from "@/components/ScheduleMeetingSection";
 import AnimatedCard from "@/components/AnimatedCard";
 import AnimatedBox from "@/components/AnimatedBox";
 import StaggeredAnimation from "@/components/StaggeredAnimation";
-import StatCounter from "@/components/StatCounter";
 import ImageGridInfo from "@/components/ImageGridInfo";
 import { Button } from "@/components/ui/button";
 import heroImage from "@/assets/hero-home.jpg";
 import heroMobileImage from "@/assets/hero-mbhome.jpg";
-import clientSuccessImage from "@/assets/client-success.jpg";
 import galleryTechWork from "@/assets/gallery-tech-work-1.jpg";
 import galleryBuilding from "@/assets/gallery-building-1.jpg";
 import galleryTeam from "@/assets/gallery-team-1.jpg";
@@ -67,16 +64,14 @@ const Home = () => {
     <div className="min-h-screen">
       <Navigation />
 
-      {/* Hero Section - No Text, Just Image and Buttons */}
+      {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16 md:pt-20">
         <div className="absolute inset-0 z-0">
-          {/* Mobile Image */}
           <img 
             src={heroMobileImage} 
             alt="Hero Background Mobile" 
             className="md:hidden w-full h-full object-cover object-center" 
           />
-          {/* Desktop Image */}
           <img 
             src={heroImage} 
             alt="Hero Background" 
@@ -84,7 +79,6 @@ const Home = () => {
           />
         </div>
 
-        {/* Buttons placed horizontally at the bottom */}
         <div className="absolute bottom-20 sm:bottom-24 left-1/2 transform -translate-x-1/2 z-20 w-full px-4 sm:px-6">
           <AnimatedBox animation="fadeInUp" delay={50}>
             <div className="flex flex-row gap-4 justify-center max-w-lg mx-auto">
@@ -107,10 +101,6 @@ const Home = () => {
               </Link>
             </div>
           </AnimatedBox>
-        </div>
-
-        <div className="absolute bottom-6 sm:bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce z-20">
-          {/* Empty div for spacing */}
         </div>
       </section>
 
