@@ -259,45 +259,6 @@ const Services = () => {
         </div>
       </section>
 
-      {/* Why Choose Us */}
-      <section className="py-16 md:py-24 bg-gradient-to-b from-background/50 to-background">
-        <div className="container mx-auto px-4 sm:px-6">
-          <div className="text-center mb-12 md:mb-16">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 md:mb-6">
-              <span className="bg-gradient-to-r from-secondary to-coral bg-clip-text text-transparent">
-                Why Choose Us
-              </span>
-            </h2>
-          </div>
-
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 max-w-6xl mx-auto">
-            <GlassCard className="p-4 sm:p-6 text-center">
-              <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🎯</div>
-              <h3 className="text-base sm:text-lg font-bold mb-2">End-to-End</h3>
-              <p className="text-xs sm:text-sm text-muted-foreground">Full lifecycle management from planning through delivery</p>
-            </GlassCard>
-
-            <GlassCard className="p-4 sm:p-6 text-center">
-              <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">⭐</div>
-              <h3 className="text-base sm:text-lg font-bold mb-2">Specialized Talent</h3>
-              <p className="text-xs sm:text-sm text-muted-foreground">Experts in proposal, recruitment, staffing and software</p>
-            </GlassCard>
-
-            <GlassCard className="p-4 sm:p-6 text-center">
-              <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">✅</div>
-              <h3 className="text-base sm:text-lg font-bold mb-2">Quality Assured</h3>
-              <p className="text-xs sm:text-sm text-muted-foreground">Standards, metrics and continuous improvement</p>
-            </GlassCard>
-
-            <GlassCard className="p-4 sm:p-6 text-center">
-              <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🤝</div>
-              <h3 className="text-base sm:text-lg font-bold mb-2">Aligned</h3>
-              <p className="text-xs sm:text-sm text-muted-foreground">Solutions tailored to your goals and culture</p>
-            </GlassCard>
-          </div>
-        </div>
-      </section>
-
       {/* Process Section */}
       <section className="py-16 md:py-24 scroll-smooth">
         <div className="container mx-auto px-4 sm:px-6">
@@ -385,7 +346,7 @@ const Services = () => {
               Whether you're preparing to win your next contract, staffing up for growth, or building a digital platform for the future, Workforce One Solutions is ready.
             </p>
             <Link to="/contact">
-              <Button size="lg" className="bg-gradient-to-r from-coral to-secondary hover:shadow-glow text-base md:text-lg px-8 sm:px-12 py-5 md:py-6 group w-full sm:w-auto">
+              <Button size="lg" className="bg-[#66CB00] hover:bg-[#66CB00]/90 hover:shadow-lg text-white text-base md:text-lg px-8 sm:px-12 py-5 md:py-6 group w-full sm:w-auto transition-all duration-300">
                 Get in Touch
                 <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
               </Button>
