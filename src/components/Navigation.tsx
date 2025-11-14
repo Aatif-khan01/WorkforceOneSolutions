@@ -183,13 +183,11 @@ const Navigation = () => {
                 )}
               </div>
             ))}
-            <div className="flex items-center gap-4">
-              <ThemeToggle />
-            </div>
+            <ThemeToggle />
             <Link to="/contact">
               <Button
                 size="lg"
-                className="bg-[#18cb96] hover:bg-[#18cb96]/90 text-white transition-all duration-300 hover:scale-105 px-6"
+                className="bg-[#66CB00] hover:bg-[#66CB00]/90 hover:shadow-xl text-white transition-all duration-300 hover:scale-105 px-6"
               >
                 LET'S TALK
               </Button>
@@ -197,10 +195,8 @@ const Navigation = () => {
           </div>
 
           {/* Mobile Menu Button */}
-          <div className="md:hidden flex items-center gap-3 ml-auto">
-            <div className="flex items-center">
-              <ThemeToggle />
-            </div>
+          <div className="md:hidden flex items-center gap-2 ml-auto">
+            <ThemeToggle />
             <button
               onClick={() => setIsOpen(!isOpen)}
               className={`p-2 transition-colors ${
@@ -258,14 +254,10 @@ const Navigation = () => {
                   )}
                 </div>
               ))}
-              <div className="flex items-center justify-between px-4 py-3 mt-4 border-t border-border">
-                <span className="text-sm font-medium text-foreground">Theme</span>
-                <ThemeToggle />
-              </div>
               <Link to="/contact" onClick={() => setIsOpen(false)}>
                 <Button
                   size="lg"
-                  className="w-full bg-[#18cb96] hover:bg-[#18cb96]/90 text-white py-3 mt-2"
+                  className="w-full bg-[#66CB00] hover:bg-[#66CB00]/90 hover:shadow-xl text-white py-3 mt-4 transition-all duration-300 hover:scale-105"
                 >
                   LET'S TALK
                 </Button>
