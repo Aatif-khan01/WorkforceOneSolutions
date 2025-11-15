@@ -208,7 +208,7 @@ const StaffingServices = () => {
             </div>
             
             <h1 className="text-5xl md:text-6xl font-bold text-center">
-              Staffing Services
+              Workforce Staffing
             </h1>
             
             <p className="text-xl md:text-2xl text-muted-foreground text-center">
@@ -226,7 +226,7 @@ const StaffingServices = () => {
             </div>
 
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold">
-              Staffing Services
+              Workforce Staffing
             </h1>
 
             <p className="text-lg sm:text-xl text-muted-foreground">
@@ -256,7 +256,7 @@ const StaffingServices = () => {
           <div className="text-center mb-16">
             <h2 className="text-5xl font-bold mb-6">
               <span className="bg-gradient-to-r from-accent to-secondary bg-clip-text text-transparent">
-                Why Our Staffing Services Stand Out
+                Why Our Workforce Staffing Stand Out
               </span>
             </h2>
           </div>
