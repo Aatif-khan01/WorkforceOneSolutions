@@ -212,7 +212,7 @@ const StaffingServices = () => {
             </h1>
             
             <p className="text-xl md:text-2xl text-muted-foreground text-center">
-              Agility and Talent for Commercial Success
+              Agile Talent. Strategic Deployment. Sustainable Growth.
             </p>
           </div>
 
@@ -236,8 +236,22 @@ const StaffingServices = () => {
         </div>
       </section>
 
-      {/* Why We Stand Out */}
+      {/* Introduction Section - NEW */}
       <section className="py-8 scroll-smooth">
+        <div className="container mx-auto px-6">
+          <GlassCard className="p-12 max-w-5xl mx-auto">
+            <p className="text-lg text-foreground leading-relaxed mb-6">
+              In the competitive commercial landscape, sustained growth depends on rapidly accessing the right talent at the right time. Our Workforce Staffing services provide agile, scalable recruitment solutions designed to meet the dynamic needs of modern businesses. We specialize in sourcing and placing high-caliber professionals across a diverse range of high-demand industries, including Information Technology (IT), Healthcare, Logistics, FinTech, and beyond. Whether you require contract, contract-to-hire, or direct placement, we eliminate the burden of recruitment, ensuring you secure the specialized skills necessary to drive immediate productivity and achieve your core business objectives.
+            </p>
+            <p className="text-lg text-foreground leading-relaxed">
+              Our dedicated team's expertise is our strategic differentiator. We don't just fill seats; we master the specific talent ecosystems of every high-growth sector we serve. This allows us to instantly identify and engage specialized talent, from securing high-level developers and data scientists in IT and FinTech to critical administrative and operational professionals across Healthcare and Logistics. Our rapid vetting process is engineered for speed, significantly shrinking your time-to-hire without compromising quality. We deliver technically proficient candidates who are immediately ready to contribute, providing you with a critical competitive advantage in the race for top commercial talent.
+            </p>
+          </GlassCard>
+        </div>
+      </section>
+
+      {/* Why We Stand Out */}
+      <section className="py-24">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-5xl font-bold mb-6">
@@ -332,7 +346,7 @@ const StaffingServices = () => {
       </section>
 
       {/* Benefits Summary */}
-      <section className="py-24">
+      <section className="py-24 bg-gradient-to-b from-background to-background/50">
         <div className="container mx-auto px-6">
           <GlassCard className="p-12 max-w-4xl mx-auto">
             <h2 className="text-4xl font-bold mb-8 text-center">
