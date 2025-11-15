@@ -4,6 +4,8 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import GlassCard from "@/components/GlassCard";
 import ImageGridInfo from "@/components/ImageGridInfo";
+import StickyContactButton from "@/components/StickyContactButton";
+import ScrollToTop from "@/components/ScrollToTop";
 import { Button } from "@/components/ui/button";
 import heroImage from "@/assets/hero-about.jpg";
 import teamCollaborationImage from "@/assets/team-collaboration.jpg";
@@ -277,6 +279,10 @@ const About = () => {
           </GlassCard>
         </div>
       </section>
+
+      {/* Sticky Buttons */}
+      <StickyContactButton />
+      <ScrollToTop />
 
       <Footer />
     </div>
