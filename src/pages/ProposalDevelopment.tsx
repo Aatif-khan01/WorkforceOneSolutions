@@ -7,6 +7,8 @@ import ClientLogos from "@/components/ClientLogos";
 import GlassCard from "@/components/GlassCard";
 import FlipCard from "@/components/FlipCard";
 import ImageGridInfo from "@/components/ImageGridInfo";
+import StickyContactButton from "@/components/StickyContactButton";
+import ScrollToTop from "@/components/ScrollToTop";
 import { Button } from "@/components/ui/button";
 import galleryPresentation from "@/assets/gallery-presentation.jpg";
 import galleryTeam from "@/assets/gallery-team-1.jpg";
@@ -97,29 +99,19 @@ const ProposalDevelopment = () => {
                 <FileText size={40} className="text-white" />
               </div>
             </div>
-            
-            <h1 className="text-5xl md:text-6xl font-bold text-center">
-              Proposal Development
-            </h1>
-            
+            <h1 className="text-5xl md:text-6xl font-bold text-center">Proposal Development</h1>
             <p className="text-xl md:text-2xl text-muted-foreground text-center">
               Strategy, Compliance, and Winning Federal Contracts
             </p>
           </div>
-
           {/* Mobile/Tablet Layout */}
           <div className="lg:hidden text-center space-y-8 max-w-3xl mx-auto">
-            {/* Small Hexagon for Mobile */}
             <div className="flex justify-center">
               <div className="w-24 h-24 sm:w-28 sm:h-28 bg-[#66CB00] clip-hexagon flex items-center justify-center shadow-xl">
                 <FileText size={32} className="text-white sm:w-10 sm:h-10" />
               </div>
             </div>
-
-            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold">
-              Proposal Development
-            </h1>
-
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold">Proposal Development</h1>
             <p className="text-lg sm:text-xl text-muted-foreground">
               Strategy, Compliance, and Winning Federal Contracts
             </p>
@@ -284,6 +276,10 @@ const ProposalDevelopment = () => {
         </div>
       </section>
 
+      {/* Sticky Buttons */}
+      <StickyContactButton />
+      <ScrollToTop />
+
       <Footer />
     </div>
   );
@@ -339,6 +335,5 @@ const PhaseFlipCard = ({
     </div>
   );
 };
-
 
 export default ProposalDevelopment;
