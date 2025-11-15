@@ -8,83 +8,127 @@ import GlassCard from "@/components/GlassCard";
 import FlipCard from "@/components/FlipCard";
 import ImageGridInfo from "@/components/ImageGridInfo";
 import { Button } from "@/components/ui/button";
-import heroImage from "@/assets/hero-proposal.jpg";
-import businessMeetingImage from "@/assets/business-meeting.jpg";
 import galleryPresentation from "@/assets/gallery-presentation.jpg";
 import galleryTeam from "@/assets/gallery-team-1.jpg";
 import galleryBuilding from "@/assets/gallery-building-1.jpg";
 
 const ProposalDevelopment = () => {
-  const services = [{
-    icon: Target,
-    title: "Capture Planning & Strategy",
-    description: "Opportunity analysis, competitor intelligence, win themes, and proposal roadmap.",
-    backContent: "We analyze market opportunities, assess competition, develop strategic win themes, and create comprehensive proposal roadmaps to maximize your success rate.",
-    gradient: "from-accent to-accent-glow"
-  }, {
-    icon: Pen,
-    title: "Proposal Writing & Content",
-    description: "Technical volumes, management plans, past performance and capability statements.",
-    backContent: "Our expert writers craft compelling technical volumes, comprehensive management plans, and persuasive past performance narratives that showcase your capabilities.",
-    gradient: "from-secondary to-coral"
-  }, {
-    icon: Palette,
-    title: "Graphics & Design",
-    description: "Professional layouts, infographics, charts, and brand-aligned visuals.",
-    backContent: "Transform complex data into stunning visuals with our professional design team. We create infographics, charts, and layouts that enhance readability and impact.",
-    gradient: "from-coral to-accent"
-  }, {
-    icon: CheckSquare,
-    title: "Compliance Review & QA",
-    description: "Section-by-section compliance mapping, Red/Pink/Gold team reviews.",
-    backContent: "Ensure 100% compliance through rigorous section-by-section mapping and multi-level team reviews, eliminating risk and maximizing evaluation scores.",
-    gradient: "from-accent-glow to-secondary"
-  }, {
-    icon: Calendar,
-    title: "Project Management",
-    description: "Timeline management, resource allocation, collaboration and submission support.",
-    backContent: "We orchestrate every aspect of proposal development with meticulous timeline management, strategic resource allocation, and seamless submission coordination.",
-    gradient: "from-secondary to-accent"
-  }];
+  const services = [
+    {
+      icon: Target,
+      title: "Capture Planning & Strategy",
+      description: "Opportunity analysis, competitor intelligence, win themes, and proposal roadmap.",
+      backContent: "We analyze market opportunities, assess competition, develop strategic win themes, and create comprehensive proposal roadmaps to maximize your success rate.",
+      gradient: "from-accent to-accent-glow"
+    },
+    {
+      icon: Pen,
+      title: "Proposal Writing & Content",
+      description: "Technical volumes, management plans, past performance and capability statements.",
+      backContent: "Our expert writers craft compelling technical volumes, comprehensive management plans, and persuasive past performance narratives that showcase your capabilities.",
+      gradient: "from-secondary to-coral"
+    },
+    {
+      icon: Palette,
+      title: "Graphics & Design",
+      description: "Professional layouts, infographics, charts, and brand-aligned visuals.",
+      backContent: "Transform complex data into stunning visuals with our professional design team. We create infographics, charts, and layouts that enhance readability and impact.",
+      gradient: "from-coral to-accent"
+    },
+    {
+      icon: CheckSquare,
+      title: "Compliance Review & QA",
+      description: "Section-by-section compliance mapping, Red/Pink/Gold team reviews.",
+      backContent: "Ensure 100% compliance through rigorous section-by-section mapping and multi-level team reviews, eliminating risk and maximizing evaluation scores.",
+      gradient: "from-accent-glow to-secondary"
+    },
+    {
+      icon: Calendar,
+      title: "Project Management",
+      description: "Timeline management, resource allocation, collaboration and submission support.",
+      backContent: "We orchestrate every aspect of proposal development with meticulous timeline management, strategic resource allocation, and seamless submission coordination.",
+      gradient: "from-secondary to-accent"
+    }
+  ];
 
-  const phases = [{
-    number: "01",
-    title: "Discovery & Planning",
-    description: "Understanding goals, capture data, and establishing win themes.",
-    backContent: "We begin by thoroughly understanding your objectives, analyzing capture intelligence, competitive landscape, and collaboratively establishing powerful win themes that differentiate your proposal.",
-    gradient: "from-accent to-secondary"
-  }, {
-    number: "02",
-    title: "Development & Drafting",
-    description: "Combining technical, management, and pricing inputs.",
-    backContent: "Our team synthesizes technical expertise, management strategies, and pricing models into cohesive, compelling content that addresses all evaluation criteria and stakeholder requirements.",
-    gradient: "from-secondary to-coral"
-  }, {
-    number: "03",
-    title: "Review & Refinement",
-    description: "Iterative reviews to enhance clarity and compliance.",
-    backContent: "Through multiple review cycles including Red/Pink/Gold team assessments, we refine every element to enhance clarity, strengthen messaging, and ensure complete compliance.",
-    gradient: "from-coral to-accent-glow"
-  }, {
-    number: "04",
-    title: "Finalization & Submit",
-    description: "Quality checks, formatting, packaging and submission.",
-    backContent: "Final quality assurance, professional formatting, meticulous packaging, and timely submission ensure your proposal is delivered flawlessly and makes the strongest possible impression.",
-    gradient: "from-accent-glow to-accent"
-  }];
+  const phases = [
+    {
+      number: "01",
+      title: "Discovery & Planning",
+      description: "Understanding goals, capture data, and establishing win themes.",
+      backContent: "We begin by thoroughly understanding your objectives, analyzing capture intelligence, competitive landscape, and collaboratively establishing powerful win themes that differentiate your proposal.",
+      gradient: "from-accent to-secondary"
+    },
+    {
+      number: "02",
+      title: "Development & Drafting",
+      description: "Combining technical, management, and pricing inputs.",
+      backContent: "Our team synthesizes technical expertise, management strategies, and pricing models into cohesive, compelling content that addresses all evaluation criteria and stakeholder requirements.",
+      gradient: "from-secondary to-coral"
+    },
+    {
+      number: "03",
+      title: "Review & Refinement",
+      description: "Iterative reviews to enhance clarity and compliance.",
+      backContent: "Through multiple review cycles including Red/Pink/Gold team assessments, we refine every element to enhance clarity, strengthen messaging, and ensure complete compliance.",
+      gradient: "from-coral to-accent-glow"
+    },
+    {
+      number: "04",
+      title: "Finalization & Submit",
+      description: "Quality checks, formatting, packaging and submission.",
+      backContent: "Final quality assurance, professional formatting, meticulous packaging, and timely submission ensure your proposal is delivered flawlessly and makes the strongest possible impression.",
+      gradient: "from-accent-glow to-accent"
+    }
+  ];
 
-  return <div className="min-h-screen">
+  return (
+    <div className="min-h-screen">
       <Navigation />
       
-      {/* Hero Section - Image Only, No Text */}
-      <section className="relative min-h-[70vh] flex items-center justify-center overflow-hidden pt-20">
-        <div className="absolute inset-0 z-0">
-          <img src={heroImage} alt="Proposal Development" className="w-full h-full object-cover" />
+      {/* Hero Section - Icon Above Title */}
+      <section className="relative min-h-[80vh] md:min-h-[90vh] flex items-center overflow-hidden pt-20 bg-gradient-to-b from-background to-background/50">
+        <div className="container mx-auto px-4 sm:px-6">
+          {/* Desktop Layout - Centered */}
+          <div className="hidden lg:flex lg:flex-col lg:items-center lg:justify-center max-w-7xl mx-auto space-y-8">
+            {/* Small Hexagon Above Title */}
+            <div className="relative w-32 h-32 flex items-center justify-center">
+              <div className="w-28 h-28 bg-[#66CB00] clip-hexagon flex items-center justify-center transform hover:scale-110 transition-transform duration-300 shadow-xl">
+                <FileText size={40} className="text-white" />
+              </div>
+            </div>
+            
+            <h1 className="text-5xl md:text-6xl font-bold text-center">
+              Proposal<br />Development
+            </h1>
+            
+            <p className="text-xl md:text-2xl text-muted-foreground text-center">
+              Winning Proposals That Set You Apart
+            </p>
+          </div>
+
+          {/* Mobile/Tablet Layout */}
+          <div className="lg:hidden text-center space-y-8 max-w-3xl mx-auto">
+            {/* Small Hexagon for Mobile */}
+            <div className="flex justify-center">
+              <div className="w-24 h-24 sm:w-28 sm:h-28 bg-[#66CB00] clip-hexagon flex items-center justify-center shadow-xl">
+                <FileText size={32} className="text-white sm:w-10 sm:h-10" />
+              </div>
+            </div>
+
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold">
+              Proposal Development
+            </h1>
+
+            <p className="text-lg sm:text-xl text-muted-foreground">
+              Winning Proposals That Set You Apart
+            </p>
+          </div>
         </div>
       </section>
 
       {/* Introduction */}
-      <section className="py-16 scroll-smooth">
+      <section className="py-8 scroll-smooth">
         <div className="container mx-auto px-6">
           <GlassCard className="p-12 max-w-5xl mx-auto">
             <p className="text-lg text-foreground leading-relaxed mb-6">
@@ -96,9 +140,6 @@ const ProposalDevelopment = () => {
           </GlassCard>
         </div>
       </section>
-
-      {/* Business Meeting Image Section */}
-      
 
       {/* Client Logos Section */}
       <ClientLogos />
@@ -114,7 +155,16 @@ const ProposalDevelopment = () => {
             </h2>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
-            {services.map((service, index) => <FlipCard key={index} icon={service.icon} title={service.title} description={service.description} backContent={service.backContent} gradient={service.gradient} />)}
+            {services.map((service, index) => (
+              <FlipCard
+                key={index}
+                icon={service.icon}
+                title={service.title}
+                description={service.description}
+                backContent={service.backContent}
+                gradient={service.gradient}
+              />
+            ))}
           </div>
         </div>
       </section>
@@ -130,7 +180,16 @@ const ProposalDevelopment = () => {
             </h2>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
-            {phases.map((phase, index) => <PhaseFlipCard key={index} number={phase.number} title={phase.title} description={phase.description} backContent={phase.backContent} gradient={phase.gradient} />)}
+            {phases.map((phase, index) => (
+              <PhaseFlipCard
+                key={index}
+                number={phase.number}
+                title={phase.title}
+                description={phase.description}
+                backContent={phase.backContent}
+                gradient={phase.gradient}
+              />
+            ))}
           </div>
         </div>
       </section>
@@ -179,29 +238,33 @@ const ProposalDevelopment = () => {
       </section>
 
       {/* Image Grid Info Section */}
-      <ImageGridInfo images={[{
-      src: galleryPresentation,
-      alt: "Proposal presentation",
-      label: "Winning Strategies"
-    }, {
-      src: galleryTeam,
-      alt: "Proposal team collaboration"
-    }, {
-      src: galleryBuilding,
-      alt: "Corporate excellence"
-    }]} title="Our Proposal Approach" subtitle="Strategy-Driven Excellence" sections={[{
-      title: "Strategic Insight",
-      icon: <Lightbulb size={24} className="text-background" />,
-      content: "We don't just write proposals, we develop winning strategies. Our team analyzes the competitive landscape, identifies your unique value proposition, and crafts compelling narratives that resonate with evaluators."
-    }, {
-      title: "Collaborative Process",
-      icon: <UsersIcon size={24} className="text-background" />,
-      content: "We work as an extension of your team, collaborating closely with subject matter experts, executives, and stakeholders to ensure every proposal reflects your organization's strengths and capabilities."
-    }, {
-      title: "Proven Success",
-      icon: <Trophy size={24} className="text-background" />,
-      content: "Our proposals have secured hundreds of millions in contract value for our clients. We bring battle-tested methodologies, compliance expertise, and creative excellence to every engagement."
-    }]} reverse={true} />
+      <ImageGridInfo
+        images={[
+          { src: galleryPresentation, alt: "Proposal presentation", label: "Winning Strategies" },
+          { src: galleryTeam, alt: "Proposal team collaboration" },
+          { src: galleryBuilding, alt: "Corporate excellence" }
+        ]}
+        title="Our Proposal Approach"
+        subtitle="Strategy-Driven Excellence"
+        sections={[
+          {
+            title: "Strategic Insight",
+            icon: <Lightbulb size={24} className="text-background" />,
+            content: "We don't just write proposals, we develop winning strategies. Our team analyzes the competitive landscape, identifies your unique value proposition, and crafts compelling narratives that resonate with evaluators."
+          },
+          {
+            title: "Collaborative Process",
+            icon: <UsersIcon size={24} className="text-background" />,
+            content: "We work as an extension of your team, collaborating closely with subject matter experts, executives, and stakeholders to ensure every proposal reflects your organization's strengths and capabilities."
+          },
+          {
+            title: "Proven Success",
+            icon: <Trophy size={24} className="text-background" />,
+            content: "Our proposals have secured hundreds of millions in contract value for our clients. We bring battle-tested methodologies, compliance expertise, and creative excellence to every engagement."
+          }
+        ]}
+        reverse={true}
+      />
 
       {/* CTA */}
       <section className="py-24">
@@ -222,11 +285,11 @@ const ProposalDevelopment = () => {
       </section>
 
       <Footer />
-    </div>;
+    </div>
+  );
 };
 
 // ---- Helper (Flip) Component for the phase cards ----
-
 const PhaseFlipCard = ({
   number,
   title,
@@ -241,8 +304,18 @@ const PhaseFlipCard = ({
   gradient?: string;
 }) => {
   const [isFlipped, setIsFlipped] = useState(false);
-  return <div className="relative h-[280px] perspective-1000" onMouseEnter={() => setIsFlipped(true)} onMouseLeave={() => setIsFlipped(false)}>
-      <div className={`relative w-full h-full transition-transform duration-700 transform-style-3d ${isFlipped ? 'rotate-y-180' : ''}`}>
+  
+  return (
+    <div
+      className="relative h-[280px] perspective-1000"
+      onMouseEnter={() => setIsFlipped(true)}
+      onMouseLeave={() => setIsFlipped(false)}
+    >
+      <div
+        className={`relative w-full h-full transition-transform duration-700 transform-style-3d ${
+          isFlipped ? 'rotate-y-180' : ''
+        }`}
+      >
         {/* Front Side */}
         <div className="absolute inset-0 backface-hidden">
           <div className="h-full w-full p-8 rounded-2xl border border-glass-border bg-glass/50 backdrop-blur-sm shadow-lg text-center">
@@ -263,7 +336,8 @@ const PhaseFlipCard = ({
           </div>
         </div>
       </div>
-    </div>;
+    </div>
+  );
 };
 
 export default ProposalDevelopment;
