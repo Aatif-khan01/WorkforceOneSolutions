@@ -185,7 +185,7 @@ const Contact = () => {
               <AnimatedCard className="p-8" animation="fadeInRight" delay={500}>
                 <div className="flex items-start space-x-4">
                   <div className="p-3 rounded-xl bg-gradient-to-br from-secondary to-coral flex-shrink-0 animate-pulse-slow" style={{ animationDelay: '0.5s' }}>
-                    <MapPin size={24} className="text-background" />
+                    <Phone size={24} className="text-background" />
                   </div>
                   <div>
                     <h3 className="text-xl font-bold mb-2">Contact US</h3>
