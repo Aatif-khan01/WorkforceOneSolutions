@@ -22,7 +22,6 @@ const Services = () => {
       description: "Accelerating your success in federal contracting through Strategic Proposal Development.",
       link: "/services/proposal",
       gradient: "from-accent to-accent-glow",
-      features: ["Market Research", "Capture Strategy", "Compliance Review", "Graphic Design"],
       image: serviceProposal,
     },
     {
@@ -31,7 +30,6 @@ const Services = () => {
       description: "Accelerated access to highly qualified and cleared professionals for your mission-critical projects.",
       link: "/services/recruitment",
       gradient: "from-secondary to-coral",
-      features: ["Security Clearances", "Vetting Process", "Mission Ready", "Cultural Fit"],
       image: serviceRecruitment,
     },
     {
@@ -40,7 +38,6 @@ const Services = () => {
       description: "Connecting your business with thoroughly vetted talent that fits your culture and mission.",
       link: "/services/staffing",
       gradient: "from-coral to-secondary",
-      features: ["Contract Support", "Direct Hire", "Team Buildouts", "Rapid Deployment"],
       image: serviceStaffing,
     },
     {
@@ -49,7 +46,6 @@ const Services = () => {
       description: "Custom software development that accelerates your market growth and competitive advantage.",
       link: "/services/software",
       gradient: "from-accent-glow to-accent",
-      features: ["Custom Development", "Enterprise Systems", "Cloud Solutions", "Ongoing Support"],
       image: serviceSoftware,
     },
   ];
@@ -212,7 +208,7 @@ const Services = () => {
       {/* Client Logos Section */}
       <ClientLogos />
 
-      {/* Services Grid */}
+      {/* Services Grid - SIMPLIFIED LIKE HOME PAGE */}
       <section className="py-16 md:py-24">
         <div className="container mx-auto px-4 sm:px-6">
           <div className="grid md:grid-cols-2 gap-6 md:gap-8 mb-16">
@@ -225,10 +221,6 @@ const Services = () => {
                       alt={service.title}
                       className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                     />
-                    
-                    <div className={`absolute top-4 left-4 sm:top-6 sm:left-6 w-12 h-12 sm:w-16 sm:h-16 rounded-xl bg-gradient-to-br ${service.gradient} flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
-                      <service.icon size={28} className="text-white sm:w-8 sm:h-8" />
-                    </div>
                   </div>
                   <div className="p-6 sm:p-8 transition-colors duration-500">
                     <h3 className="text-2xl sm:text-3xl font-bold mb-3 sm:mb-4 text-foreground transition-colors duration-500 group-hover:text-white">
@@ -238,15 +230,6 @@ const Services = () => {
                     <p className="text-muted-foreground mb-4 sm:mb-6 text-base sm:text-lg transition-colors duration-500 group-hover:text-white">
                       {service.description}
                     </p>
-
-                    <div className="grid grid-cols-2 gap-2 sm:gap-3 mb-4 sm:mb-6">
-                      {service.features.map((feature, idx) => (
-                        <div key={idx} className="flex items-center space-x-2">
-                          <Check size={14} className="text-accent flex-shrink-0 sm:w-4 sm:h-4 transition-colors duration-500 group-hover:text-white" />
-                          <span className="text-xs sm:text-sm text-foreground transition-colors duration-500 group-hover:text-white">{feature}</span>
-                        </div>
-                      ))}
-                    </div>
 
                     <div className="flex items-center text-accent group-hover:translate-x-2 transition-all duration-500 group-hover:text-white">
                       <span className="font-semibold text-sm sm:text-base">Learn more</span>
