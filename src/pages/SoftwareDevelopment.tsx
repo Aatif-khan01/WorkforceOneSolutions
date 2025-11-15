@@ -244,7 +244,7 @@ const SoftwareDevelopment = () => {
             </h1>
 
             <p className="text-lg sm:text-xl text-muted-foreground">
-              Innovative Solutions. Scalable Impact.
+              Precision, Performance, and Digital Delivery
             </p>
           </div>
         </div>
@@ -254,8 +254,11 @@ const SoftwareDevelopment = () => {
       <section className="py-8 scroll-smooth">
         <div className="container mx-auto px-6">
           <GlassCard className="p-12 max-w-5xl mx-auto">
+            <p className="text-lg text-foreground leading-relaxed mb-6">
+              In the digital-first economy, the quality of your software dictates your competitive standing. Our Software Development services are engineered to be your catalyst for digital disruption. We are a specialized extension of your innovation pipeline, focused on building highly resilient, scalable, and cutting-edge digital assets—from enterprise-grade custom applications and secure cloud-native platforms to intuitive mobile experiences and complex data integrations. By adhering rigorously to modern methodologies (Agile, DevOps), we ensure rapid iteration and continuous delivery, transforming your ambitious vision into market-ready software that drives critical business outcomes and delivers measurable return on investment.
+            </p>
             <p className="text-lg text-foreground leading-relaxed">
-              Whether you're looking to modernize legacy systems, develop new applications, or integrate advanced technologies, our team is equipped to turn your vision into reality. From concept to deployment, we provide end-to-end product engineering services, ensuring your software meets market demands and user expectations.
+              Our core competency lies in architectural rigor and technical mastery. Our engineering teams maintain expertise across current and emerging technology stacks, prioritizing scalable architecture (microservices, service-oriented design) and secure cloud deployment (AWS, Azure, GCP). We engage consultatively to align technical specifications with precise business requirements, ensuring optimal resource utilization and maximum return on investment. We commit to delivering software characterized by verifiable performance, exceptional reliability, and adherence to industry best practices, positioning your enterprise with a strategic, technologically superior digital platform.
             </p>
           </GlassCard>
         </div>
