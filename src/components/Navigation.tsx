@@ -3,8 +3,10 @@ import { Menu, X, ChevronDown } from "lucide-react";
 import { useState, useEffect, useRef } from "react";
 import { Button } from "./ui/button";
 import { motion, AnimatePresence } from "framer-motion";
-import logo from "@/assets/WfOS-LOGO.png";
+import logoLight from "@/assets/WfOS-LOGO.png";
+import logoDark from "@/assets/Logo-dark.png";
 import { ThemeToggle } from "@/components/ThemeToggle";
+import { useTheme } from "@/components/ThemeProvider";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -14,6 +16,7 @@ const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const location = useLocation();
   const dropdownRef = useRef<HTMLDivElement>(null);
+  const { theme } = useTheme();
 
   const isHomePage = location.pathname === "/";
 
@@ -89,6 +92,9 @@ const Navigation = () => {
     return "text-foreground hover:text-[#66CB00]";
   };
 
+  // Choose logo based on theme
+  const currentLogo = theme === "dark" ? logoDark : logoLight;
+
   return (
     <motion.nav
       initial={{ y: 0 }}
@@ -102,18 +108,17 @@ const Navigation = () => {
     >
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
-          {!isHomePage && (
-            <Link
-              to="/"
-              className="hover:scale-105 transition-transform duration-300"
-            >
-              <img
-                src={logo}
-                alt="Company logo"
-                className="h-14 w-auto" 
-              />
-            </Link>
-          )}
+          {/* Logo - Switches based on theme */}
+          <Link
+            to="/"
+            className="hover:scale-105 transition-transform duration-300"
+          >
+            <img
+              src={currentLogo}
+              alt="Company logo"
+              className="h-14 w-auto transition-opacity duration-300" 
+            />
+          </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8 ml-auto">
