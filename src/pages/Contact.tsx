@@ -2,10 +2,8 @@ import { useState } from "react";
 import { Mail, MapPin, Phone, Send, MessageCircle, Clock, CheckCircle } from "lucide-react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import ScheduleMeetingSection from "@/components/ScheduleMeetingSection";
 import AnimatedCard from "@/components/AnimatedCard";
 import AnimatedBox from "@/components/AnimatedBox";
-import StaggeredAnimation from "@/components/StaggeredAnimation";
 import ImageGridInfo from "@/components/ImageGridInfo";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -257,7 +255,6 @@ const Contact = () => {
         ]} 
       />
 
-      <ScheduleMeetingSection />
       <Footer />
     </div>
   );
