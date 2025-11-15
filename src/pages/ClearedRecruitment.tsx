@@ -206,7 +206,7 @@ const ClearedRecruitment = () => {
           <GlassCard className="p-12 max-w-5xl mx-auto animate-fade-in">
             <p className="text-lg text-foreground leading-relaxed">
               For projects demanding the highest levels of security and trust, our Cleared Recruitment services provide rapid and reliable access to the nation's most trusted professionals. We specialize in sourcing, vetting, and placing experts with the full spectrum of required U.S. Government security clearances. This includes foundational levels like NACI and Public Trust, through to high-level clearances such as Secret, Top Secret, Top Secret with SCI (TS/SCI), Counter Intelligence Polygraph (CI Poly), and Full Scope Polygraph (FS Poly). We understand that time is critical for mission support, which is why we offer flexible staffing solutions for short-term, long-term, and full-time durations, ensuring your organization remains fully compliant and operationally ready without delay.
-              </p>
+            </p>
             <p className="text-lg text-foreground leading-relaxed"> 
               Our dedicated expertise in this highly specialized domain sets us apart. We operate with an unrivaled understanding of the security clearance landscape and the unique demands of government and defense contracting. Our network consists exclusively of actively cleared professionals, significantly reducing your time-to-hire for critical roles.
             </p>
