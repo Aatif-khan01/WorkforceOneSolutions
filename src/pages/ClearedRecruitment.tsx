@@ -201,7 +201,7 @@ const ClearedRecruitment = () => {
       </section>
 
       {/* Introduction */}
-      <section className="py-16 scroll-smooth">
+      <section className="py-8 scroll-smooth">
         <div className="container mx-auto px-6">
           <GlassCard className="p-12 max-w-5xl mx-auto animate-fade-in">
             <p className="text-lg text-foreground leading-relaxed">
