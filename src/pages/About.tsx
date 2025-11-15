@@ -12,23 +12,28 @@ import galleryOfficeView from "@/assets/gallery-office-view.jpg";
 import galleryCreativeTeam from "@/assets/gallery-creative-team.jpg";
 
 const About = () => {
-  const principles = [{
-    title: "Your Success Is Our Priority",
-    description: "We regard you as a partner, your goals are our goals. We invest time to understand your mission, culture and outcomes.",
-    icon: Heart
-  }, {
-    title: "Your Data & Info Are Secure",
-    description: "We handle your information responsibly and implement strong controls to protect confidentiality.",
-    icon: Shield
-  }, {
-    title: "Transparent Communication",
-    description: "We keep you informed, respond promptly and work in the channels you prefer. No surprises, no hidden fees.",
-    icon: Users
-  }, {
-    title: "Quality First",
-    description: "We apply disciplined processes and continuous improvement to ensure our work meets and exceeds expectations.",
-    icon: Award
-  }];
+  const principles = [
+    {
+      title: "Your Success Is Our Priority",
+      description: "We regard you as a partner, your goals are our goals. We invest time to understand your mission, culture and outcomes.",
+      icon: Heart
+    },
+    {
+      title: "Your Data & Info Are Secure",
+      description: "We handle your information responsibly and implement strong controls to protect confidentiality.",
+      icon: Shield
+    },
+    {
+      title: "Transparent Communication",
+      description: "We keep you informed, respond promptly and work in the channels you prefer. No surprises, no hidden fees.",
+      icon: Users
+    },
+    {
+      title: "Quality First",
+      description: "We apply disciplined processes and continuous improvement to ensure our work meets and exceeds expectations.",
+      icon: Award
+    }
+  ];
 
   const industries = [
     "Defense & Aerospace",
@@ -150,13 +155,13 @@ const About = () => {
             </h2>
           </div>
 
-          <div className="flex flex-wrap justify-center gap-4 max-w-4xl mx-auto">
+          <div className="flex flex-wrap justify-center gap-5 md:gap-6 max-w-5xl mx-auto">
             {industries.map((industry, index) => (
               <div
                 key={index}
-                className="px-6 py-3 rounded-full border-2 border-border bg-background/50 backdrop-blur-sm hover:border-[#66CB00] hover:bg-[#66CB00]/10 transition-all duration-300 cursor-default"
+                className="px-8 py-4 rounded-full border-[3px] border-border bg-background/50 backdrop-blur-sm hover:border-[#66CB00] hover:bg-[#66CB00]/10 transition-all duration-300 cursor-default shadow-md"
               >
-                <span className="text-sm md:text-base font-medium text-foreground">
+                <span className="text-base md:text-lg font-semibold text-foreground">
                   {industry}
                 </span>
               </div>
@@ -210,36 +215,45 @@ const About = () => {
 
       {/* Image Grid Info Section */}
       <ImageGridInfo 
-        images={[{
-          src: galleryPartnership,
-          alt: "Business partnership",
-          label: "Our Culture"
-        }, {
-          src: galleryOfficeView,
-          alt: "Modern workspace"
-        }, {
-          src: galleryCreativeTeam,
-          alt: "Creative collaboration"
-        }]} 
+        images={[
+          {
+            src: galleryPartnership,
+            alt: "Business partnership",
+            label: "Our Culture"
+          },
+          {
+            src: galleryOfficeView,
+            alt: "Modern workspace"
+          },
+          {
+            src: galleryCreativeTeam,
+            alt: "Creative collaboration"
+          }
+        ]} 
         title="Our Core Values" 
         subtitle="The Principles That Guide Us" 
-        sections={[{
-          title: "Integrity First",
-          icon: <Shield size={24} className="text-background" />,
-          content: "We operate with transparency, honesty, and ethical standards in all our interactions. Your trust is our most valuable asset, and we earn it through consistent, principled action."
-        }, {
-          title: "Client-Centric Focus",
-          icon: <Heart size={24} className="text-background" />,
-          content: "Your success is our success. We listen deeply, understand your unique challenges, and tailor solutions that align with your goals, culture, and mission."
-        }, {
-          title: "Continuous Innovation",
-          icon: <Rocket size={24} className="text-background" />,
-          content: "We embrace change and continuously evolve our methods, tools, and approaches to stay ahead of industry trends and deliver cutting-edge solutions."
-        }, {
-          title: "Excellence & Quality",
-          icon: <Award size={24} className="text-background" />,
-          content: "We are committed to delivering exceptional results with precision and integrity, ensuring every solution reflects our highest standards of quality."
-        }]} 
+        sections={[
+          {
+            title: "Integrity First",
+            icon: <Shield size={24} className="text-background" />,
+            content: "We operate with transparency, honesty, and ethical standards in all our interactions. Your trust is our most valuable asset, and we earn it through consistent, principled action."
+          },
+          {
+            title: "Client-Centric Focus",
+            icon: <Heart size={24} className="text-background" />,
+            content: "Your success is our success. We listen deeply, understand your unique challenges, and tailor solutions that align with your goals, culture, and mission."
+          },
+          {
+            title: "Continuous Innovation",
+            icon: <Rocket size={24} className="text-background" />,
+            content: "We embrace change and continuously evolve our methods, tools, and approaches to stay ahead of industry trends and deliver cutting-edge solutions."
+          },
+          {
+            title: "Excellence & Quality",
+            icon: <Award size={24} className="text-background" />,
+            content: "We are committed to delivering exceptional results with precision and integrity, ensuring every solution reflects our highest standards of quality."
+          }
+        ]} 
         reverse={true} 
       />
 
