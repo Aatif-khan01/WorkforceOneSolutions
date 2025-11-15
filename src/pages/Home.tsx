@@ -257,7 +257,7 @@ const Home = () => {
               {
                 title: "About Us",
                 icon: <Target size={24} className="text-background" />,
-                content: "Workforce One Solutions is purpose built to empower organizations, from federal contractors to commercial enterprises, to thrive amidst rapid technological and business change. We serve as a strategic partner, delivering proven expertise, agility, and innovative solutions that drive measurable results for our clients.Our core capabilities encompass Proposal Development, Cleared Recruitment, Flexible Staffing Solutions, and Custom Software Development.\n\nWe leverage these services to help you build high performing teams, optimize operational efficiency, and successfully achieve mission critical objectives with precision and commitment."
+                content: "Workforce One Solutions is purpose built to empower organizations, from federal contractors to commercial enterprises, to thrive amidst rapid technological and business change. We serve as a strategic partner, delivering proven expertise, agility, and innovative solutions that drive measurable results for our clients. Our core capabilities encompass Proposal Development, Cleared Recruitment, Flexible Staffing Solutions, and Custom Software Development. We leverage these services to help you build high performing teams, optimize operational efficiency, and successfully achieve mission critical objectives with precision and commitment."
               },
               {
                 title: "Our Vision",
