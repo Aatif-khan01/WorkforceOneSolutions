@@ -6,6 +6,7 @@ import AnimatedCard from "@/components/AnimatedCard";
 import AnimatedBox from "@/components/AnimatedBox";
 import StaggeredAnimation from "@/components/StaggeredAnimation";
 import ImageGridInfo from "@/components/ImageGridInfo";
+import StickyContactButton from "@/components/StickyContactButton";
 import { Button } from "@/components/ui/button";
 import heroImage from "@/assets/hero-home.jpg";
 import heroMobileImage from "@/assets/hero-mbhome.jpg";
@@ -296,6 +297,9 @@ const Home = () => {
           </AnimatedCard>
         </div>
       </section>
+
+      {/* Sticky Contact Button */}
+      <StickyContactButton />
 
       <Footer />
     </div>
