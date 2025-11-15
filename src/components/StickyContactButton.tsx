@@ -1,9 +1,13 @@
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { Button } from "./ui/button";
 
 const StickyContactButton = () => {
   const [isVisible, setIsVisible] = useState(false);
+  const location = useLocation();
+
+  // Check if we're on the contact page
+  const isContactPage = location.pathname === "/contact";
 
   useEffect(() => {
     const toggleVisibility = () => {
@@ -18,10 +22,15 @@ const StickyContactButton = () => {
     return () => window.removeEventListener("scroll", toggleVisibility);
   }, []);
 
+  // Don't render the button on the contact page
+  if (isContactPage) {
+    return null;
+  }
+
   return (
     <>
       {isVisible && (
-        <div className="fixed bottom-8 left-8 z-40 animate-slide-up">
+        <div className="fixed top-20 right-6 z-40 animate-slide-up">
           <Link to="/contact">
             <Button
               size="lg"
