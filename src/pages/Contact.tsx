@@ -189,8 +189,8 @@ const Contact = () => {
                   </div>
                   <div>
                     <h3 className="text-xl font-bold mb-2">Global / US Office</h3>
-                    <p className="text-muted-foreground mb-2">XXXXX</p>
-                    <p className="text-muted-foreground">XXXXX</p>
+                    <p className="text-muted-foreground mb-2">Coming Soon</p>
+                    <p className="text-muted-foreground">info@workforceonesolutions.com</p>
                   </div>
                 </div>
               </AnimatedCard>
