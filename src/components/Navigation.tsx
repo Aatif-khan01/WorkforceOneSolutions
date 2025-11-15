@@ -126,7 +126,7 @@ const Navigation = () => {
               >
                 <Link
                   to={link.path}
-                  className={`relative text-sm font-medium transition-colors duration-300 group flex items-center ${
+                  className={`relative text-base font-semibold transition-colors duration-300 group flex items-center ${
                     location.pathname === link.path || 
                     (link.path === "/services" && location.pathname.startsWith("/services"))
                       ? getActiveTextColor()
@@ -136,7 +136,7 @@ const Navigation = () => {
                   {link.label}
                   {link.hasDropdown && (
                     <ChevronDown
-                      size={16}
+                      size={18}
                       className={`ml-1 transition-transform duration-300 ${
                         showServicesDropdown ? "rotate-180" : ""
                       }`}
@@ -189,7 +189,7 @@ const Navigation = () => {
             <Link to="/contact">
               <Button
                 size="lg"
-                className="bg-[#66CB00] hover:bg-[#66CB00]/90 hover:shadow-xl text-white transition-all duration-300 hover:scale-105 px-6"
+                className="bg-[#66CB00] hover:bg-[#66CB00]/90 hover:shadow-xl text-white text-base font-semibold transition-all duration-300 hover:scale-105 px-8 py-6"
               >
                 LET'S TALK
               </Button>
@@ -255,7 +255,7 @@ const Navigation = () => {
               <Link to="/contact" onClick={() => setIsOpen(false)}>
                 <Button
                   size="lg"
-                  className="w-full bg-[#66CB00] hover:bg-[#66CB00]/90 hover:shadow-xl text-white py-3 mt-4 transition-all duration-300 hover:scale-105"
+                  className="w-full bg-[#66CB00] hover:bg-[#66CB00]/90 hover:shadow-xl text-white py-6 mt-4 transition-all duration-300 hover:scale-105 text-base font-semibold"
                 >
                   LET'S TALK
                 </Button>
