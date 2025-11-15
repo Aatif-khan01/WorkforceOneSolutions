@@ -5,6 +5,8 @@ import Footer from "@/components/Footer";
 import ClientLogos from "@/components/ClientLogos";
 import GlassCard from "@/components/GlassCard";
 import ImageGridInfo from "@/components/ImageGridInfo";
+import StickyContactButton from "@/components/StickyContactButton";
+import ScrollToTop from "@/components/ScrollToTop";
 import { Button } from "@/components/ui/button";
 import galleryPresentation from "@/assets/gallery-presentation.jpg";
 import galleryDevWork from "@/assets/gallery-dev-work.jpg";
@@ -332,6 +334,10 @@ const Services = () => {
           </GlassCard>
         </div>
       </section>
+
+      {/* Sticky Buttons */}
+      <StickyContactButton />
+      <ScrollToTop />
 
       <Footer />
     </div>
