@@ -6,7 +6,6 @@ import Footer from "@/components/Footer";
 import ImageGridInfo from "@/components/ImageGridInfo";
 import GlassCard from "@/components/GlassCard";
 import { Button } from "@/components/ui/button";
-import heroImage from "@/assets/hero-software.jpg";
 import developmentWorkspaceImage from "@/assets/development-workspace.jpg";
 import galleryDevWork from "@/assets/gallery-dev-work.jpg";
 import galleryDatacenter from "@/assets/gallery-datacenter.jpg";
@@ -210,34 +209,49 @@ const SoftwareDevelopment = () => {
     <div className="min-h-screen">
       <Navigation />
       
-      {/* Hero Section */}
-      <section className="relative min-h-[70vh] flex items-center justify-center overflow-hidden pt-20">
-        <div className="absolute inset-0 z-0">
-          <img src={heroImage} alt="Software Development" className="w-full h-full object-cover" />
-        </div>
-        
-        <div className="container mx-auto px-6 relative z-10">
-          <div className="max-w-4xl mx-auto text-center space-y-6">
-            <div className="inline-block p-4 rounded-2xl bg-gradient-to-br from-accent-glow to-accent mb-4">
-              <Code size={48} className="text-background" />
+      {/* Hero Section - Icon Above Title */}
+      <section className="relative min-h-[80vh] md:min-h-[90vh] flex items-center overflow-hidden pt-20 bg-gradient-to-b from-background to-background/50">
+        <div className="container mx-auto px-4 sm:px-6">
+          {/* Desktop Layout - Centered */}
+          <div className="hidden lg:flex lg:flex-col lg:items-center lg:justify-center max-w-7xl mx-auto space-y-8">
+            {/* Small Hexagon Above Title */}
+            <div className="relative w-32 h-32 flex items-center justify-center">
+              <div className="w-28 h-28 bg-[#66CB00] clip-hexagon flex items-center justify-center transform hover:scale-110 transition-transform duration-300 shadow-xl">
+                <Code size={40} className="text-white" />
+              </div>
             </div>
-            <h1 className="text-6xl md:text-7xl font-bold">
-              <span className="bg-gradient-to-r from-accent-glow via-accent to-secondary bg-clip-text text-transparent">
-                Software Development
-              </span>
+            
+            <h1 className="text-5xl md:text-6xl font-bold text-center">
+              Software<br />Development
             </h1>
-            <p className="text-2xl md:text-3xl font-semibold text-foreground">
+            
+            <p className="text-xl md:text-2xl text-muted-foreground text-center">
               Innovative Solutions. Scalable Impact.
             </p>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              We specialize in delivering custom software solutions that drive efficiency, enhance user experiences, and align with your strategic goals.
+          </div>
+
+          {/* Mobile/Tablet Layout */}
+          <div className="lg:hidden text-center space-y-8 max-w-3xl mx-auto">
+            {/* Small Hexagon for Mobile */}
+            <div className="flex justify-center">
+              <div className="w-24 h-24 sm:w-28 sm:h-28 bg-[#66CB00] clip-hexagon flex items-center justify-center shadow-xl">
+                <Code size={32} className="text-white sm:w-10 sm:h-10" />
+              </div>
+            </div>
+
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold">
+              Software Development
+            </h1>
+
+            <p className="text-lg sm:text-xl text-muted-foreground">
+              Innovative Solutions. Scalable Impact.
             </p>
           </div>
         </div>
       </section>
 
       {/* Introduction */}
-      <section className="py-16 scroll-smooth">
+      <section className="py-8 scroll-smooth">
         <div className="container mx-auto px-6">
           <GlassCard className="p-12 max-w-5xl mx-auto">
             <p className="text-lg text-foreground leading-relaxed">
