@@ -5,6 +5,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import GlassCard from "@/components/GlassCard";
 import ImageGridInfo from "@/components/ImageGridInfo";
+import StickyContactButton from "@/components/StickyContactButton";
 import { Button } from "@/components/ui/button";
 import diverseTeamImage from "@/assets/diverse-team.jpg";
 import galleryCreativeTeam from "@/assets/gallery-creative-team.jpg";
