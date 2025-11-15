@@ -159,28 +159,36 @@ const ClearedRecruitment = () => {
     <div className="min-h-screen">
       <Navigation />
       
-      {/* Hero Section - Simplified with Tagline */}
+      {/* Hero Section - Icon Above Title */}
       <section className="relative min-h-[80vh] md:min-h-[90vh] flex items-center overflow-hidden pt-20 bg-gradient-to-b from-background to-background/50">
         <div className="container mx-auto px-4 sm:px-6">
           {/* Desktop Layout - Centered */}
           <div className="hidden lg:flex lg:flex-col lg:items-center lg:justify-center max-w-7xl mx-auto space-y-8">
+            {/* Small Hexagon Above Title */}
+            <div className="relative w-32 h-32 flex items-center justify-center">
+              <div className="w-28 h-28 bg-[#66CB00] clip-hexagon flex items-center justify-center transform hover:scale-110 transition-transform duration-300 shadow-xl">
+                <Shield size={40} className="text-white" />
+              </div>
+            </div>
+            
             <h1 className="text-5xl md:text-6xl font-bold text-center">
-              Cleared Recruitment
+              Cleared<br />Recruitment
             </h1>
             
             <p className="text-xl md:text-2xl text-muted-foreground text-center">
               Securing Your Mission-Critical Talent
             </p>
-            
-            <div className="relative w-80 h-80 flex items-center justify-center">
-              <div className="w-56 h-56 bg-[#66CB00] clip-hexagon flex items-center justify-center transform hover:scale-110 transition-transform duration-300 shadow-2xl">
-                <Shield size={80} className="text-white" />
-              </div>
-            </div>
           </div>
 
           {/* Mobile/Tablet Layout */}
           <div className="lg:hidden text-center space-y-8 max-w-3xl mx-auto">
+            {/* Small Hexagon for Mobile */}
+            <div className="flex justify-center">
+              <div className="w-24 h-24 sm:w-28 sm:h-28 bg-[#66CB00] clip-hexagon flex items-center justify-center shadow-xl">
+                <Shield size={32} className="text-white sm:w-10 sm:h-10" />
+              </div>
+            </div>
+
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold">
               Cleared Recruitment
             </h1>
@@ -188,13 +196,6 @@ const ClearedRecruitment = () => {
             <p className="text-lg sm:text-xl text-muted-foreground">
               Securing Your Mission-Critical Talent
             </p>
-
-            {/* Single Large Hexagon for Mobile */}
-            <div className="flex justify-center py-8">
-              <div className="w-40 h-40 sm:w-48 sm:h-48 bg-[#66CB00] clip-hexagon flex items-center justify-center shadow-2xl">
-                <Shield size={64} className="text-white sm:w-20 sm:h-20" />
-              </div>
-            </div>
           </div>
         </div>
       </section>
