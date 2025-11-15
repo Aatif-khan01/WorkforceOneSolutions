@@ -30,11 +30,11 @@ const StickyContactButton = () => {
   return (
     <>
       {isVisible && (
-        <div className="fixed top-4 right-6 z-30 animate-slide-up">
+        <div className="fixed bottom-24 right-8 z-40 animate-slide-up">
           <Link to="/contact">
             <Button
               size="lg"
-              className="bg-[#66CB00] hover:bg-[#66CB00]/90 hover:shadow-xl text-white text-base font-semibold transition-all duration-300 hover:scale-105 px-8 py-6"
+              className="bg-[#66CB00] hover:bg-[#66CB00]/90 hover:shadow-xl text-white text-base font-semibold transition-all duration-300 hover:scale-105 px-8 py-6 rounded-lg shadow-2xl"
             >
               LET'S TALK
             </Button>
