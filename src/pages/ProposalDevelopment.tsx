@@ -103,7 +103,7 @@ const ProposalDevelopment = () => {
             </h1>
             
             <p className="text-xl md:text-2xl text-muted-foreground text-center">
-              Winning Proposals That Set You Apart
+              Strategy, Compliance, and Winning Federal Contracts
             </p>
           </div>
 
