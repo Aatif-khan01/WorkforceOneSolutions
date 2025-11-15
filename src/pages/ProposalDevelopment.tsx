@@ -339,13 +339,6 @@ const PhaseFlipCard = ({
     </div>
   );
 };
-      {/* Sticky Buttons */}
-      <StickyContactButton />
-      <ScrollToTop />
 
-      <Footer />
-    </div>
-  );
-};
 
 export default ProposalDevelopment;
