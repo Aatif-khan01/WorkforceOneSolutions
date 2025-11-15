@@ -6,7 +6,6 @@ import Footer from "@/components/Footer";
 import GlassCard from "@/components/GlassCard";
 import ImageGridInfo from "@/components/ImageGridInfo";
 import { Button } from "@/components/ui/button";
-import heroImage from "@/assets/hero-staffing.jpg";
 import diverseTeamImage from "@/assets/diverse-team.jpg";
 import galleryCreativeTeam from "@/assets/gallery-creative-team.jpg";
 import galleryOfficeView from "@/assets/gallery-office-view.jpg";
@@ -107,108 +106,138 @@ const ProcessStepFlipCard = ({
 };
 
 const StaffingServices = () => {
-  const benefits = [{
-    icon: Zap,
-    title: "Speed & Scalability",
-    description: "High-velocity sourcing with a deep talent pool including security-cleared professionals",
-    backContent: "Our extensive network and streamlined processes enable rapid deployment of qualified professionals. We maintain a ready pool of pre-vetted, security-cleared talent for immediate placement."
-  }, {
-    icon: Target,
-    title: "Quality & Fit",
-    description: "Assessed for technical skills, cultural alignment, clearance status, and project readiness",
-    backContent: "Every candidate undergoes comprehensive evaluation including technical assessments, behavioral interviews, cultural fit analysis, and security clearance verification to ensure optimal placement success."
-  }, {
-    icon: Users,
-    title: "Flexible Delivery",
-    description: "Contract staff, direct hire, hybrid arrangements or managed team solutions",
-    backContent: "We offer multiple engagement models tailored to your needs: short-term contracts, long-term placements, project-based teams, or fully managed workforce solutions with complete oversight."
-  }, {
-    icon: Shield,
-    title: "End-to-End Management",
-    description: "Onboarding, compliance, workforce analytics and performance tracking",
-    backContent: "Complete lifecycle management from onboarding through offboarding, including compliance monitoring, performance analytics, timesheet management, and continuous optimization of your workforce."
-  }];
+  const benefits = [
+    {
+      icon: Zap,
+      title: "Speed & Scalability",
+      description: "High-velocity sourcing with a deep talent pool including security-cleared professionals",
+      backContent: "Our extensive network and streamlined processes enable rapid deployment of qualified professionals. We maintain a ready pool of pre-vetted, security-cleared talent for immediate placement."
+    },
+    {
+      icon: Target,
+      title: "Quality & Fit",
+      description: "Assessed for technical skills, cultural alignment, clearance status, and project readiness",
+      backContent: "Every candidate undergoes comprehensive evaluation including technical assessments, behavioral interviews, cultural fit analysis, and security clearance verification to ensure optimal placement success."
+    },
+    {
+      icon: Users,
+      title: "Flexible Delivery",
+      description: "Contract staff, direct hire, hybrid arrangements or managed team solutions",
+      backContent: "We offer multiple engagement models tailored to your needs: short-term contracts, long-term placements, project-based teams, or fully managed workforce solutions with complete oversight."
+    },
+    {
+      icon: Shield,
+      title: "End-to-End Management",
+      description: "Onboarding, compliance, workforce analytics and performance tracking",
+      backContent: "Complete lifecycle management from onboarding through offboarding, including compliance monitoring, performance analytics, timesheet management, and continuous optimization of your workforce."
+    }
+  ];
 
-  const solutions = [{
-    title: "Cleared Recruitment & Deployment",
-    description: "For government, defence, or high-sensitivity commercial projects with required security clearances.",
-    features: ["Active-clearance mapping", "Rapid deployment", "Ongoing clearance management", "Full compliance"],
-    gradient: "from-accent to-accent-glow"
-  }, {
-    title: "Project & Contract Staffing",
-    description: "When you have an upcoming project, surge requirement, or short-term initiative.",
-    features: ["Rapid sourcing of specialists", "Flexible contract terms", "Onboarding & monitoring", "Budget-friendly models"],
-    gradient: "from-secondary to-coral"
-  }, {
-    title: "Long-Term & Direct Hire",
-    description: "For strategic hires or building your core workforce aligned to your growth.",
-    features: ["Full lifecycle recruitment", "Talent-mapping support", "Cultural integration", "Retention-focused"],
-    gradient: "from-coral to-secondary"
-  }, {
-    title: "Managed Team Solutions",
-    description: "We build, manage and optimize the team on your behalf with full governance.",
-    features: ["Fully managed teams", "Performance KPIs", "Delivery oversight", "Global roll-outs"],
-    gradient: "from-accent-glow to-accent"
-  }];
+  const solutions = [
+    {
+      title: "Cleared Recruitment & Deployment",
+      description: "For government, defence, or high-sensitivity commercial projects with required security clearances.",
+      features: ["Active-clearance mapping", "Rapid deployment", "Ongoing clearance management", "Full compliance"],
+      gradient: "from-accent to-accent-glow"
+    },
+    {
+      title: "Project & Contract Staffing",
+      description: "When you have an upcoming project, surge requirement, or short-term initiative.",
+      features: ["Rapid sourcing of specialists", "Flexible contract terms", "Onboarding & monitoring", "Budget-friendly models"],
+      gradient: "from-secondary to-coral"
+    },
+    {
+      title: "Long-Term & Direct Hire",
+      description: "For strategic hires or building your core workforce aligned to your growth.",
+      features: ["Full lifecycle recruitment", "Talent-mapping support", "Cultural integration", "Retention-focused"],
+      gradient: "from-coral to-secondary"
+    },
+    {
+      title: "Managed Team Solutions",
+      description: "We build, manage and optimize the team on your behalf with full governance.",
+      features: ["Fully managed teams", "Performance KPIs", "Delivery oversight", "Global roll-outs"],
+      gradient: "from-accent-glow to-accent"
+    }
+  ];
 
-  const processes = [{
-    number: "01",
-    title: "Discovery & Planning",
-    description: "Understanding business objectives, project timelines, required competencies, and budget.",
-    backContent: "We conduct in-depth consultations to understand your organizational goals, project scope, timeline constraints, technical requirements, budget parameters, and cultural considerations to develop optimal staffing strategies.",
-    numberColor: "text-accent/20"
-  }, {
-    number: "02",
-    title: "Talent Sourcing",
-    description: "Using proprietary talent network and cleared-candidate databases to identify potential candidates.",
-    backContent: "Leveraging our extensive database of pre-qualified candidates, industry networks, and active sourcing strategies to identify professionals who match your specific technical, clearance, and cultural requirements.",
-    numberColor: "text-secondary/20"
-  }, {
-    number: "03",
-    title: "Selection & Onboarding",
-    description: "Reference checks, clearance verification, contract negotiation, and seamless onboarding.",
-    backContent: "Comprehensive vetting including reference verification, security clearance validation, skills assessment, followed by streamlined contract negotiation and structured onboarding to ensure immediate productivity.",
-    numberColor: "text-coral/20"
-  }, {
-    number: "04",
-    title: "Deployment & Tracking",
-    description: "Performance monitoring, timesheet management, and workforce analytics.",
-    backContent: "Ongoing management with real-time performance tracking, automated timesheet processing, compliance monitoring, and detailed workforce analytics to optimize productivity and drive continuous improvement.",
-    numberColor: "text-accent-glow/20"
-  }];
+  const processes = [
+    {
+      number: "01",
+      title: "Discovery & Planning",
+      description: "Understanding business objectives, project timelines, required competencies, and budget.",
+      backContent: "We conduct in-depth consultations to understand your organizational goals, project scope, timeline constraints, technical requirements, budget parameters, and cultural considerations to develop optimal staffing strategies.",
+      numberColor: "text-accent/20"
+    },
+    {
+      number: "02",
+      title: "Talent Sourcing",
+      description: "Using proprietary talent network and cleared-candidate databases to identify potential candidates.",
+      backContent: "Leveraging our extensive database of pre-qualified candidates, industry networks, and active sourcing strategies to identify professionals who match your specific technical, clearance, and cultural requirements.",
+      numberColor: "text-secondary/20"
+    },
+    {
+      number: "03",
+      title: "Selection & Onboarding",
+      description: "Reference checks, clearance verification, contract negotiation, and seamless onboarding.",
+      backContent: "Comprehensive vetting including reference verification, security clearance validation, skills assessment, followed by streamlined contract negotiation and structured onboarding to ensure immediate productivity.",
+      numberColor: "text-coral/20"
+    },
+    {
+      number: "04",
+      title: "Deployment & Tracking",
+      description: "Performance monitoring, timesheet management, and workforce analytics.",
+      backContent: "Ongoing management with real-time performance tracking, automated timesheet processing, compliance monitoring, and detailed workforce analytics to optimize productivity and drive continuous improvement.",
+      numberColor: "text-accent-glow/20"
+    }
+  ];
 
   return (
     <div className="min-h-screen">
       <Navigation />
       
-      {/* Hero Section */}
-      <section className="relative min-h-[70vh] flex items-center justify-center overflow-hidden pt-20">
-        <div className="absolute inset-0 z-0">
-          <img src={heroImage} alt="Staffing Services" className="w-full h-full object-cover" />
-        </div>
-        
-        <div className="container mx-auto px-6 relative z-10">
-          <div className="max-w-4xl mx-auto text-center space-y-6 animate-fade-in-up">
-            <div className="inline-block p-4 rounded-2xl bg-gradient-to-br from-coral to-secondary mb-4">
-              <Briefcase size={48} className="text-background" />
+      {/* Hero Section - Icon Above Title */}
+      <section className="relative min-h-[80vh] md:min-h-[90vh] flex items-center overflow-hidden pt-20 bg-gradient-to-b from-background to-background/50">
+        <div className="container mx-auto px-4 sm:px-6">
+          {/* Desktop Layout - Centered */}
+          <div className="hidden lg:flex lg:flex-col lg:items-center lg:justify-center max-w-7xl mx-auto space-y-8">
+            {/* Small Hexagon Above Title */}
+            <div className="relative w-32 h-32 flex items-center justify-center">
+              <div className="w-28 h-28 bg-[#66CB00] clip-hexagon flex items-center justify-center transform hover:scale-110 transition-transform duration-300 shadow-xl">
+                <Briefcase size={40} className="text-white" />
+              </div>
             </div>
-            <h1 className="text-6xl md:text-7xl font-bold">
-              <span className="bg-gradient-to-r from-coral via-secondary to-accent bg-clip-text text-transparent">
-                Staffing Services
-              </span>
+            
+            <h1 className="text-5xl md:text-6xl font-bold text-center">
+              Staffing<br />Services
             </h1>
-            <p className="text-2xl md:text-3xl font-semibold text-foreground">
+            
+            <p className="text-xl md:text-2xl text-muted-foreground text-center">
               Agile Talent. Strategic Deployment. Sustainable Growth.
             </p>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Access to the right people, at the right time, is a competitive advantage. Our staffing services deliver the talent, flexibility and strategic alignment your organisation needs to scale with confidence.
+          </div>
+
+          {/* Mobile/Tablet Layout */}
+          <div className="lg:hidden text-center space-y-8 max-w-3xl mx-auto">
+            {/* Small Hexagon for Mobile */}
+            <div className="flex justify-center">
+              <div className="w-24 h-24 sm:w-28 sm:h-28 bg-[#66CB00] clip-hexagon flex items-center justify-center shadow-xl">
+                <Briefcase size={32} className="text-white sm:w-10 sm:h-10" />
+              </div>
+            </div>
+
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold">
+              Staffing Services
+            </h1>
+
+            <p className="text-lg sm:text-xl text-muted-foreground">
+              Agile Talent. Strategic Deployment. Sustainable Growth.
             </p>
           </div>
         </div>
       </section>
 
       {/* Why We Stand Out */}
-      <section className="py-24 scroll-smooth">
+      <section className="py-8 scroll-smooth">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-5xl font-bold mb-6">
@@ -254,9 +283,11 @@ const StaffingServices = () => {
 
           <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
             {solutions.map((solution, index) => (
-              <GlassCard key={index} className="p-8 animate-scale-in" style={{
-                animationDelay: `${index * 0.15}s`
-              }}>
+              <GlassCard
+                key={index}
+                className="p-8 animate-scale-in"
+                style={{ animationDelay: `${index * 0.15}s` }}
+              >
                 <div className={`w-full h-2 rounded-full bg-gradient-to-r ${solution.gradient} mb-6`} />
                 <h3 className="text-2xl font-bold mb-4">{solution.title}</h3>
                 <p className="text-muted-foreground mb-6">{solution.description}</p>
@@ -345,32 +376,30 @@ const StaffingServices = () => {
 
       {/* Image Grid Info Section */}
       <ImageGridInfo 
-        images={[{
-          src: galleryCreativeTeam,
-          alt: "Dynamic team collaboration",
-          label: "Flexible Staffing"
-        }, {
-          src: galleryOfficeView,
-          alt: "Professional workspace"
-        }, {
-          src: galleryConsultation,
-          alt: "Staffing consultation"
-        }]} 
+        images={[
+          { src: galleryCreativeTeam, alt: "Dynamic team collaboration", label: "Flexible Staffing" },
+          { src: galleryOfficeView, alt: "Professional workspace" },
+          { src: galleryConsultation, alt: "Staffing consultation" }
+        ]} 
         title="Staffing That Scales" 
         subtitle="Flexible Talent Solutions" 
-        sections={[{
-          title: "Rapid Deployment",
-          icon: <Zap size={24} className="text-background" />,
-          content: "When you need talent fast, we deliver. Our extensive network and streamlined onboarding processes enable us to place qualified professionals quickly, minimizing disruption to your operations."
-        }, {
-          title: "Quality Assurance",
-          icon: <Shield size={24} className="text-background" />,
-          content: "Every candidate is thoroughly vetted for technical skills, cultural fit, and professional experience. We guarantee the quality of our placements and provide ongoing support to ensure success."
-        }, {
-          title: "Strategic Partnership",
-          icon: <Target size={24} className="text-background" />,
-          content: "We're not just a staffing vendor—we're your strategic talent partner. We take time to understand your business, culture, and goals to deliver staffing solutions that drive long-term success."
-        }]} 
+        sections={[
+          {
+            title: "Rapid Deployment",
+            icon: <Zap size={24} className="text-background" />,
+            content: "When you need talent fast, we deliver. Our extensive network and streamlined onboarding processes enable us to place qualified professionals quickly, minimizing disruption to your operations."
+          },
+          {
+            title: "Quality Assurance",
+            icon: <Shield size={24} className="text-background" />,
+            content: "Every candidate is thoroughly vetted for technical skills, cultural fit, and professional experience. We guarantee the quality of our placements and provide ongoing support to ensure success."
+          },
+          {
+            title: "Strategic Partnership",
+            icon: <Target size={24} className="text-background" />,
+            content: "We're not just a staffing vendor—we're your strategic talent partner. We take time to understand your business, culture, and goals to deliver staffing solutions that drive long-term success."
+          }
+        ]} 
         reverse={true} 
       />
 
