@@ -159,79 +159,22 @@ const ClearedRecruitment = () => {
     <div className="min-h-screen">
       <Navigation />
       
-      {/* Hero Section - Services Style with Centered Title */}
+      {/* Hero Section - Simplified with Tagline */}
       <section className="relative min-h-[80vh] md:min-h-[90vh] flex items-center overflow-hidden pt-20 bg-gradient-to-b from-background to-background/50">
         <div className="container mx-auto px-4 sm:px-6">
-          {/* Desktop Layout - 3 Columns */}
-          <div className="hidden lg:grid lg:grid-cols-3 gap-12 items-center max-w-7xl mx-auto">
-            {/* Left Side - Description */}
-            <div className="space-y-12">
-              {/* Security Clearances */}
-              <div className="space-y-4">
-                <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-full bg-[#66CB00] flex items-center justify-center flex-shrink-0">
-                    <span className="w-2.5 h-2.5 rounded-full bg-white"></span>
-                  </div>
-                  <h3 className="text-xl font-bold">All Clearance Levels</h3>
-                </div>
-                <p className="text-sm text-muted-foreground leading-relaxed">
-                  From Secret to TS/SCI with poly, we connect you with pre-cleared professionals ready for immediate deployment.
-                </p>
-              </div>
-
-              {/* Rapid Placement */}
-              <div className="space-y-4">
-                <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-full bg-[#66CB00] flex items-center justify-center flex-shrink-0">
-                    <span className="w-2.5 h-2.5 rounded-full bg-white"></span>
-                  </div>
-                  <h3 className="text-xl font-bold">Rapid Placement</h3>
-                </div>
-                <p className="text-sm text-muted-foreground leading-relaxed">
-                  Our extensive network enables quick identification and placement of mission-critical talent.
-                </p>
-              </div>
-            </div>
-
-            {/* Center - Title and Hexagon */}
-            <div className="flex flex-col items-center justify-center space-y-8">
-              <h1 className="text-5xl md:text-6xl font-bold text-center">
-                Cleared<br />Recruitment
-              </h1>
-              
-              <div className="relative w-80 h-80 flex items-center justify-center">
-                <div className="w-56 h-56 bg-[#66CB00] clip-hexagon flex items-center justify-center transform hover:scale-110 transition-transform duration-300 shadow-2xl">
-                  <Shield size={80} className="text-white" />
-                </div>
-              </div>
-            </div>
-
-            {/* Right Side - More Description */}
-            <div className="space-y-12">
-              {/* Compliance */}
-              <div className="space-y-4">
-                <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-full bg-[#66CB00] flex items-center justify-center flex-shrink-0">
-                    <span className="w-2.5 h-2.5 rounded-full bg-white"></span>
-                  </div>
-                  <h3 className="text-xl font-bold">Full Compliance</h3>
-                </div>
-                <p className="text-sm text-muted-foreground leading-relaxed">
-                  Every placement adheres to federal regulations and security protocols ensuring mission readiness.
-                </p>
-              </div>
-
-              {/* Specialized Roles */}
-              <div className="space-y-4">
-                <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-full bg-[#66CB00] flex items-center justify-center flex-shrink-0">
-                    <span className="w-2.5 h-2.5 rounded-full bg-white"></span>
-                  </div>
-                  <h3 className="text-xl font-bold">Specialized Expertise</h3>
-                </div>
-                <p className="text-sm text-muted-foreground leading-relaxed">
-                  Access cleared cybersecurity experts, intelligence analysts, engineers, and technical specialists.
-                </p>
+          {/* Desktop Layout - Centered */}
+          <div className="hidden lg:flex lg:flex-col lg:items-center lg:justify-center max-w-7xl mx-auto space-y-8">
+            <h1 className="text-5xl md:text-6xl font-bold text-center">
+              Cleared<br />Recruitment
+            </h1>
+            
+            <p className="text-xl md:text-2xl text-muted-foreground text-center">
+              Securing Your Mission-Critical Talent
+            </p>
+            
+            <div className="relative w-80 h-80 flex items-center justify-center">
+              <div className="w-56 h-56 bg-[#66CB00] clip-hexagon flex items-center justify-center transform hover:scale-110 transition-transform duration-300 shadow-2xl">
+                <Shield size={80} className="text-white" />
               </div>
             </div>
           </div>
@@ -242,16 +185,16 @@ const ClearedRecruitment = () => {
               Cleared Recruitment
             </h1>
 
+            <p className="text-lg sm:text-xl text-muted-foreground">
+              Securing Your Mission-Critical Talent
+            </p>
+
             {/* Single Large Hexagon for Mobile */}
             <div className="flex justify-center py-8">
               <div className="w-40 h-40 sm:w-48 sm:h-48 bg-[#66CB00] clip-hexagon flex items-center justify-center shadow-2xl">
                 <Shield size={64} className="text-white sm:w-20 sm:h-20" />
               </div>
             </div>
-
-            <p className="text-base sm:text-lg text-muted-foreground leading-relaxed px-4">
-              Connecting mission-critical projects with top-tier security-cleared professionals across all clearance levels.
-            </p>
           </div>
         </div>
       </section>
