@@ -230,7 +230,7 @@ const StaffingServices = () => {
             </h1>
 
             <p className="text-lg sm:text-xl text-muted-foreground">
-              Agile Talent. Strategic Deployment. Sustainable Growth.
+              Agility and Talent for Commercial Success
             </p>
           </div>
         </div>
