@@ -41,7 +41,7 @@ const Navigation = () => {
   const serviceLinks = [
     { path: "/services/proposal", label: "Proposal Development" },
     { path: "/services/recruitment", label: "Cleared Recruitment" },
-    { path: "/services/staffing", label: "Staffing Services" },
+    { path: "/services/staffing", label: "Workforce Staffing" },
     { path: "/services/software", label: "Software Development" },
   ];
 
