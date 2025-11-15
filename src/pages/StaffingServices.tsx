@@ -424,6 +424,9 @@ const StaffingServices = () => {
         </div>
       </section>
 
+{/* Sticky Contact Button */}
+      <StickyContactButton />
+
       <Footer />
     </div>
   );
