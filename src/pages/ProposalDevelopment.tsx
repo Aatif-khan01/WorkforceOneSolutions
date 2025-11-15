@@ -325,12 +325,12 @@ const PhaseFlipCard = ({
           </div>
         </div>
 
-        {/* Back Side */}
+        {/* Back Side - Changed to solid green */}
         <div className="absolute inset-0 backface-hidden rotate-y-180">
-          <div className={`h-full w-full p-8 rounded-2xl bg-gradient-to-br ${gradient} shadow-lg flex flex-col justify-center items-center text-center`}>
-            <div className="text-5xl font-bold text-background/30 mb-3">{number}</div>
-            <h3 className="text-xl font-bold mb-4 text-background">{title}</h3>
-            <p className="text-background/90 text-sm leading-relaxed">
+          <div className="h-full w-full p-8 rounded-2xl bg-[#66CB00] shadow-lg flex flex-col justify-center items-center text-center">
+            <div className="text-5xl font-bold text-white/30 mb-3">{number}</div>
+            <h3 className="text-xl font-bold mb-4 text-white">{title}</h3>
+            <p className="text-white/90 text-sm leading-relaxed">
               {backContent || description}
             </p>
           </div>
