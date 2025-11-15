@@ -82,6 +82,13 @@ const Navigation = () => {
     return "bg-[#66CB00]";
   };
 
+  const getMobileButtonColor = () => {
+    if (isHomePage && !isScrolled) {
+      return "text-foreground bg-white/10 backdrop-blur-sm hover:bg-white/20";
+    }
+    return "text-foreground hover:text-[#66CB00]";
+  };
+
   return (
     <motion.nav
       initial={{ y: 0 }}
@@ -194,11 +201,7 @@ const Navigation = () => {
             <ThemeToggle />
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className={`p-2 transition-colors ${
-                isHomePage && !isScrolled 
-                  ? "text-white hover:text-white/80" 
-                  : "text-foreground hover:text-[#66CB00]"
-              }`}
+              className={`p-2 rounded-lg transition-all duration-300 ${getMobileButtonColor()}`}
             >
               {isOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
