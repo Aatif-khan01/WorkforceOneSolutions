@@ -446,6 +446,9 @@ const SoftwareDevelopment = () => {
         </div>
       </section>
 
+{/* Sticky Contact Button */}
+      <StickyContactButton />
+
       <Footer />
     </div>
   );
