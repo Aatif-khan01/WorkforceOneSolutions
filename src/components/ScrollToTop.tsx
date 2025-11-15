@@ -33,13 +33,13 @@ const ScrollToTop = () => {
   }
 
   return (
-    <div className="fixed bottom-8 right-8 z-scroll-top">
+    <div className="fixed bottom-8 right-8 z-50">
       <Button
         onClick={scrollToTop}
-        className="scroll-to-top-button w-12 h-12 rounded-full bg-gradient-to-r from-accent to-accent-glow hover:from-accent-glow hover:to-accent shadow-lg hover:shadow-xl transition-all duration-200 animate-float border-2 border-accent/20 backdrop-blur-sm"
+        className="w-12 h-12 rounded-full bg-[#66CB00] hover:bg-[#66CB00]/90 shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-110 border-2 border-[#66CB00]/20 backdrop-blur-sm"
         size="icon"
       >
-        <ChevronUp size={24} className="text-background" />
+        <ChevronUp size={24} className="text-white" />
       </Button>
     </div>
   );
