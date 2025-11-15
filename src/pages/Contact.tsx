@@ -188,8 +188,8 @@ const Contact = () => {
                     <MapPin size={24} className="text-background" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold mb-2">Global / US Office</h3>
-                    <p className="text-muted-foreground mb-2">Coming Soon</p>
+                    <h3 className="text-xl font-bold mb-2">Contact US</h3>
+                    <p className="text-muted-foreground mb-2">XXXXXXXXX</p>
                     <p className="text-muted-foreground">info@workforceonesolutions.com</p>
                   </div>
                 </div>
