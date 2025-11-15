@@ -133,13 +133,8 @@ const StaffingServices = () => {
     }
   ];
 
+  // ONLY TWO SOLUTIONS - Removed the other two
   const solutions = [
-    {
-      title: "Cleared Recruitment & Deployment",
-      description: "For government, defence, or high-sensitivity commercial projects with required security clearances.",
-      features: ["Active-clearance mapping", "Rapid deployment", "Ongoing clearance management", "Full compliance"],
-      gradient: "from-accent to-accent-glow"
-    },
     {
       title: "Project & Contract Staffing",
       description: "When you have an upcoming project, surge requirement, or short-term initiative.",
@@ -151,12 +146,6 @@ const StaffingServices = () => {
       description: "For strategic hires or building your core workforce aligned to your growth.",
       features: ["Full lifecycle recruitment", "Talent-mapping support", "Cultural integration", "Retention-focused"],
       gradient: "from-coral to-secondary"
-    },
-    {
-      title: "Managed Team Solutions",
-      description: "We build, manage and optimize the team on your behalf with full governance.",
-      features: ["Fully managed teams", "Performance KPIs", "Delivery oversight", "Global roll-outs"],
-      gradient: "from-accent-glow to-accent"
     }
   ];
 
@@ -236,7 +225,7 @@ const StaffingServices = () => {
         </div>
       </section>
 
-      {/* Introduction Section - NEW */}
+      {/* Introduction Section */}
       <section className="py-8 scroll-smooth">
         <div className="container mx-auto px-6">
           <GlassCard className="p-12 max-w-5xl mx-auto">
@@ -284,7 +273,7 @@ const StaffingServices = () => {
         </div>
       </section>
 
-      {/* Core Staffing Solutions */}
+      {/* Core Staffing Solutions - ONLY 2 CARDS */}
       <section className="py-24 bg-gradient-to-b from-background/50 to-background">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
