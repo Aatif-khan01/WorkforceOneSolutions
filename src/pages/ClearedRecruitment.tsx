@@ -147,14 +147,6 @@ const ClearedRecruitment = () => {
     },
   ];
 
-  const industries = [
-    "Defense & Aerospace",
-    "Intelligence & Cybersecurity",
-    "Government Contracting",
-    "Healthcare & Life Sciences",
-    "Information Technology",
-  ];
-
   return (
     <div className="min-h-screen">
       <Navigation />
@@ -298,27 +290,6 @@ const ClearedRecruitment = () => {
               </div>
             </div>
           </GlassCard>
-        </div>
-      </section>
-
-      {/* Industries We Serve */}
-      <section className="py-24">
-        <div className="container mx-auto px-6">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold mb-6">
-              <span className="bg-gradient-to-r from-accent to-secondary bg-clip-text text-transparent">
-                Industries We Serve
-              </span>
-            </h2>
-          </div>
-
-          <div className="flex flex-wrap justify-center gap-4 max-w-4xl mx-auto">
-            {industries.map((industry, index) => (
-              <div key={index} className="px-6 py-3 rounded-full bg-glass/40 backdrop-blur-xl border border-glass-border hover:border-[#66CB00] hover:bg-[#66CB00]/10 transition-colors">
-                <span className="text-foreground font-medium">{industry}</span>
-              </div>
-            ))}
-          </div>
         </div>
       </section>
 
