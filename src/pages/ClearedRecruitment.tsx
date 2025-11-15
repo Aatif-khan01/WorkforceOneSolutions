@@ -165,7 +165,7 @@ const ClearedRecruitment = () => {
           {/* Desktop Layout - Centered */}
           <div className="hidden lg:flex lg:flex-col lg:items-center lg:justify-center max-w-7xl mx-auto space-y-8">
             <h1 className="text-5xl md:text-6xl font-bold text-center">
-              Cleared<br />Recruitment
+              Cleared Recruitment
             </h1>
             
             <p className="text-xl md:text-2xl text-muted-foreground text-center">
