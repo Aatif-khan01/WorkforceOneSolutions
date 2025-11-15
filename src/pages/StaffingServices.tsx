@@ -6,6 +6,7 @@ import Footer from "@/components/Footer";
 import GlassCard from "@/components/GlassCard";
 import ImageGridInfo from "@/components/ImageGridInfo";
 import StickyContactButton from "@/components/StickyContactButton";
+import ScrollToTop from "@/components/ScrollToTop";
 import { Button } from "@/components/ui/button";
 import diverseTeamImage from "@/assets/diverse-team.jpg";
 import galleryCreativeTeam from "@/assets/gallery-creative-team.jpg";
