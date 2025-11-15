@@ -30,6 +30,14 @@ const About = () => {
     icon: Award
   }];
 
+  const industries = [
+    "Defense & Aerospace",
+    "Intelligence & Cybersecurity",
+    "Government Contracting",
+    "Healthcare & Life Sciences",
+    "Information Technology"
+  ];
+
   return (
     <div className="min-h-screen">
       <Navigation />
@@ -208,6 +216,32 @@ const About = () => {
         }]} 
         reverse={true} 
       />
+
+      {/* Industries We Serve */}
+      <section className="py-16 md:py-24 bg-gradient-to-b from-background/50 to-background">
+        <div className="container mx-auto px-4 sm:px-6">
+          <div className="text-center mb-12 md:mb-16">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
+              <span className="bg-gradient-to-r from-accent to-secondary bg-clip-text text-transparent">
+                Industries We Serve
+              </span>
+            </h2>
+          </div>
+
+          <div className="flex flex-wrap justify-center gap-4 max-w-4xl mx-auto">
+            {industries.map((industry, index) => (
+              <div
+                key={index}
+                className="px-6 py-3 rounded-full border-2 border-border bg-background/50 backdrop-blur-sm hover:border-[#66CB00] hover:bg-[#66CB00]/10 transition-all duration-300 cursor-default"
+              >
+                <span className="text-sm md:text-base font-medium text-foreground">
+                  {industry}
+                </span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
       {/* CTA */}
       <section className="py-16 md:py-24">
