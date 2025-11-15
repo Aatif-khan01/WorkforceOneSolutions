@@ -7,7 +7,6 @@ import ClientLogos from "@/components/ClientLogos";
 import GlassCard from "@/components/GlassCard";
 import ImageGridInfo from "@/components/ImageGridInfo";
 import { Button } from "@/components/ui/button";
-import heroImage from "@/assets/hero-recruitment.jpg";
 import gallerySecurity from "@/assets/gallery-security.jpg";
 import galleryInterview from "@/assets/gallery-interview.jpg";
 import galleryPartnership from "@/assets/gallery-partnership.jpg";
@@ -160,10 +159,100 @@ const ClearedRecruitment = () => {
     <div className="min-h-screen">
       <Navigation />
       
-      {/* Hero Section - Image Only, No Text or Icon */}
-      <section className="relative min-h-[70vh] flex items-center justify-center overflow-hidden pt-20">
-        <div className="absolute inset-0 z-0">
-          <img src={heroImage} alt="Cleared Recruitment" className="w-full h-full object-cover object-center" />
+      {/* Hero Section - Services Style with Hexagonal Layout */}
+      <section className="relative min-h-[80vh] md:min-h-[90vh] flex items-center overflow-hidden pt-20 bg-gradient-to-b from-background to-background/50">
+        <div className="container mx-auto px-4 sm:px-6">
+          {/* Desktop Layout - 3 Columns */}
+          <div className="hidden lg:grid lg:grid-cols-3 gap-12 items-center max-w-7xl mx-auto">
+            {/* Left Side - Description */}
+            <div className="space-y-12">
+              {/* Security Clearances */}
+              <div className="space-y-4">
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-full bg-[#66CB00] flex items-center justify-center flex-shrink-0">
+                    <span className="w-2.5 h-2.5 rounded-full bg-white"></span>
+                  </div>
+                  <h3 className="text-xl font-bold">All Clearance Levels</h3>
+                </div>
+                <p className="text-sm text-muted-foreground leading-relaxed">
+                  From Secret to TS/SCI with poly, we connect you with pre-cleared professionals ready for immediate deployment.
+                </p>
+              </div>
+
+              {/* Rapid Placement */}
+              <div className="space-y-4">
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-full bg-[#66CB00] flex items-center justify-center flex-shrink-0">
+                    <span className="w-2.5 h-2.5 rounded-full bg-white"></span>
+                  </div>
+                  <h3 className="text-xl font-bold">Rapid Placement</h3>
+                </div>
+                <p className="text-sm text-muted-foreground leading-relaxed">
+                  Our extensive network enables quick identification and placement of mission-critical talent.
+                </p>
+              </div>
+            </div>
+
+            {/* Center - Single Large Hexagon with Shield Icon */}
+            <div className="flex justify-center items-center">
+              <div className="relative w-80 h-80 flex items-center justify-center">
+                <div className="w-56 h-56 bg-[#66CB00] clip-hexagon flex items-center justify-center transform hover:scale-110 transition-transform duration-300 shadow-2xl">
+                  <Shield size={80} className="text-white" />
+                </div>
+              </div>
+            </div>
+
+            {/* Right Side - Title and More Description */}
+            <div className="space-y-12 flex flex-col items-center">
+              <h1 className="text-5xl md:text-6xl font-bold text-center">
+                Cleared<br />Recruitment
+              </h1>
+
+              {/* Compliance */}
+              <div className="space-y-4 w-full">
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-full bg-[#66CB00] flex items-center justify-center flex-shrink-0">
+                    <span className="w-2.5 h-2.5 rounded-full bg-white"></span>
+                  </div>
+                  <h3 className="text-xl font-bold">Full Compliance</h3>
+                </div>
+                <p className="text-sm text-muted-foreground leading-relaxed">
+                  Every placement adheres to federal regulations and security protocols ensuring mission readiness.
+                </p>
+              </div>
+
+              {/* Specialized Roles */}
+              <div className="space-y-4 w-full">
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-full bg-[#66CB00] flex items-center justify-center flex-shrink-0">
+                    <span className="w-2.5 h-2.5 rounded-full bg-white"></span>
+                  </div>
+                  <h3 className="text-xl font-bold">Specialized Expertise</h3>
+                </div>
+                <p className="text-sm text-muted-foreground leading-relaxed">
+                  Access cleared cybersecurity experts, intelligence analysts, engineers, and technical specialists.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Mobile/Tablet Layout */}
+          <div className="lg:hidden text-center space-y-8 max-w-3xl mx-auto">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold">
+              Cleared Recruitment
+            </h1>
+
+            {/* Single Large Hexagon for Mobile */}
+            <div className="flex justify-center py-8">
+              <div className="w-40 h-40 sm:w-48 sm:h-48 bg-[#66CB00] clip-hexagon flex items-center justify-center shadow-2xl">
+                <Shield size={64} className="text-white sm:w-20 sm:h-20" />
+              </div>
+            </div>
+
+            <p className="text-base sm:text-lg text-muted-foreground leading-relaxed px-4">
+              Connecting mission-critical projects with top-tier security-cleared professionals across all clearance levels.
+            </p>
+          </div>
         </div>
       </section>
 
@@ -174,7 +263,7 @@ const ClearedRecruitment = () => {
             <p className="text-lg text-foreground leading-relaxed">
               For projects demanding the highest levels of security and trust, our Cleared Recruitment services provide rapid and reliable access to the nation's most trusted professionals. We specialize in sourcing, vetting, and placing experts with the full spectrum of required U.S. Government security clearances. This includes foundational levels like NACI and Public Trust, through to high-level clearances such as Secret, Top Secret, Top Secret with SCI (TS/SCI), Counter Intelligence Polygraph (CI Poly), and Full Scope Polygraph (FS Poly). We understand that time is critical for mission support, which is why we offer flexible staffing solutions for short-term, long-term, and full-time durations, ensuring your organization remains fully compliant and operationally ready without delay.
               
-              Our dedicated expertise in this highly specialized domain sets us apart. We operate with an unrivaled understanding of the security clearance landscape and the unique demands of government and defense contracting. Our network consists exclusively of actively cleared professionals, significantly reducing your time-to-hire for critical roles.
+              Our dedicated expertise in this highly specialized domain sets us apart. We operate with an unrivaled understanding of the security clearance landscape and the unique demands of government and defense contracting. Our network consists exclusively of actively cleared professionals, significantly reducing your time-to-hire for critical roles.
             </p>
           </GlassCard>
         </div>
@@ -280,7 +369,7 @@ const ClearedRecruitment = () => {
 
           <div className="flex flex-wrap justify-center gap-4 max-w-4xl mx-auto">
             {industries.map((industry, index) => (
-              <div key={index} className="px-6 py-3 rounded-full bg-glass/40 backdrop-blur-xl border border-glass-border hover:border-accent transition-colors">
+              <div key={index} className="px-6 py-3 rounded-full bg-glass/40 backdrop-blur-xl border border-glass-border hover:border-[#66CB00] hover:bg-[#66CB00]/10 transition-colors">
                 <span className="text-foreground font-medium">{industry}</span>
               </div>
             ))}
