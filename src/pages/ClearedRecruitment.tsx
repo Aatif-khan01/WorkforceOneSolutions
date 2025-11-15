@@ -6,6 +6,8 @@ import Footer from "@/components/Footer";
 import ClientLogos from "@/components/ClientLogos";
 import GlassCard from "@/components/GlassCard";
 import ImageGridInfo from "@/components/ImageGridInfo";
+import StickyContactButton from "@/components/StickyContactButton";
+import ScrollToTop from "@/components/ScrollToTop";
 import { Button } from "@/components/ui/button";
 import gallerySecurity from "@/assets/gallery-security.jpg";
 import galleryInterview from "@/assets/gallery-interview.jpg";
@@ -338,6 +340,10 @@ const ClearedRecruitment = () => {
           </GlassCard>
         </div>
       </section>
+
+      {/* Sticky Buttons */}
+      <StickyContactButton />
+      <ScrollToTop />
 
       <Footer />
     </div>
