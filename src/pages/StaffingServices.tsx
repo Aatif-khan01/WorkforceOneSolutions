@@ -208,7 +208,7 @@ const StaffingServices = () => {
             </div>
             
             <h1 className="text-5xl md:text-6xl font-bold text-center">
-              Staffing<br />Services
+              Staffing Services
             </h1>
             
             <p className="text-xl md:text-2xl text-muted-foreground text-center">
