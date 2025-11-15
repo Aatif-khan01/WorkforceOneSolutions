@@ -226,7 +226,7 @@ const SoftwareDevelopment = () => {
             </h1>
             
             <p className="text-xl md:text-2xl text-muted-foreground text-center">
-              Innovative Solutions. Scalable Impact.
+              Precision, Performance, and Digital Delivery
             </p>
           </div>
 
