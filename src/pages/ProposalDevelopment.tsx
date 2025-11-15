@@ -121,7 +121,7 @@ const ProposalDevelopment = () => {
             </h1>
 
             <p className="text-lg sm:text-xl text-muted-foreground">
-              Winning Proposals That Set You Apart
+              Strategy, Compliance, and Winning Federal Contracts
             </p>
           </div>
         </div>
@@ -132,10 +132,10 @@ const ProposalDevelopment = () => {
         <div className="container mx-auto px-6">
           <GlassCard className="p-12 max-w-5xl mx-auto">
             <p className="text-lg text-foreground leading-relaxed mb-6">
-              At Workforce One Solutions, we help you transform business opportunities into winning proposals that set you apart from competitors. Our Proposal Development division combines deep domain expertise, compliance precision, and creative storytelling to help clients win government, defence, and commercial contracts.
+              Securing high-value federal government contracts demands far more than basic writing; it requires strategic mastery and guaranteed compliance. Our Proposal Development services provide the comprehensive partnership necessary to turn complex solicitations into successful contracts. We move beyond simple writing to offer end-to-end proposal management, from initial RFI analysis and focused "win theme" development to driving the entire RFP (Request for Proposal) process to a perfectly compliant submission. We integrate seamlessly with your internal teams to capture crucial information, develop robust pricing strategies, and ensure absolute compliance with every instruction outlined in the Statement of Work (SOW) or Performance Work Statement (PWS) eliminating the risks that often derails prospective wins.
             </p>
             <p className="text-lg text-foreground leading-relaxed">
-              We partner with you through every stage, from capture strategy and content creation to reviews and final production, ensuring your proposal reflects excellence, credibility, and value.
+              Our team's mastery lies in specialized technical writing and strategic architecture for the federal evaluation board. We understand that evaluators discard non-compliant or confusing proposals instantly. We eliminate this risk by translating your most complex technical architectures, methodologies, and engineering concepts into compelling, highly scoreable, and indisputably compliant narratives. By leveraging a deep, intimate knowledge of federal evaluation criteria (FAR/DFARS), we structure and articulate every section—from Management Plans to Technical Solutions—to maximize your probability of award.
             </p>
           </GlassCard>
         </div>
