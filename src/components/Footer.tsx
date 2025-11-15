@@ -1,15 +1,26 @@
 import { Link } from "react-router-dom";
 import { Linkedin } from "lucide-react";
-import logo from "@/assets/WfOS-LOGO.png";
+import logoLight from "@/assets/WfOS-LOGO.png";
+import logoDark from "@/assets/Logo-dark.png";
+import { useTheme } from "@/components/ThemeProvider";
 
 const Footer = () => {
+  const { theme } = useTheme();
+  
+  // Choose logo based on theme
+  const currentLogo = theme === "dark" ? logoDark : logoLight;
+
   return (
     <footer className="relative mt-24 bg-card/50 backdrop-blur-xl border-t border-glass-border">
       <div className="container mx-auto px-6 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="space-y-4">
             <Link to="/" className="inline-flex items-center">
-              <img src={logo} alt="Company logo" className="h-14 w-auto" />
+              <img 
+                src={currentLogo} 
+                alt="Company logo" 
+                className="h-14 w-auto transition-opacity duration-300" 
+              />
             </Link>
             <p className="text-muted-foreground">
               Empowering Businesses through Talent and Innovation.
