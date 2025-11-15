@@ -33,7 +33,7 @@ const ScrollToTop = () => {
   }
 
   return (
-    <div className="fixed bottom-8 right-8 z-50">
+    <div className="fixed bottom-24 right-8 z-50 animate-float">
       <Button
         onClick={scrollToTop}
         className="w-12 h-12 rounded-full bg-[#66CB00] hover:bg-[#66CB00]/90 shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-110 border-2 border-[#66CB00]/20 backdrop-blur-sm"
