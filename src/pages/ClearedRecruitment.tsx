@@ -159,7 +159,7 @@ const ClearedRecruitment = () => {
     <div className="min-h-screen">
       <Navigation />
       
-      {/* Hero Section - Services Style with Hexagonal Layout */}
+      {/* Hero Section - Services Style with Centered Title */}
       <section className="relative min-h-[80vh] md:min-h-[90vh] flex items-center overflow-hidden pt-20 bg-gradient-to-b from-background to-background/50">
         <div className="container mx-auto px-4 sm:px-6">
           {/* Desktop Layout - 3 Columns */}
@@ -193,8 +193,12 @@ const ClearedRecruitment = () => {
               </div>
             </div>
 
-            {/* Center - Single Large Hexagon with Shield Icon */}
-            <div className="flex justify-center items-center">
+            {/* Center - Title and Hexagon */}
+            <div className="flex flex-col items-center justify-center space-y-8">
+              <h1 className="text-5xl md:text-6xl font-bold text-center">
+                Cleared<br />Recruitment
+              </h1>
+              
               <div className="relative w-80 h-80 flex items-center justify-center">
                 <div className="w-56 h-56 bg-[#66CB00] clip-hexagon flex items-center justify-center transform hover:scale-110 transition-transform duration-300 shadow-2xl">
                   <Shield size={80} className="text-white" />
@@ -202,14 +206,10 @@ const ClearedRecruitment = () => {
               </div>
             </div>
 
-            {/* Right Side - Title and More Description */}
-            <div className="space-y-12 flex flex-col items-center">
-              <h1 className="text-5xl md:text-6xl font-bold text-center">
-                Cleared<br />Recruitment
-              </h1>
-
+            {/* Right Side - More Description */}
+            <div className="space-y-12">
               {/* Compliance */}
-              <div className="space-y-4 w-full">
+              <div className="space-y-4">
                 <div className="flex items-center gap-3">
                   <div className="w-10 h-10 rounded-full bg-[#66CB00] flex items-center justify-center flex-shrink-0">
                     <span className="w-2.5 h-2.5 rounded-full bg-white"></span>
@@ -222,7 +222,7 @@ const ClearedRecruitment = () => {
               </div>
 
               {/* Specialized Roles */}
-              <div className="space-y-4 w-full">
+              <div className="space-y-4">
                 <div className="flex items-center gap-3">
                   <div className="w-10 h-10 rounded-full bg-[#66CB00] flex items-center justify-center flex-shrink-0">
                     <span className="w-2.5 h-2.5 rounded-full bg-white"></span>
@@ -269,7 +269,7 @@ const ClearedRecruitment = () => {
         </div>
       </section>
 
-      {/* Client Logos Section - Positioned after Introduction */}
+      {/* Client Logos Section */}
       <ClientLogos />
 
       {/* Recruitment Process */}
