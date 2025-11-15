@@ -157,10 +157,10 @@ const Contact = () => {
                 <Button 
                   type="submit" 
                   size="lg" 
-                  className="w-full bg-[#66CB00] hover:bg-[#66CB00]/90 hover:shadow-lg text-white group transition-all duration-300"
+                  className="w-full bg-[#66CB00] hover:bg-[#66CB00]/90 hover:shadow-lg text-white text-lg font-semibold py-7 group transition-all duration-300"
                 >
                   Send Message
-                  <Send className="ml-2 group-hover:translate-x-1 transition-transform" size={20} />
+                  <Send className="ml-2 group-hover:translate-x-1 transition-transform" size={22} />
                 </Button>
               </form>
             </AnimatedCard>
