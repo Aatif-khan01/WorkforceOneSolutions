@@ -256,7 +256,7 @@ const StaffingServices = () => {
           <div className="text-center mb-16">
             <h2 className="text-5xl font-bold mb-6">
               <span className="bg-gradient-to-r from-accent to-secondary bg-clip-text text-transparent">
-                Why Our Workforce Staffing Stand Out
+                Why Our Workforce Staffing Stand's Out
               </span>
             </h2>
           </div>
