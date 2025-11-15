@@ -108,17 +108,20 @@ const Navigation = () => {
     >
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
-          {/* Logo - Switches based on theme */}
-          <Link
-            to="/"
-            className="hover:scale-105 transition-transform duration-300"
-          >
-            <img
-              src={currentLogo}
-              alt="Company logo"
-              className="h-14 w-auto transition-opacity duration-300" 
-            />
-          </Link>
+          {/* Logo - Only show on non-home pages, with fixed size */}
+          {!isHomePage && (
+            <Link
+              to="/"
+              className="hover:scale-105 transition-transform duration-300"
+            >
+              <img
+                src={currentLogo}
+                alt="Company logo"
+                className="h-12 w-auto object-contain transition-opacity duration-300"
+                style={{ maxHeight: "48px" }}
+              />
+            </Link>
+          )}
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8 ml-auto">
