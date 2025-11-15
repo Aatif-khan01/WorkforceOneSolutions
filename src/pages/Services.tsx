@@ -123,7 +123,7 @@ const Services = () => {
             <div className="flex flex-col items-center space-y-8">
               {/* Title at Top */}
               <h1 className="text-5xl md:text-6xl font-bold text-center">
-                Our<br />Services
+                Our Services
               </h1>
 
               {/* Hexagonal Icons in Cross/Plus Pattern */}
