@@ -5,6 +5,8 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import ImageGridInfo from "@/components/ImageGridInfo";
 import GlassCard from "@/components/GlassCard";
+import StickyContactButton from "@/components/StickyContactButton";
+import ScrollToTop from "@/components/ScrollToTop";
 import { Button } from "@/components/ui/button";
 import developmentWorkspaceImage from "@/assets/development-workspace.jpg";
 import galleryDevWork from "@/assets/gallery-dev-work.jpg";
@@ -446,8 +448,9 @@ const SoftwareDevelopment = () => {
         </div>
       </section>
 
-{/* Sticky Contact Button */}
+      {/* Sticky Buttons */}
       <StickyContactButton />
+      <ScrollToTop />
 
       <Footer />
     </div>
