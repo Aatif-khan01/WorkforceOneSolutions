@@ -191,7 +191,7 @@ const Contact = () => {
                       href="tel:+17037911501" 
                       className="text-muted-foreground hover:text-accent transition-colors duration-200 block mb-2"
                     >
-                      (703) 791-1501
+                      +1(703) 791-1501
                     </a>
                     <a 
                       href="mailto:info@workforceonesolutions.com" 
