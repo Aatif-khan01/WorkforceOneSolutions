@@ -175,7 +175,7 @@ const Contact = () => {
                   <div>
                     <h3 className="text-xl font-bold mb-2">Head Office (India)</h3>
                     <p className="text-muted-foreground mb-2">Srinagar, Jammu and Kashmir, India</p>
-                    <p className="text-muted-foreground">info@workforceonesolutions.com</p>
+                    <p className="text-muted-foreground"></p>
                   </div>
                 </div>
               </AnimatedCard>
@@ -187,8 +187,18 @@ const Contact = () => {
                   </div>
                   <div>
                     <h3 className="text-xl font-bold mb-2">Contact US</h3>
-                    <p className="text-muted-foreground mb-2">(703) 791-1501</p>
-                    <p className="text-muted-foreground">info@workforceonesolutions.com</p>
+                    <a 
+                      href="tel:+17037911501" 
+                      className="text-muted-foreground hover:text-accent transition-colors duration-200 block mb-2"
+                    >
+                      (703) 791-1501
+                    </a>
+                    <a 
+                      href="mailto:info@workforceonesolutions.com" 
+                      className="text-muted-foreground hover:text-accent transition-colors duration-200 block"
+                    >
+                      info@workforceonesolutions.com
+                    </a>
                   </div>
                 </div>
               </AnimatedCard>
