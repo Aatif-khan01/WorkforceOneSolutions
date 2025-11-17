@@ -187,7 +187,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h3 className="text-xl font-bold mb-2">Contact US</h3>
-                    <p className="text-muted-foreground mb-2">XXXXXXXXX</p>
+                    <p className="text-muted-foreground mb-2">+1-(703)791-1501</p>
                     <p className="text-muted-foreground">info@workforceonesolutions.com</p>
                   </div>
                 </div>
