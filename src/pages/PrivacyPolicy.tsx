@@ -1,11 +1,38 @@
 import { Shield, Lock, Eye, FileCheck } from "lucide-react";
+import { Helmet } from "react-helmet-async";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import GlassCard from "@/components/GlassCard";
 
 const PrivacyPolicy = () => {
   return (
-    <div className="min-h-screen">
+    <>
+      <Helmet>
+        <title>Privacy Policy | Workforce One Solutions</title>
+        <meta
+          name="description"
+          content="Review Workforce One Solutions' privacy practices covering confidentiality, data protection, and information handling standards."
+        />
+        <meta
+          name="keywords"
+          content="Workforce One Solutions privacy policy, data protection, confidentiality statement"
+        />
+        <link rel="canonical" href="https://www.workforceonesolutions.com/privacy-policy" />
+        <meta property="og:title" content="Privacy Policy" />
+        <meta
+          property="og:description"
+          content="Understand how Workforce One Solutions safeguards your data."
+        />
+        <meta property="og:url" content="https://www.workforceonesolutions.com/privacy-policy" />
+        <meta property="og:image" content="https://www.workforceonesolutions.com/og-image.jpg" />
+        <meta name="twitter:title" content="Privacy Policy" />
+        <meta
+          name="twitter:description"
+          content="Understand how Workforce One Solutions safeguards your data."
+        />
+        <meta name="twitter:image" content="https://www.workforceonesolutions.com/og-image.jpg" />
+      </Helmet>
+      <div className="min-h-screen">
       <Navigation />
       
       {/* Hero Section */}
@@ -200,6 +227,7 @@ const PrivacyPolicy = () => {
 
       <Footer />
     </div>
+    </>
   );
 };
 
