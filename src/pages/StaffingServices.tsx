@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import { Briefcase, Zap, Users, Target, Shield, ArrowRight } from "lucide-react";
+import { Helmet } from "react-helmet-async";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import GlassCard from "@/components/GlassCard";
@@ -183,7 +184,33 @@ const StaffingServices = () => {
   ];
 
   return (
-    <div className="min-h-screen">
+    <>
+      <Helmet>
+        <title>Workforce Staffing Services | Workforce One Solutions</title>
+        <meta
+          name="description"
+          content="Deploy pre-vetted commercial talent fast with Workforce One Solutions staffing services covering contract, contract-to-hire, and direct placements."
+        />
+        <meta
+          name="keywords"
+          content="workforce staffing, contract staffing, talent solutions, commercial staffing partner"
+        />
+        <link rel="canonical" href="https://www.workforceonesolutions.com/services/staffing" />
+        <meta property="og:title" content="Workforce Staffing Services" />
+        <meta
+          property="og:description"
+          content="Flexible staffing solutions delivering quality talent on demand."
+        />
+        <meta property="og:url" content="https://www.workforceonesolutions.com/services/staffing" />
+        <meta property="og:image" content="https://www.workforceonesolutions.com/og-image.jpg" />
+        <meta name="twitter:title" content="Workforce Staffing Services" />
+        <meta
+          name="twitter:description"
+          content="Flexible staffing solutions delivering quality talent on demand."
+        />
+        <meta name="twitter:image" content="https://www.workforceonesolutions.com/og-image.jpg" />
+      </Helmet>
+      <div className="min-h-screen">
       <Navigation />
       
       {/* Hero Section - Icon Above Title */}
@@ -426,11 +453,12 @@ const StaffingServices = () => {
         </div>
       </section>
 
-{/* Sticky Contact Button */}
+      {/* Sticky Contact Button */}
       <StickyContactButton />
 
       <Footer />
     </div>
+    </>
   );
 };
 
