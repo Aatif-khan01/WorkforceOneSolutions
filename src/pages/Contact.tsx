@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Mail, MapPin, Phone, Send, MessageCircle, Clock, CheckCircle } from "lucide-react";
+import { Helmet } from "react-helmet-async";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import AnimatedCard from "@/components/AnimatedCard";
@@ -38,7 +39,33 @@ const Contact = () => {
   };
 
   return (
-    <div className="min-h-screen">
+    <>
+      <Helmet>
+        <title>Contact Workforce One Solutions | Start the Conversation</title>
+        <meta
+          name="description"
+          content="Contact Workforce One Solutions to discuss proposal support, cleared recruitment, staffing, and software development needs."
+        />
+        <meta
+          name="keywords"
+          content="contact Workforce One Solutions, proposal consultation, staffing inquiry, software project quote"
+        />
+        <link rel="canonical" href="https://www.workforceonesolutions.com/contact" />
+        <meta property="og:title" content="Contact Workforce One Solutions" />
+        <meta
+          property="og:description"
+          content="Connect with experts in proposal development, cleared talent, staffing, and software."
+        />
+        <meta property="og:url" content="https://www.workforceonesolutions.com/contact" />
+        <meta property="og:image" content="https://www.workforceonesolutions.com/og-image.jpg" />
+        <meta name="twitter:title" content="Contact Workforce One Solutions" />
+        <meta
+          name="twitter:description"
+          content="Connect with experts in proposal development, cleared talent, staffing, and software."
+        />
+        <meta name="twitter:image" content="https://www.workforceonesolutions.com/og-image.jpg" />
+      </Helmet>
+      <div className="min-h-screen">
       <Navigation />
       
       {/* Hero Section */}
@@ -267,6 +294,7 @@ const Contact = () => {
 
       <Footer />
     </div>
+    </>
   );
 };
 
