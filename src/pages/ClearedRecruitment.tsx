@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import { Shield, Users, Search, CheckCircle, Award, ArrowRight, Target } from "lucide-react";
+import { Helmet } from "react-helmet-async";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import ClientLogos from "@/components/ClientLogos";
@@ -150,7 +151,33 @@ const ClearedRecruitment = () => {
   ];
 
   return (
-    <div className="min-h-screen">
+    <>
+      <Helmet>
+        <title>Cleared Recruitment Services | Workforce One Solutions</title>
+        <meta
+          name="description"
+          content="Access fully vetted professionals with active security clearances, from Secret to TS/SCI with polygraph, through Workforce One Solutions."
+        />
+        <meta
+          name="keywords"
+          content="cleared recruitment, security clearance staffing, TS/SCI hiring, cleared talent provider"
+        />
+        <link rel="canonical" href="https://www.workforceonesolutions.com/services/recruitment" />
+        <meta property="og:title" content="Cleared Recruitment Services" />
+        <meta
+          property="og:description"
+          content="Rapidly deploy mission-ready talent with active security clearances."
+        />
+        <meta property="og:url" content="https://www.workforceonesolutions.com/services/recruitment" />
+        <meta property="og:image" content="https://www.workforceonesolutions.com/og-image.jpg" />
+        <meta name="twitter:title" content="Cleared Recruitment Services" />
+        <meta
+          name="twitter:description"
+          content="Rapidly deploy mission-ready talent with active security clearances."
+        />
+        <meta name="twitter:image" content="https://www.workforceonesolutions.com/og-image.jpg" />
+      </Helmet>
+      <div className="min-h-screen">
       <Navigation />
       
       {/* Hero Section - Icon Above Title */}
@@ -347,6 +374,7 @@ const ClearedRecruitment = () => {
 
       <Footer />
     </div>
+    </>
   );
 };
 
