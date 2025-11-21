@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Helmet } from "react-helmet-async";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Calendar } from "@/components/ui/calendar";
@@ -20,7 +21,33 @@ const Booking = () => {
   const durations = ["15m", "30m", "45m", "1h"];
 
   return (
-    <div className="min-h-screen bg-background">
+    <>
+      <Helmet>
+        <title>Book a Consultation | Workforce One Solutions</title>
+        <meta
+          name="description"
+          content="Schedule a meeting with Workforce One Solutions to discuss proposal development, cleared recruitment, staffing, or software initiatives."
+        />
+        <meta
+          name="keywords"
+          content="book consultation Workforce One Solutions, schedule staffing call, proposal consultation meeting"
+        />
+        <link rel="canonical" href="https://www.workforceonesolutions.com/booking" />
+        <meta property="og:title" content="Book a Consultation" />
+        <meta
+          property="og:description"
+          content="Easily schedule time with Workforce One Solutions experts."
+        />
+        <meta property="og:url" content="https://www.workforceonesolutions.com/booking" />
+        <meta property="og:image" content="https://www.workforceonesolutions.com/og-image.jpg" />
+        <meta name="twitter:title" content="Book a Consultation" />
+        <meta
+          name="twitter:description"
+          content="Easily schedule time with Workforce One Solutions experts."
+        />
+        <meta name="twitter:image" content="https://www.workforceonesolutions.com/og-image.jpg" />
+      </Helmet>
+      <div className="min-h-screen bg-background">
       <Navigation />
       
       <main className="container mx-auto px-4 pt-24 pb-16">
@@ -134,6 +161,7 @@ const Booking = () => {
 
       <Footer />
     </div>
+    </>
   );
 };
 
