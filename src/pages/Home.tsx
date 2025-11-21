@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { ArrowRight, CheckCircle, Users, FileText, Code, Briefcase, Target, Zap, Shield } from "lucide-react";
+import { Helmet } from "react-helmet-async";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import AnimatedCard from "@/components/AnimatedCard";
@@ -62,7 +63,33 @@ const Home = () => {
   ];
 
   return (
-    <div className="min-h-screen">
+    <>
+      <Helmet>
+        <title>Workforce One Solutions | Proposal Development, Recruitment & Software</title>
+        <meta
+          name="description"
+          content="Expert proposal development, cleared recruitment, workforce staffing, and custom software solutions for government contractors and commercial enterprises."
+        />
+        <meta
+          name="keywords"
+          content="proposal development, cleared recruitment, workforce staffing, software development, government contracting"
+        />
+        <link rel="canonical" href="https://www.workforceonesolutions.com/" />
+        <meta property="og:title" content="Workforce One Solutions | Home" />
+        <meta
+          property="og:description"
+          content="Accelerate contract wins, talent acquisition, and digital transformation with Workforce One Solutions."
+        />
+        <meta property="og:url" content="https://www.workforceonesolutions.com/" />
+        <meta property="og:image" content="https://www.workforceonesolutions.com/og-image.jpg" />
+        <meta name="twitter:title" content="Workforce One Solutions | Home" />
+        <meta
+          name="twitter:description"
+          content="Accelerate contract wins, talent acquisition, and digital transformation with Workforce One Solutions."
+        />
+        <meta name="twitter:image" content="https://www.workforceonesolutions.com/og-image.jpg" />
+      </Helmet>
+      <div className="min-h-screen">
       <Navigation />
 
       {/* Hero Section */}
@@ -303,6 +330,7 @@ const Home = () => {
 
       <Footer />
     </div>
+    </>
   );
 };
 
