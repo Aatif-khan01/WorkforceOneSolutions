@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import { Code, Smartphone, Globe, Cloud, Palette, TestTube, RefreshCw, Wrench, ArrowRight, Layers, Award, Rocket } from "lucide-react";
+import { Helmet } from "react-helmet-async";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import ImageGridInfo from "@/components/ImageGridInfo";
@@ -208,7 +209,33 @@ const SoftwareDevelopment = () => {
   ];
 
   return (
-    <div className="min-h-screen">
+    <>
+      <Helmet>
+        <title>Custom Software Development | Workforce One Solutions</title>
+        <meta
+          name="description"
+          content="Build modern web, mobile, SaaS, and cloud platforms with Workforce One Solutions—experts in agile development, DevOps, and quality engineering."
+        />
+        <meta
+          name="keywords"
+          content="custom software development, SaaS development, DevOps services, enterprise application development"
+        />
+        <link rel="canonical" href="https://www.workforceonesolutions.com/services/software" />
+        <meta property="og:title" content="Custom Software Development" />
+        <meta
+          property="og:description"
+          content="Agile teams delivering secure, high-performance software tailored to your mission."
+        />
+        <meta property="og:url" content="https://www.workforceonesolutions.com/services/software" />
+        <meta property="og:image" content="https://www.workforceonesolutions.com/og-image.jpg" />
+        <meta name="twitter:title" content="Custom Software Development" />
+        <meta
+          name="twitter:description"
+          content="Agile teams delivering secure, high-performance software tailored to your mission."
+        />
+        <meta name="twitter:image" content="https://www.workforceonesolutions.com/og-image.jpg" />
+      </Helmet>
+      <div className="min-h-screen">
       <Navigation />
       
       {/* Hero Section - Icon Above Title */}
@@ -454,6 +481,7 @@ const SoftwareDevelopment = () => {
 
       <Footer />
     </div>
+    </>
   );
 };
 
