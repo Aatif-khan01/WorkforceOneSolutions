@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Shield, Heart, Award, Users, Rocket, ArrowRight } from "lucide-react";
+import { Helmet } from "react-helmet-async";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import GlassCard from "@/components/GlassCard";
@@ -46,7 +47,33 @@ const About = () => {
   ];
 
   return (
-    <div className="min-h-screen">
+    <>
+      <Helmet>
+        <title>About Workforce One Solutions | Trusted Talent & Technology Partner</title>
+        <meta
+          name="description"
+          content="Learn how Workforce One Solutions empowers government contractors and commercial enterprises with proposal development, cleared staffing, and software expertise."
+        />
+        <meta
+          name="keywords"
+          content="about Workforce One Solutions, proposal experts, cleared staffing partner, software consultancy"
+        />
+        <link rel="canonical" href="https://www.workforceonesolutions.com/about" />
+        <meta property="og:title" content="About Workforce One Solutions" />
+        <meta
+          property="og:description"
+          content="Discover the mission, values, and team behind Workforce One Solutions."
+        />
+        <meta property="og:url" content="https://www.workforceonesolutions.com/about" />
+        <meta property="og:image" content="https://www.workforceonesolutions.com/og-image.jpg" />
+        <meta name="twitter:title" content="About Workforce One Solutions" />
+        <meta
+          name="twitter:description"
+          content="Discover the mission, values, and team behind Workforce One Solutions."
+        />
+        <meta name="twitter:image" content="https://www.workforceonesolutions.com/og-image.jpg" />
+      </Helmet>
+      <div className="min-h-screen">
       <Navigation />
 
       {/* Hero Section */}
@@ -286,6 +313,7 @@ const About = () => {
 
       <Footer />
     </div>
+    </>
   );
 };
 
