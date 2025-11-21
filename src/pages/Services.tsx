@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { FileText, Users, Briefcase, Code, ArrowRight, Target, Zap, Shield, Check, Layers, Award, Clock } from "lucide-react";
+import { Helmet } from "react-helmet-async";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import ClientLogos from "@/components/ClientLogos";
@@ -80,7 +81,33 @@ const Services = () => {
   ];
 
   return (
-    <div className="min-h-screen">
+    <>
+      <Helmet>
+        <title>Professional Services | Proposal, Staffing, Software & Recruitment</title>
+        <meta
+          name="description"
+          content="Explore Workforce One Solutions services spanning proposal development, cleared recruitment, workforce staffing, and custom software development."
+        />
+        <meta
+          name="keywords"
+          content="proposal development services, cleared recruitment services, workforce staffing provider, software development agency"
+        />
+        <link rel="canonical" href="https://www.workforceonesolutions.com/services" />
+        <meta property="og:title" content="Services | Workforce One Solutions" />
+        <meta
+          property="og:description"
+          content="One partner for proposal strategy, cleared talent, workforce staffing, and software delivery."
+        />
+        <meta property="og:url" content="https://www.workforceonesolutions.com/services" />
+        <meta property="og:image" content="https://www.workforceonesolutions.com/og-image.jpg" />
+        <meta name="twitter:title" content="Services | Workforce One Solutions" />
+        <meta
+          name="twitter:description"
+          content="One partner for proposal strategy, cleared talent, workforce staffing, and software delivery."
+        />
+        <meta name="twitter:image" content="https://www.workforceonesolutions.com/og-image.jpg" />
+      </Helmet>
+      <div className="min-h-screen">
       <Navigation />
 
       {/* Hero Section - Mobile Optimized */}
@@ -341,6 +368,7 @@ const Services = () => {
 
       <Footer />
     </div>
+    </>
   );
 };
 
