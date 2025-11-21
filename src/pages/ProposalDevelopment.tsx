@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { FileText, Target, Pen, Palette, CheckSquare, Calendar, ArrowRight, Lightbulb, Users as UsersIcon, Trophy } from "lucide-react";
+import { Helmet } from "react-helmet-async";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import ClientLogos from "@/components/ClientLogos";
@@ -85,7 +86,33 @@ const ProposalDevelopment = () => {
   ];
 
   return (
-    <div className="min-h-screen">
+    <>
+      <Helmet>
+        <title>Proposal Development Services | Workforce One Solutions</title>
+        <meta
+          name="description"
+          content="Win federal and commercial bids with capture planning, proposal writing, graphics, compliance, and project management from Workforce One Solutions."
+        />
+        <meta
+          name="keywords"
+          content="proposal development, capture planning, RFP support, federal proposal writing"
+        />
+        <link rel="canonical" href="https://www.workforceonesolutions.com/services/proposal" />
+        <meta property="og:title" content="Proposal Development Services" />
+        <meta
+          property="og:description"
+          content="Strategic capture planning, proposal writing, design, and compliance reviews to maximize awards."
+        />
+        <meta property="og:url" content="https://www.workforceonesolutions.com/services/proposal" />
+        <meta property="og:image" content="https://www.workforceonesolutions.com/og-image.jpg" />
+        <meta name="twitter:title" content="Proposal Development Services" />
+        <meta
+          name="twitter:description"
+          content="Strategic capture planning, proposal writing, design, and compliance reviews to maximize awards."
+        />
+        <meta name="twitter:image" content="https://www.workforceonesolutions.com/og-image.jpg" />
+      </Helmet>
+      <div className="min-h-screen">
       <Navigation />
       
       {/* Hero Section - Icon Above Title */}
@@ -282,6 +309,7 @@ const ProposalDevelopment = () => {
 
       <Footer />
     </div>
+    </>
   );
 };
 
