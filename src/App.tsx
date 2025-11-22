@@ -1,3 +1,4 @@
+import { lazy, Suspense } from "react";
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -9,19 +10,28 @@ import ScrollToTop from "@/components/ScrollToTop";
 import ContentProtection from "@/components/ContentProtection";
 import { useScrollTop } from "@/hook/use-scroll-top";
 import { ThemeProvider } from "@/components/ThemeProvider";
-import Home from "./pages/Home";
-import About from "./pages/About";
-import Services from "./pages/Services";
-import ProposalDevelopment from "./pages/ProposalDevelopment";
-import ClearedRecruitment from "./pages/ClearedRecruitment";
-import StaffingServices from "./pages/StaffingServices";
-import SoftwareDevelopment from "./pages/SoftwareDevelopment";
-import Contact from "./pages/Contact";
-import Booking from "./pages/Booking";
-import PrivacyPolicy from "./pages/PrivacyPolicy";
-import NotFound from "./pages/NotFound";
+
+// Lazy load route components to reduce initial bundle size
+const Home = lazy(() => import("./pages/Home"));
+const About = lazy(() => import("./pages/About"));
+const Services = lazy(() => import("./pages/Services"));
+const ProposalDevelopment = lazy(() => import("./pages/ProposalDevelopment"));
+const ClearedRecruitment = lazy(() => import("./pages/ClearedRecruitment"));
+const StaffingServices = lazy(() => import("./pages/StaffingServices"));
+const SoftwareDevelopment = lazy(() => import("./pages/SoftwareDevelopment"));
+const Contact = lazy(() => import("./pages/Contact"));
+const Booking = lazy(() => import("./pages/Booking"));
+const PrivacyPolicy = lazy(() => import("./pages/PrivacyPolicy"));
+const NotFound = lazy(() => import("./pages/NotFound"));
 
 const queryClient = new QueryClient();
+
+// Loading fallback component
+const PageLoader = () => (
+  <div className="min-h-screen flex items-center justify-center bg-background">
+    <div className="animate-pulse text-muted-foreground">Loading...</div>
+  </div>
+);
 
 const AppRoutes = () => {
   const location = useLocation();
@@ -30,19 +40,21 @@ const AppRoutes = () => {
   return (
     <AnimatePresence mode="wait">
       <PageTransition key={location.pathname}>
-        <Routes location={location}>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/services" element={<Services />} />
-          <Route path="/services/proposal" element={<ProposalDevelopment />} />
-          <Route path="/services/recruitment" element={<ClearedRecruitment />} />
-          <Route path="/services/staffing" element={<StaffingServices />} />
-          <Route path="/services/software" element={<SoftwareDevelopment />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/booking" element={<Booking />} />
-          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-          <Route path="*" element={<NotFound />} />
-        </Routes>
+        <Suspense fallback={<PageLoader />}>
+          <Routes location={location}>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/services" element={<Services />} />
+            <Route path="/services/proposal" element={<ProposalDevelopment />} />
+            <Route path="/services/recruitment" element={<ClearedRecruitment />} />
+            <Route path="/services/staffing" element={<StaffingServices />} />
+            <Route path="/services/software" element={<SoftwareDevelopment />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/booking" element={<Booking />} />
+            <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </Suspense>
       </PageTransition>
     </AnimatePresence>
   );
