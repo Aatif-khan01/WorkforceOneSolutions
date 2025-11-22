@@ -297,10 +297,14 @@ const SoftwareDevelopment = () => {
       <section className="py-16 relative overflow-hidden">
         <div className="container mx-auto px-6">
           <div className="relative rounded-3xl overflow-hidden max-w-6xl mx-auto">
-            <img 
+            <img
               src={developmentWorkspaceImage}
-              alt="Development Workspace" 
+              alt="Development Workspace"
               className="w-full h-[500px] object-cover"
+              loading="lazy"
+              decoding="async"
+              width={1600}
+              height={900}
             />
           </div>
         </div>
