@@ -55,4 +55,4 @@ export default defineConfig(({ mode }) => ({
     reportCompressedSize: false,
   },
   base: "/",
-})); 
+}));
