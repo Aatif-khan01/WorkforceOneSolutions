@@ -7,7 +7,7 @@ interface ImageGridInfoProps {
     alt: string;
     label?: string;
   }[];
-  title: string;
+  title?: string;
   subtitle?: string;
   sections: {
     title: string;
@@ -15,9 +15,10 @@ interface ImageGridInfoProps {
     content: string;
   }[];
   reverse?: boolean;
+  hideTitle?: boolean;
 }
 
-const ImageGridInfo = ({ images, title, subtitle, sections, reverse = false }: ImageGridInfoProps) => {
+const ImageGridInfo = ({ images, title, subtitle, sections, reverse = false, hideTitle = false }: ImageGridInfoProps) => {
   return (
     <section className="py-24 scroll-smooth">
       <div className="container mx-auto px-6">
@@ -51,16 +52,18 @@ const ImageGridInfo = ({ images, title, subtitle, sections, reverse = false }: I
 
           {/* Info Content */}
           <div className={`space-y-6 ${reverse ? 'lg:order-1' : ''}`}>
-            <div>
-              <h2 className="text-4xl md:text-5xl font-bold mb-2">
-                <span className="bg-gradient-to-r from-accent via-accent-glow to-secondary bg-clip-text text-transparent">
-                  {title}
-                </span>
-              </h2>
-              {subtitle && (
-                <p className="text-xl text-muted-foreground">{subtitle}</p>
-              )}
-            </div>
+            {!hideTitle && title && (
+              <div>
+                <h2 className="text-4xl md:text-5xl font-bold mb-2">
+                  <span className="bg-gradient-to-r from-accent via-accent-glow to-secondary bg-clip-text text-transparent">
+                    {title}
+                  </span>
+                </h2>
+                {subtitle && (
+                  <p className="text-xl text-muted-foreground">{subtitle}</p>
+                )}
+              </div>
+            )}
 
             <div className="space-y-6">
               {sections.map((section, index) => (
