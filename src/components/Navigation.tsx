@@ -119,6 +119,10 @@ const Navigation = () => {
                 alt="Company logo"
                 className="h-12 w-auto object-contain transition-opacity duration-300"
                 style={{ maxHeight: "48px" }}
+                width={144}
+                height={48}
+                decoding="async"
+                loading="eager"
               />
             </Link>
           )}
