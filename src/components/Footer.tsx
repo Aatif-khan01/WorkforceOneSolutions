@@ -16,10 +16,14 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="space-y-4">
             <Link to="/" className="inline-flex items-center">
-              <img 
-                src={currentLogo} 
-                alt="Company logo" 
-                className="h-14 w-auto transition-opacity duration-300" 
+              <img
+                src={currentLogo}
+                alt="Company logo"
+                className="h-14 w-auto transition-opacity duration-300"
+                width={168}
+                height={56}
+                decoding="async"
+                loading="lazy"
               />
             </Link>
             <p className="text-muted-foreground">
