@@ -297,7 +297,7 @@ const StaffingServices = () => {
       <section className="py-16 relative overflow-hidden">
         <div className="container mx-auto px-6">
           <div className="relative rounded-3xl overflow-hidden max-w-6xl mx-auto">
-            <img src={diverseTeamImage} alt="Diverse Team" className="w-full h-[500px] object-cover" />
+            <img src={diverseTeamImage} alt="Diverse Team" className="w-full h-[500px] object-cover" loading="lazy" decoding="async" width={1600} height={900} />
           </div>
         </div>
       </section>
