@@ -1,10 +1,14 @@
 <IfModule mod_rewrite.c>
   RewriteEngine On
   RewriteBase /
-  RewriteRule ^index\.html$ - [L]
+  
+  # Handle Angular and React Router - redirect all requests to index.html
+  # except for files that exist
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteCond %{REQUEST_FILENAME} !-d
-  RewriteRule . /index.html [L]
+  RewriteCond %{REQUEST_URI} !^/assets/
+  RewriteCond %{REQUEST_URI} !^/favicon\.ico$
+  RewriteRule ^ /index.html [L]
 </IfModule>
 
 # Enable compression
