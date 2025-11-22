@@ -83,7 +83,7 @@ const About = () => {
             {/* Image */}
             <div className="relative">
               <div className="relative rounded-3xl overflow-hidden shadow-2xl">
-                <img src={heroImage} alt="About Us" className="w-full h-[300px] sm:h-[400px] md:h-[500px] object-cover" loading="eager" decoding="async" fetchpriority="high" width={1600} height={900} />
+                <img src={heroImage} alt="About Us" className="w-full h-[300px] sm:h-[400px] md:h-[500px] object-cover" loading="eager" decoding="async" fetchPriority="high" width={1600} height={900} />
               </div>
             </div>
 
