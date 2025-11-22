@@ -10,6 +10,7 @@ import ScrollToTop from "@/components/ScrollToTop";
 import ContentProtection from "@/components/ContentProtection";
 import { useScrollTop } from "@/hook/use-scroll-top";
 import { ThemeProvider } from "@/components/ThemeProvider";
+import Home from "./pages/Home";
 
 // Error Boundary Component
 interface ErrorBoundaryProps {
@@ -54,9 +55,6 @@ class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
     return this.props.children;
   }
 }
-
-// Import Home page directly for faster initial load
-import Home from "./pages/Home";
 
 // Lazy load other route components to reduce initial bundle size
 const About = lazy(() => import("./pages/About"));
