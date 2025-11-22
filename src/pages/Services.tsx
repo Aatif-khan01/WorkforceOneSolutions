@@ -245,10 +245,12 @@ const Services = () => {
               <Link key={index} to={service.link} className="group">
                 <GlassCard className="p-0 h-full overflow-hidden transition-all duration-500 hover:scale-105 hover:bg-[#66CB00] hover:border-[#66CB00]">
                   <div className="relative h-56 sm:h-64 md:h-72 overflow-hidden">
-                    <img 
-                      src={service.image} 
+                    <img
+                      src={service.image}
                       alt={service.title}
                       className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                      loading="lazy"
+                      decoding="async"
                     />
                   </div>
                   <div className="p-6 sm:p-8 transition-colors duration-500">
