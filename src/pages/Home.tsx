@@ -88,27 +88,34 @@ const Home = () => {
           content="Accelerate contract wins, talent acquisition, and digital transformation with Workforce One Solutions."
         />
         <meta name="twitter:image" content="https://www.workforceonesolutions.com/og-image.jpg" />
+        <link rel="preload" as="image" href={heroImage} />
+        <link rel="preload" as="image" href={heroMobileImage} />
       </Helmet>
       <div className="min-h-screen">
       <Navigation />
 
-      {/* Visually hidden h1 for SEO and accessibility */}
-      <h1 className="sr-only">
-        Workforce One Solutions – Proposal Development, Recruitment & Software
-      </h1>
-
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16 md:pt-20">
         <div className="absolute inset-0 z-0">
-          <img 
-            src={heroMobileImage} 
-            alt="Hero Background Mobile" 
-            className="md:hidden w-full h-full object-cover object-center" 
+          <img
+            src={heroMobileImage}
+            alt="Hero Background Mobile"
+            className="md:hidden w-full h-full object-cover object-center"
+            loading="eager"
+            decoding="async"
+            fetchpriority="high"
+            width={1280}
+            height={720}
           />
-          <img 
-            src={heroImage} 
-            alt="Hero Background" 
-            className="hidden md:block w-full h-full object-cover object-center" 
+          <img
+            src={heroImage}
+            alt="Hero Background"
+            className="hidden md:block w-full h-full object-cover object-center"
+            loading="eager"
+            decoding="async"
+            fetchpriority="high"
+            width={1920}
+            height={1080}
           />
         </div>
 
@@ -161,10 +168,12 @@ const Home = () => {
                   hover={false}
                 >
                   <div className="relative h-64 overflow-hidden">
-                    <img 
-                      src={service.image} 
-                      alt={service.title} 
-                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" 
+                    <img
+                      src={service.image}
+                      alt={service.title}
+                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                      loading="lazy"
+                      decoding="async"
                     />
                   </div>
                   <div className="p-8 transition-colors duration-500">
