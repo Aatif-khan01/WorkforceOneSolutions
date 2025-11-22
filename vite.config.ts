@@ -16,18 +16,43 @@ export default defineConfig(({ mode }) => ({
     },
   },
   build: {
-    minify: 'esbuild',
+    outDir: "dist",
+    assetsDir: "assets",
+    sourcemap: false,
+    minify: "esbuild",
     cssMinify: true,
+    cssCodeSplit: true,
     rollupOptions: {
       output: {
-        manualChunks: {
-          'react-vendor': ['react', 'react-dom', 'react-router-dom'],
-          'ui-vendor': ['framer-motion', 'lucide-react'],
+        manualChunks: (id) => {
+          // Vendor chunks
+          if (id.includes('node_modules')) {
+            if (id.includes('react') || id.includes('react-dom') || id.includes('react-router')) {
+              return 'vendor-react';
+            }
+            if (id.includes('@radix-ui')) {
+              return 'vendor-ui';
+            }
+            if (id.includes('framer-motion')) {
+              return 'vendor-animation';
+            }
+            if (id.includes('@tanstack')) {
+              return 'vendor-query';
+            }
+            // Other node_modules
+            return 'vendor';
+          }
         },
+        // Optimize chunk file names
+        chunkFileNames: 'assets/js/[name]-[hash].js',
+        entryFileNames: 'assets/js/[name]-[hash].js',
+        assetFileNames: 'assets/[ext]/[name]-[hash].[ext]',
       },
     },
-    cssCodeSplit: true,
-    reportCompressedSize: false,
     chunkSizeWarningLimit: 1000,
+    // Optimize for production
+    target: 'es2015',
+    reportCompressedSize: false,
   },
+  base: "/",
 }));
