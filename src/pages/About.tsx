@@ -83,7 +83,7 @@ const About = () => {
             {/* Image */}
             <div className="relative">
               <div className="relative rounded-3xl overflow-hidden shadow-2xl">
-                <img src={heroImage} alt="About Us" className="w-full h-[300px] sm:h-[400px] md:h-[500px] object-cover" />
+                <img src={heroImage} alt="About Us" className="w-full h-[300px] sm:h-[400px] md:h-[500px] object-cover" loading="eager" decoding="async" fetchpriority="high" width={1600} height={900} />
               </div>
             </div>
 
@@ -119,7 +119,7 @@ const About = () => {
       <section className="py-12 md:py-16 relative overflow-hidden">
         <div className="container mx-auto px-4 sm:px-6">
           <div className="relative rounded-3xl overflow-hidden max-w-6xl mx-auto">
-            <img src={teamCollaborationImage} alt="Team Collaboration" className="w-full h-[300px] sm:h-[400px] md:h-[500px] object-cover" />
+            <img src={teamCollaborationImage} alt="Team Collaboration" className="w-full h-[300px] sm:h-[400px] md:h-[500px] object-cover" loading="lazy" decoding="async" width={1600} height={900} />
           </div>
         </div>
       </section>
