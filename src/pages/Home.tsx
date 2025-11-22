@@ -88,8 +88,9 @@ const Home = () => {
           content="Accelerate contract wins, talent acquisition, and digital transformation with Workforce One Solutions."
         />
         <meta name="twitter:image" content="https://www.workforceonesolutions.com/og-image.jpg" />
-        <link rel="preload" as="image" href={heroImage} />
+        {/* Preload mobile hero image first for better LCP on mobile */}
         <link rel="preload" as="image" href={heroMobileImage} />
+        <link rel="preload" as="image" href={heroImage} media="(min-width: 768px)" />
       </Helmet>
       <div className="min-h-screen">
       <Navigation />
@@ -97,22 +98,24 @@ const Home = () => {
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16 md:pt-20">
         <div className="absolute inset-0 z-0">
+          {/* Mobile hero image - prioritized for LCP on mobile */}
           <img
             src={heroMobileImage}
             alt="Hero Background Mobile"
             className="md:hidden w-full h-full object-cover object-center"
             loading="eager"
-            decoding="sync"
-            fetchPriority="high"
+            decoding="async"
+            fetchpriority="high"
             width={1280}
             height={720}
           />
+          {/* Desktop hero image */}
           <img
             src={heroImage}
             alt="Hero Background"
             className="hidden md:block w-full h-full object-cover object-center"
             loading="eager"
-            decoding="sync"
+            decoding="async"
             fetchPriority="high"
             width={1920}
             height={1080}
@@ -174,8 +177,6 @@ const Home = () => {
                       className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                       loading="lazy"
                       decoding="async"
-                      width={800}
-                      height={600}
                     />
                   </div>
                   <div className="p-8 transition-colors duration-500">
