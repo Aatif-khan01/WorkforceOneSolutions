@@ -106,6 +106,8 @@ const Home = () => {
             fetchPriority="high"
             width={1280}
             height={720}
+            srcSet={`${heroMobileImage} 1280w`}
+            sizes="100vw"
           />
           <img
             src={heroImage}
@@ -116,6 +118,8 @@ const Home = () => {
             fetchPriority="high"
             width={1920}
             height={1080}
+            srcSet={`${heroImage} 1920w`}
+            sizes="100vw"
           />
         </div>
 
@@ -174,6 +178,8 @@ const Home = () => {
                       className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                       loading="lazy"
                       decoding="async"
+                      width={800}
+                      height={600}
                     />
                   </div>
                   <div className="p-8 transition-colors duration-500">
