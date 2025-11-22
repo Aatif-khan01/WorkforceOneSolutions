@@ -16,19 +16,18 @@ export default defineConfig(({ mode }) => ({
     },
   },
   build: {
-    outDir: "dist",
-    assetsDir: "assets",
-    sourcemap: false,
-    minify: "esbuild",
+    minify: 'esbuild',
+    cssMinify: true,
     rollupOptions: {
       output: {
         manualChunks: {
-          vendor: ["react", "react-dom", "react-router-dom"],
-          ui: ["framer-motion", "@radix-ui/react-dialog", "@radix-ui/react-dropdown-menu"],
+          'react-vendor': ['react', 'react-dom', 'react-router-dom'],
+          'ui-vendor': ['framer-motion', 'lucide-react'],
         },
       },
     },
+    cssCodeSplit: true,
+    reportCompressedSize: false,
     chunkSizeWarningLimit: 1000,
   },
-  base: "/",
 }));
