@@ -16,15 +16,18 @@ export default defineConfig(({ mode }) => ({
     },
   },
   build: {
-    outDir: "dist",
-    assetsDir: "assets",
-    sourcemap: false,
-    minify: "esbuild",
+    minify: 'esbuild',
     cssMinify: true,
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          'react-vendor': ['react', 'react-dom', 'react-router-dom'],
+          'ui-vendor': ['framer-motion', 'lucide-react'],
+        },
+      },
+    },
     cssCodeSplit: true,
-    chunkSizeWarningLimit: 1000,
-    target: 'es2015',
     reportCompressedSize: false,
+    chunkSizeWarningLimit: 1000,
   },
-  base: "/",
 }));
