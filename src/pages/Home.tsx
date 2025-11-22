@@ -103,7 +103,7 @@ const Home = () => {
             className="md:hidden w-full h-full object-cover object-center"
             loading="eager"
             decoding="async"
-            fetchpriority="high"
+            fetchPriority="high"
             width={1280}
             height={720}
           />
@@ -113,7 +113,7 @@ const Home = () => {
             className="hidden md:block w-full h-full object-cover object-center"
             loading="eager"
             decoding="async"
-            fetchpriority="high"
+            fetchPriority="high"
             width={1920}
             height={1080}
           />
