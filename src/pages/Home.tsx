@@ -102,24 +102,20 @@ const Home = () => {
             alt="Hero Background Mobile"
             className="md:hidden w-full h-full object-cover object-center"
             loading="eager"
-            decoding="async"
+            decoding="sync"
             fetchPriority="high"
             width={1280}
             height={720}
-            srcSet={`${heroMobileImage} 1280w`}
-            sizes="100vw"
           />
           <img
             src={heroImage}
             alt="Hero Background"
             className="hidden md:block w-full h-full object-cover object-center"
             loading="eager"
-            decoding="async"
+            decoding="sync"
             fetchPriority="high"
             width={1920}
             height={1080}
-            srcSet={`${heroImage} 1920w`}
-            sizes="100vw"
           />
         </div>
 
