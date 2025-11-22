@@ -26,9 +26,12 @@ const StaggeredAnimation = ({
           if (entry.isIntersecting) {
             const children = entry.target.children;
             Array.from(children).forEach((_, index) => {
-              setTimeout(() => {
-                setVisibleItems(prev => new Set([...prev, index]));
-              }, index * staggerDelay);
+              // Use requestAnimationFrame for better performance and to avoid blocking main thread
+              requestAnimationFrame(() => {
+                setTimeout(() => {
+                  setVisibleItems(prev => new Set([...prev, index]));
+                }, index * staggerDelay);
+              });
             });
           }
         });
