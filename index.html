@@ -77,8 +77,15 @@
       }
     </script>
 
+    <!-- DNS Prefetch for external resources (improves mobile performance) -->
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
+    
+    <!-- Preconnect for fonts (establishes early connection) -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    
+    <!-- Font loading with display=swap (prevents invisible text, improves LCP) -->
     <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet" />
   </head>
 
