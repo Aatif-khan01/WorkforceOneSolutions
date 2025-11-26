@@ -1,11 +1,10 @@
 import { useState, useEffect } from "react";
 import { X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
-import thanksgivingDesktop from "@/assets/Thanksgiving.jpg";
-import thanksgivingMobile from "@/assets/Thanksgiving-phone.jpg";
 
 const ThanksgivingPopup = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [imageLoaded, setImageLoaded] = useState(false);
 
   useEffect(() => {
     // Check if user has already seen the popup today
@@ -13,12 +12,26 @@ const ThanksgivingPopup = () => {
     const today = new Date().toDateString();
 
     if (lastSeen !== today) {
-      // Show popup after a short delay
-      const timer = setTimeout(() => {
-        setIsOpen(true);
-      }, 1000); // 1 second delay after page load
+      // Preload images before showing popup
+      const desktopImg = new Image();
+      const mobileImg = new Image();
+      
+      desktopImg.src = "/src/assets/Thanksgiving.jpg";
+      mobileImg.src = "/src/assets/Thanksgiving-phone.jpg";
 
-      return () => clearTimeout(timer);
+      // Show popup after images are loaded
+      Promise.all([
+        new Promise((resolve) => {
+          desktopImg.onload = resolve;
+        }),
+        new Promise((resolve) => {
+          mobileImg.onload = resolve;
+        })
+      ]).then(() => {
+        setImageLoaded(true);
+        // Small delay after images are loaded
+        setTimeout(() => setIsOpen(true), 500);
+      });
     }
   }, []);
 
@@ -27,6 +40,8 @@ const ThanksgivingPopup = () => {
     // Save that user has seen the popup today
     localStorage.setItem("thanksgivingPopupSeen", new Date().toDateString());
   };
+
+  if (!imageLoaded) return null;
 
   return (
     <AnimatePresence>
@@ -60,20 +75,21 @@ const ThanksgivingPopup = () => {
               </button>
 
               {/* Image Container - Responsive */}
-              <div className="relative rounded-2xl overflow-hidden shadow-2xl">
+              <div className="relative rounded-2xl overflow-hidden shadow-2xl bg-gray-100">
                 {/* Desktop Image */}
-                <img
-                  src={thanksgivingDesktop}
-                  alt="Happy Thanksgiving from Workforce One Solutions"
-                  className="hidden md:block w-full h-auto"
-                />
-                
-                {/* Mobile Image */}
-                <img
-                  src={thanksgivingMobile}
-                  alt="Happy Thanksgiving from Workforce One Solutions"
-                  className="block md:hidden w-full h-auto"
-                />
+                <picture>
+                  <source
+                    media="(min-width: 768px)"
+                    srcSet="/src/assets/Thanksgiving.jpg"
+                  />
+                  <img
+                    src="/src/assets/Thanksgiving-phone.jpg"
+                    alt="Happy Thanksgiving from Workforce One Solutions"
+                    className="w-full h-auto"
+                    loading="eager"
+                    decoding="async"
+                  />
+                </picture>
               </div>
             </div>
           </motion.div>
@@ -84,4 +100,3 @@ const ThanksgivingPopup = () => {
 };
 
 export default ThanksgivingPopup;
-
