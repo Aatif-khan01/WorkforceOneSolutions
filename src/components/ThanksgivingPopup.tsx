@@ -7,38 +7,34 @@ const ThanksgivingPopup = () => {
   const [imageLoaded, setImageLoaded] = useState(false);
 
   useEffect(() => {
-    // Check if user has already seen the popup today
-    const lastSeen = localStorage.getItem("thanksgivingPopupSeen");
-    const today = new Date().toDateString();
+    // OPTION 1: Show popup every time (remove localStorage check)
+    // Preload images before showing popup
+    const desktopImg = new Image();
+    const mobileImg = new Image();
+    
+    desktopImg.src = "/src/assets/Thanksgiving.jpg";
+    mobileImg.src = "/src/assets/Thanksgiving-phone.jpg";
 
-    if (lastSeen !== today) {
-      // Preload images before showing popup
-      const desktopImg = new Image();
-      const mobileImg = new Image();
-      
-      desktopImg.src = "/src/assets/Thanksgiving.jpg";
-      mobileImg.src = "/src/assets/Thanksgiving-phone.jpg";
-
-      // Show popup after images are loaded
-      Promise.all([
-        new Promise((resolve) => {
-          desktopImg.onload = resolve;
-        }),
-        new Promise((resolve) => {
-          mobileImg.onload = resolve;
-        })
-      ]).then(() => {
-        setImageLoaded(true);
-        // Small delay after images are loaded
-        setTimeout(() => setIsOpen(true), 500);
-      });
-    }
+    // Show popup after images are loaded
+    Promise.all([
+      new Promise((resolve) => {
+        desktopImg.onload = resolve;
+      }),
+      new Promise((resolve) => {
+        mobileImg.onload = resolve;
+      })
+    ]).then(() => {
+      setImageLoaded(true);
+      // Small delay after images are loaded
+      setTimeout(() => setIsOpen(true), 500);
+    });
   }, []);
 
   const handleClose = () => {
     setIsOpen(false);
-    // Save that user has seen the popup today
-    localStorage.setItem("thanksgivingPopupSeen", new Date().toDateString());
+    // OPTION 1: Don't save to localStorage (popup shows every time)
+    // Comment out the line below if you want it to show on every page refresh
+    // localStorage.setItem("thanksgivingPopupSeen", new Date().toDateString());
   };
 
   if (!imageLoaded) return null;
