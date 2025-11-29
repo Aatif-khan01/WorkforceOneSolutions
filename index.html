@@ -50,7 +50,13 @@
     />
     <meta property="twitter:image" content="https://www.workforceonesolutions.com/og-image.jpg" />
 
-    <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
+    <!-- Favicons -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="/android-chrome-192x192.png" />
+    <link rel="icon" type="image/png" sizes="512x512" href="/android-chrome-512x512.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
 
     <!-- Structured Data -->
     <script type="application/ld+json">
@@ -59,7 +65,12 @@
         "@type": "Organization",
         "name": "Workforce One Solutions",
         "url": "https://www.workforceonesolutions.com",
-        "logo": "https://www.workforceonesolutions.com/logo.png",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://www.workforceonesolutions.com/android-chrome-512x512.png",
+          "width": 512,
+          "height": 512
+        },
         "description": "Expert proposal development, cleared recruitment, workforce staffing, and custom software solutions.",
         "address": {
           "@type": "PostalAddress",
