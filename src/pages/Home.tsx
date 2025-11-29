@@ -8,7 +8,6 @@ import AnimatedBox from "@/components/AnimatedBox";
 import StaggeredAnimation from "@/components/StaggeredAnimation";
 import ImageGridInfo from "@/components/ImageGridInfo";
 import StickyContactButton from "@/components/StickyContactButton";
-import ThanksgivingPopup from "@/components/ThanksgivingPopup";
 import { Button } from "@/components/ui/button";
 import heroImage from "@/assets/hero-home.jpg";
 import heroMobileImage from "@/assets/hero-mbhome.jpg";
@@ -95,9 +94,6 @@ const Home = () => {
       </Helmet>
       <div className="min-h-screen">
       <Navigation />
-
-      {/* Thanksgiving Popup */}
-      <ThanksgivingPopup />
 
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16 md:pt-20">
