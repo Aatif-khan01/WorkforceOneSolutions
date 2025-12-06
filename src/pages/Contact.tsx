@@ -19,6 +19,7 @@ const Contact = () => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
+    organization: "",
     service: "",
     source: "",
     message: ""
@@ -35,6 +36,7 @@ const Contact = () => {
       access_key: "d68d047f-1210-4992-addc-a9bab8ea2cda",
       name: formData.name,
       email: formData.email,
+      organization: formData.organization,
       service: formData.service,
       source: formData.source,
       message: formData.message,
@@ -63,6 +65,7 @@ const Contact = () => {
         setFormData({
           name: "",
           email: "",
+          organization: "",
           service: "",
           source: "",
           message: ""
@@ -184,6 +187,19 @@ const Contact = () => {
                     onChange={e => setFormData({ ...formData, email: e.target.value })} 
                     placeholder="john@example.com" 
                     required 
+                    disabled={isSubmitting}
+                    className="bg-glass/40 border-glass-border focus:border-accent" 
+                  />
+                </div>
+
+                <div>
+                  <label className="block text-sm font-medium mb-2 text-foreground">Organization (Optional)</label>
+                  <Input 
+                    type="text" 
+                    name="organization"
+                    value={formData.organization} 
+                    onChange={e => setFormData({ ...formData, organization: e.target.value })} 
+                    placeholder="Your Company Name" 
                     disabled={isSubmitting}
                     className="bg-glass/40 border-glass-border focus:border-accent" 
                   />
