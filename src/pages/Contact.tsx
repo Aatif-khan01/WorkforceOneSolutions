@@ -24,18 +24,62 @@ const Contact = () => {
     message: ""
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    toast.success("Thank you! We'll be in touch soon.", {
-      description: "Your message has been received."
-    });
-    setFormData({
-      name: "",
-      email: "",
-      service: "",
-      source: "",
-      message: ""
-    });
+    setIsSubmitting(true);
+
+    // Create FormData object for Web3Forms
+    const data = {
+      access_key: "d68d047f-1210-4992-addc-a9bab8ea2cda",
+      name: formData.name,
+      email: formData.email,
+      service: formData.service,
+      source: formData.source,
+      message: formData.message,
+      botcheck: false,
+      subject: "New Contact Form Submission - Workforce One Solutions",
+      from_name: "Workforce One Solutions Website"
+    };
+
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json"
+        },
+        body: JSON.stringify(data)
+      });
+
+      const result = await response.json();
+
+      if (result.success) {
+        toast.success("Thank you! We'll be in touch soon.", {
+          description: "Your message has been received successfully."
+        });
+        // Reset form
+        setFormData({
+          name: "",
+          email: "",
+          service: "",
+          source: "",
+          message: ""
+        });
+      } else {
+        toast.error("Oops! Something went wrong.", {
+          description: "Please try again or email us directly."
+        });
+      }
+    } catch (error) {
+      console.error("Form submission error:", error);
+      toast.error("Failed to send message.", {
+        description: "Please check your internet connection and try again."
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -108,14 +152,25 @@ const Contact = () => {
               </h2>
               
               <form onSubmit={handleSubmit} className="space-y-6">
+                {/* Honeypot Field - Hidden from users, visible to bots */}
+                <input 
+                  type="checkbox" 
+                  name="botcheck" 
+                  style={{ display: 'none' }} 
+                  tabIndex={-1}
+                  autoComplete="off"
+                />
+
                 <div>
                   <label className="block text-sm font-medium mb-2 text-foreground">Your Name</label>
                   <Input 
                     type="text" 
+                    name="name"
                     value={formData.name} 
                     onChange={e => setFormData({ ...formData, name: e.target.value })} 
                     placeholder="John Doe" 
                     required 
+                    disabled={isSubmitting}
                     className="bg-glass/40 border-glass-border focus:border-accent" 
                   />
                 </div>
@@ -124,10 +179,12 @@ const Contact = () => {
                   <label className="block text-sm font-medium mb-2 text-foreground">Your Email</label>
                   <Input 
                     type="email" 
+                    name="email"
                     value={formData.email} 
                     onChange={e => setFormData({ ...formData, email: e.target.value })} 
                     placeholder="john@example.com" 
                     required 
+                    disabled={isSubmitting}
                     className="bg-glass/40 border-glass-border focus:border-accent" 
                   />
                 </div>
@@ -137,6 +194,7 @@ const Contact = () => {
                   <Select 
                     value={formData.service} 
                     onValueChange={value => setFormData({ ...formData, service: value })}
+                    disabled={isSubmitting}
                   >
                     <SelectTrigger className="bg-glass/40 border-glass-border focus:border-accent">
                       <SelectValue placeholder="Select a service" />
@@ -156,6 +214,7 @@ const Contact = () => {
                   <Select 
                     value={formData.source} 
                     onValueChange={value => setFormData({ ...formData, source: value })}
+                    disabled={isSubmitting}
                   >
                     <SelectTrigger className="bg-glass/40 border-glass-border focus:border-accent">
                       <SelectValue placeholder="Select an option" />
@@ -172,11 +231,13 @@ const Contact = () => {
                 <div>
                   <label className="block text-sm font-medium mb-2 text-foreground">Project details / Message</label>
                   <Textarea 
+                    name="message"
                     value={formData.message} 
                     onChange={e => setFormData({ ...formData, message: e.target.value })} 
                     placeholder="Tell us about your project..." 
                     rows={6} 
                     required 
+                    disabled={isSubmitting}
                     className="bg-glass/40 border-glass-border focus:border-accent resize-none" 
                   />
                 </div>
@@ -184,9 +245,10 @@ const Contact = () => {
                 <Button 
                   type="submit" 
                   size="lg" 
-                  className="w-full bg-[#66CB00] hover:bg-[#66CB00]/90 hover:shadow-lg text-white text-lg font-semibold py-7 group transition-all duration-300"
+                  disabled={isSubmitting}
+                  className="w-full bg-[#66CB00] hover:bg-[#66CB00]/90 hover:shadow-lg text-white text-lg font-semibold py-7 group transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
                 >
-                  Send Message
+                  {isSubmitting ? "Sending..." : "Send Message"}
                   <Send className="ml-2 group-hover:translate-x-1 transition-transform" size={22} />
                 </Button>
               </form>
@@ -265,32 +327,36 @@ const Contact = () => {
       </section>
 
       {/* Image Grid Info Section */}
-      <ImageGridInfo 
-        images={[
-          { src: galleryConsultation, alt: "Business consultation", label: "Expert Guidance" },
-          { src: galleryPartnership, alt: "Partnership collaboration" },
-          { src: galleryOfficeView, alt: "Professional environment" }
-        ]} 
-        title="Why Connect With Us" 
-        subtitle="Your Success Is Our Priority" 
-        sections={[
-          {
-            title: "Responsive Communication",
-            icon: <MessageCircle size={24} className="text-background" />,
-            content: "We value your time and respond promptly to all inquiries. Our team is committed to providing clear, helpful communication throughout our engagement."
-          },
-          {
-            title: "Flexible Scheduling",
-            icon: <Clock size={24} className="text-background" />,
-            content: "We work around your schedule for consultations and meetings. Whether you prefer phone, video, or in-person discussions, we accommodate your preferences."
-          },
-          {
-            title: "Tailored Solutions",
-            icon: <CheckCircle size={24} className="text-background" />,
-            content: "Every client is unique. We take time to understand your specific needs and develop customized solutions that align with your goals and constraints."
-          }
-        ]} 
-      />
+      <section className="py-24">
+        <div className="container mx-auto px-6">
+          <ImageGridInfo 
+            images={[
+              { src: galleryConsultation, alt: "Business consultation", label: "Expert Guidance" },
+              { src: galleryPartnership, alt: "Partnership collaboration" },
+              { src: galleryOfficeView, alt: "Professional environment" }
+            ]} 
+            title="Why Connect With Us" 
+            subtitle="Your Success Is Our Priority" 
+            sections={[
+              {
+                title: "Responsive Communication",
+                icon: <MessageCircle size={24} className="text-background" />,
+                content: "We value your time and respond promptly to all inquiries. Our team is committed to providing clear, helpful communication throughout our engagement."
+              },
+              {
+                title: "Flexible Scheduling",
+                icon: <Clock size={24} className="text-background" />,
+                content: "We work around your schedule for consultations and meetings. Whether you prefer phone, video, or in-person discussions, we accommodate your preferences."
+              },
+              {
+                title: "Tailored Solutions",
+                icon: <CheckCircle size={24} className="text-background" />,
+                content: "Every client is unique. We take time to understand your specific needs and develop customized solutions that align with your goals and constraints."
+              }
+            ]} 
+          />
+        </div>
+      </section>
 
       <Footer />
     </div>
