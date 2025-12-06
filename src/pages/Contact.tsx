@@ -29,6 +29,15 @@ const Contact = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+
+    // Validate all fields are filled
+    if (!formData.name || !formData.email || !formData.organization || !formData.service || !formData.source || !formData.message) {
+      toast.error("Please fill in all fields", {
+        description: "All fields are required before submission."
+      });
+      return;
+    }
+
     setIsSubmitting(true);
 
     // Create FormData object for Web3Forms
@@ -165,7 +174,9 @@ const Contact = () => {
                 />
 
                 <div>
-                  <label className="block text-sm font-medium mb-2 text-foreground">Your Name</label>
+                  <label className="block text-sm font-medium mb-2 text-foreground">
+                    Your Name <span className="text-red-500">*</span>
+                  </label>
                   <Input 
                     type="text" 
                     name="name"
@@ -179,7 +190,9 @@ const Contact = () => {
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium mb-2 text-foreground">Your Email</label>
+                  <label className="block text-sm font-medium mb-2 text-foreground">
+                    Your Email <span className="text-red-500">*</span>
+                  </label>
                   <Input 
                     type="email" 
                     name="email"
@@ -193,24 +206,30 @@ const Contact = () => {
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium mb-2 text-foreground">Organization</label>
+                  <label className="block text-sm font-medium mb-2 text-foreground">
+                    Organization <span className="text-red-500">*</span>
+                  </label>
                   <Input 
                     type="text" 
                     name="organization"
                     value={formData.organization} 
                     onChange={e => setFormData({ ...formData, organization: e.target.value })} 
                     placeholder="Your Company Name" 
+                    required
                     disabled={isSubmitting}
                     className="bg-glass/40 border-glass-border focus:border-accent" 
                   />
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium mb-2 text-foreground">Tell us about your requirement</label>
+                  <label className="block text-sm font-medium mb-2 text-foreground">
+                    Tell us about your requirement <span className="text-red-500">*</span>
+                  </label>
                   <Select 
                     value={formData.service} 
                     onValueChange={value => setFormData({ ...formData, service: value })}
                     disabled={isSubmitting}
+                    required
                   >
                     <SelectTrigger className="bg-glass/40 border-glass-border focus:border-accent">
                       <SelectValue placeholder="Select a service" />
@@ -226,11 +245,14 @@ const Contact = () => {
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium mb-2 text-foreground">How did you hear about us?</label>
+                  <label className="block text-sm font-medium mb-2 text-foreground">
+                    How did you hear about us? <span className="text-red-500">*</span>
+                  </label>
                   <Select 
                     value={formData.source} 
                     onValueChange={value => setFormData({ ...formData, source: value })}
                     disabled={isSubmitting}
+                    required
                   >
                     <SelectTrigger className="bg-glass/40 border-glass-border focus:border-accent">
                       <SelectValue placeholder="Select an option" />
@@ -245,7 +267,9 @@ const Contact = () => {
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium mb-2 text-foreground">Project details / Message</label>
+                  <label className="block text-sm font-medium mb-2 text-foreground">
+                    Project details / Message <span className="text-red-500">*</span>
+                  </label>
                   <Textarea 
                     name="message"
                     value={formData.message} 
