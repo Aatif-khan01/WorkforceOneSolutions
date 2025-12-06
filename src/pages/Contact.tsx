@@ -193,7 +193,7 @@ const Contact = () => {
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium mb-2 text-foreground">Organization (Optional)</label>
+                  <label className="block text-sm font-medium mb-2 text-foreground">Organization</label>
                   <Input 
                     type="text" 
                     name="organization"
