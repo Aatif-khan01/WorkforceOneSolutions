@@ -8,7 +8,7 @@ const ChristmasPopup = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
-    // Show popup after 1 second - ALWAYS (for testing)
+    // Show popup after 1 second
     const timer = setTimeout(() => {
       setIsOpen(true);
     }, 1000);
@@ -41,30 +41,34 @@ const ChristmasPopup = () => {
             transition={{ duration: 0.3 }}
             className="fixed inset-0 z-[1000] flex items-center justify-center p-4"
           >
-            <div className="relative max-w-5xl w-full">
-              {/* Close Button */}
+            <div className="relative w-full max-w-3xl">
+              {/* Close Button - Top Right Corner Inside Modal */}
               <button
                 onClick={handleClose}
-                className="absolute -top-4 -right-4 md:-top-6 md:-right-6 z-10 p-3 bg-white rounded-full shadow-2xl hover:bg-gray-100 transition-colors duration-200 group border-2 border-gray-200"
-                aria-label="Close popup"
+                className="absolute top-2 right-2 md:top-3 md:right-3 z-10 p-2 md:p-2.5 bg-white/95 rounded-full shadow-lg hover:bg-red-500 hover:scale-110 transition-all duration-200 group border border-gray-200"
+                aria-label="Close Christmas popup"
               >
-                <X size={28} className="text-gray-700 group-hover:text-red-600 transition-colors" />
+                <X size={24} className="text-gray-700 group-hover:text-white transition-colors" />
               </button>
 
               {/* Image Container - Responsive */}
-              <div className="relative rounded-2xl overflow-hidden shadow-2xl">
+              <div className="relative rounded-xl md:rounded-2xl overflow-hidden shadow-2xl bg-white">
                 {/* Desktop Image */}
                 <img
                   src={christmasDesktop}
                   alt="Merry Christmas from Workforce One Solutions"
-                  className="hidden md:block w-full h-auto"
+                  className="hidden md:block w-full h-auto max-h-[80vh] object-contain"
+                  loading="eager"
+                  decoding="async"
                 />
                 
                 {/* Mobile Image */}
                 <img
                   src={christmasMobile}
                   alt="Merry Christmas from Workforce One Solutions"
-                  className="block md:hidden w-full h-auto"
+                  className="block md:hidden w-full h-auto max-h-[85vh] object-contain"
+                  loading="eager"
+                  decoding="async"
                 />
               </div>
             </div>
