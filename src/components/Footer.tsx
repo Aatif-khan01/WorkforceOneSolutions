@@ -53,7 +53,13 @@ const Footer = () => {
           <div>
             <h4 className="text-lg font-semibold mb-4 text-foreground">Connect</h4>
             <div className="flex space-x-4">
-              <a href="#" className="p-2 rounded-lg bg-glass/40 hover:bg-glass border border-glass-border hover:border-accent transition-all hover:scale-110">
+              <a 
+                href="https://www.linkedin.com/company/workforce-one-solutions/about/?viewAsMember=true"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-2 rounded-lg bg-glass/40 hover:bg-glass border border-glass-border hover:border-accent transition-all hover:scale-110"
+                aria-label="Workforce One Solutions LinkedIn"
+              >
                 <Linkedin size={20} className="text-accent" />
               </a>
             </div>
