@@ -8,6 +8,7 @@ import AnimatedBox from "@/components/AnimatedBox";
 import StaggeredAnimation from "@/components/StaggeredAnimation";
 import ImageGridInfo from "@/components/ImageGridInfo";
 import StickyContactButton from "@/components/StickyContactButton";
+import ChristmasPopup from "@/components/ChristmasPopup";
 import { Button } from "@/components/ui/button";
 import heroImage from "@/assets/hero-home.jpg";
 import heroMobileImage from "@/assets/hero-mbhome.jpg";
@@ -92,6 +93,10 @@ const Home = () => {
         <link rel="preload" as="image" href={heroMobileImage} />
         <link rel="preload" as="image" href={heroImage} media="(min-width: 768px)" />
       </Helmet>
+      
+      {/* Christmas Popup */}
+      <ChristmasPopup />
+      
       <div className="min-h-screen">
       <Navigation />
 
