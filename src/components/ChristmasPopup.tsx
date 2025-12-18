@@ -8,16 +8,23 @@ const ChristmasPopup = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
-    // Show popup after 1 second
-    const timer = setTimeout(() => {
-      setIsOpen(true);
-    }, 1000);
+    // Check if user has already closed the popup
+    const hasSeenPopup = localStorage.getItem("christmasPopupSeen");
+    
+    if (!hasSeenPopup) {
+      // Show popup after 1 second if not seen before
+      const timer = setTimeout(() => {
+        setIsOpen(true);
+      }, 1000);
 
-    return () => clearTimeout(timer);
+      return () => clearTimeout(timer);
+    }
   }, []);
 
   const handleClose = () => {
     setIsOpen(false);
+    // Mark popup as seen in localStorage
+    localStorage.setItem("christmasPopupSeen", "true");
   };
 
   return (
