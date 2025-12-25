@@ -36,6 +36,9 @@
       content="Expert proposal development, cleared recruitment, workforce staffing, and custom software solutions for government contractors and commercial enterprises."
     />
     <meta property="og:image" content="https://www.workforceonesolutions.com/og-image.jpg" />
+    
+    <!-- ADD THIS LINE: Site Name for social media -->
+    <meta property="og:site_name" content="Workforce One Solutions" />
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
@@ -64,7 +67,7 @@
     <meta name="msapplication-TileImage" content="/android-chrome-192x192.png" />
     <meta name="theme-color" content="#ffffff" />
 
-    <!-- Structured Data -->
+    <!-- Structured Data for Organization -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -93,6 +96,22 @@
           "https://www.linkedin.com/company/workforceonesolutions",
           "https://twitter.com/workforceone"
         ]
+      }
+    </script>
+
+    <!-- ADD THIS: WebSite Structured Data for Site Name -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Workforce One Solutions",
+        "alternateName": ["WfOS", "Workforce One"],
+        "url": "https://www.workforceonesolutions.com",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://www.workforceonesolutions.com/search?q={search_term_string}",
+          "query-input": "required name=search_term_string"
+        }
       }
     </script>
 
