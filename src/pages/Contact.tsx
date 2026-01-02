@@ -123,11 +123,11 @@ const Contact = () => {
       </Helmet>
       <div className="min-h-screen">
       <Navigation />
-      
+
       {/* Hero Section */}
       <section className="relative min-h-[50vh] flex items-center justify-center overflow-hidden pt-20">
         <div className="absolute inset-0 bg-gradient-to-br from-background via-primary/20 to-background" />
-        
+
         <div className="container mx-auto px-6 relative z-10">
           <div className="max-w-4xl mx-auto text-center space-y-6">
             <AnimatedBox animation="fadeInUp" delay={200}>
@@ -162,7 +162,7 @@ const Contact = () => {
                   Get in Touch
                 </span>
               </h2>
-              
+
               <form onSubmit={handleSubmit} className="space-y-6">
                 {/* Honeypot Field - Hidden from users, visible to bots */}
                 <input 
@@ -343,8 +343,11 @@ const Contact = () => {
                 </p>
                 <div className="flex space-x-4">
                   <a 
-                    href="#" 
+                    href="https://www.linkedin.com/company/workforce-one-it/about"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="w-12 h-12 rounded-lg bg-glass/40 border border-glass-border hover:border-accent flex items-center justify-center transition-all hover:scale-110 animate-float"
+                    aria-label="Visit Workforce One Solutions on LinkedIn"
                   >
                     <span className="text-accent font-bold">in</span>
                   </a>
